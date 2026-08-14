@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Arab-X 2026 | The National Arab American Entrepreneurship Conference</title>
-<meta name="description" content="Arab-X is the national convening of Arab American enterprise. October 29 and 30, 2026, Detroit. Presented by the Tejara Innovation Hub in partnership with the American Arab Chamber of Commerce." />
+<meta name="description" content="Arab-X is the national convening of Arab American enterprise. October 30, 2026, Detroit. Presented by the Tejara Innovation Hub in partnership with the American Arab Chamber of Commerce." />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
@@ -138,7 +138,9 @@ header.nav.solid .menu-btn{ border-color:var(--line); color:var(--ink); }
 .setting__foot{ margin-top:14px; font-size:13px; font-weight:600; color:rgba(255,255,255,.55); }
 .agenda{ margin-top:clamp(44px,5vw,64px); }
 .agenda__day{ font-size:11.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--lime); padding-bottom:14px; border-bottom:1px solid rgba(255,255,255,.3); }
-.agenda__row{ display:grid; grid-template-columns:150px 1fr auto; gap:20px; padding:13px 0; border-bottom:1px solid var(--line-dark); font-size:15px; align-items:baseline; }
+.agenda__row{ display:grid; grid-template-columns:96px 1fr; gap:20px; padding:14px 0; border-bottom:1px solid var(--line-dark); font-size:15.5px; align-items:baseline; }
+.agenda__row .agenda__what:only-child{ grid-column:1 / -1; color:rgba(255,255,255,.6); font-weight:500; }
+.agenda__num{ font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--lime); }
 .agenda__time{ font-weight:700; color:#fff; font-size:13.5px; letter-spacing:.06em; white-space:nowrap; }
 .agenda__what{ color:rgba(255,255,255,.88); font-weight:500; }
 .agenda__len{ font-size:11.5px; color:rgba(255,255,255,.42); text-transform:uppercase; letter-spacing:.1em; white-space:nowrap; }
@@ -163,36 +165,8 @@ header.nav.solid .menu-btn{ border-color:var(--line); color:var(--ink); }
 .floor li::before{ content:""; position:absolute; left:0; top:9px; width:8px; height:2px; background:var(--lime-dark); }
 
 /* ===================== PARTNERSHIP ===================== */
-.ratecard{ border-top:2px solid var(--ink); }
-.tierrow{ display:grid; grid-template-columns:minmax(260px,1.15fr) 1.6fr auto; gap:clamp(24px,3.5vw,48px); padding:34px 0; border-bottom:1px solid var(--line); align-items:start; }
-.tierrow__id .avail{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.15em; color:var(--lime-dark); display:block; margin-bottom:8px; }
-.tierrow__id h3{ font-size:21px; letter-spacing:-.01em; }
-.tierrow__id .price{ font-weight:800; font-size:30px; color:var(--petrol); margin-top:12px; letter-spacing:-.02em; }
-.tierrow__id .per{ font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.13em; color:var(--mut); margin-top:2px; }
-.tierrow__body ul{ margin:0; padding:0; list-style:none; display:grid; gap:8px; }
-.tierrow__body li{ font-size:14px; line-height:1.6; padding-left:20px; position:relative; }
-.tierrow__body li::before{ content:""; position:absolute; left:0; top:9px; width:8px; height:2px; background:var(--lime-dark); }
-.tierrow__act{ padding-top:6px; }
-.tierrow--flag{ background:var(--petrol-deep); margin-inline:calc(var(--gutter) * -1); padding-inline:var(--gutter); border-bottom:none; }
-.tierrow--flag .tierrow__id h3{ color:#fff; }
-.tierrow--flag .tierrow__id .avail{ color:var(--lime); }
-.tierrow--flag .tierrow__id .price{ color:#fff; }
-.tierrow--flag .tierrow__id .per{ color:rgba(255,255,255,.55); }
-.tierrow--flag .tierrow__body li{ color:rgba(255,255,255,.82); }
-.tierrow--flag .tierrow__body li::before{ background:var(--lime); }
 .combine{ margin-top:clamp(36px,4vw,52px); border-left:2px solid var(--lime-dark); padding:6px 0 6px 26px; font-size:15px; line-height:1.7; max-width:88ch; }
 .combine strong{ color:var(--ink); }
-
-/* matrix table */
-.matrix{ margin-top:clamp(48px,5vw,68px); }
-.matrix h3{ font-size:19px; margin-bottom:18px; }
-.matrix .scrollx{ overflow-x:auto; }
-table.mtable{ width:100%; border-collapse:collapse; font-size:14px; min-width:760px; }
-.mtable th{ text-align:left; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.13em; color:#fff; background:var(--petrol); padding:13px 16px; }
-.mtable th:first-child{ border-radius:0; }
-.mtable td{ padding:12px 16px; border-bottom:1px solid var(--line); color:var(--body); }
-.mtable td:first-child{ font-weight:600; color:var(--ink); }
-.mtable tr:nth-child(even) td{ background:var(--bg-alt); }
 
 /* ===================== INSTITUTIONS ===================== */
 .insts{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,5vw,72px); }
@@ -205,7 +179,7 @@ table.mtable{ width:100%; border-collapse:collapse; font-size:14px; min-width:76
 .inst__stat span{ font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--mut); }
 
 /* ===================== ATTEND ===================== */
-.passes{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,5vw,72px); max-width:900px; }
+.passes{ display:grid; grid-template-columns:1fr; gap:clamp(32px,5vw,72px); max-width:520px; }
 .pass{ border-top:2px solid var(--ink); padding-top:22px; }
 .pass h3{ font-size:19px; }
 .pass__price{ font-weight:800; font-size:38px; color:var(--petrol); letter-spacing:-.02em; margin-top:12px; }
@@ -260,7 +234,6 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
   .proj:nth-child(3){ padding-left:0; border-left:0; }
   .audgrid{ grid-template-columns:1fr; }
   .floor ul{ grid-template-columns:1fr; }
-  .tierrow{ grid-template-columns:1fr; gap:18px; }
   .insts{ grid-template-columns:1fr; }
   .passes{ grid-template-columns:1fr; }
   .agenda__row{ grid-template-columns:1fr; gap:3px; }
@@ -284,7 +257,7 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
       <a href="#attend">Attend</a>
     </nav>
     <div class="nav__cta">
-      <a class="btn" href="mailto:sponsorship@americanarab.com?subject=Arab-X%202026%20Partnership%20Inquiry">Partner With Us</a>
+      <a class="btn" href="mailto:hello@tejara.org?subject=Arab-X%202026%20Partnership%20Inquiry">Partner With Us</a>
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
       <svg width="22" height="15" viewBox="0 0 22 15" fill="none"><path d="M0 1.5h22M0 7.5h22M0 13.5h22" stroke="currentColor" stroke-width="1.7"/></svg>
@@ -299,7 +272,7 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
   <a href="#room">Audience</a>
   <a href="#partnership">Partnership</a>
   <a href="#attend">Attend</a>
-  <a href="mailto:sponsorship@americanarab.com?subject=Arab-X%202026%20Partnership%20Inquiry">Partner With Us</a>
+  <a href="mailto:hello@tejara.org?subject=Arab-X%202026%20Partnership%20Inquiry">Partner With Us</a>
 </div>
 
 <main id="main">
@@ -312,17 +285,16 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
     <p class="hero__presenter">Presented by the Tejara Innovation Hub<br/><span>In partnership with the American Arab Chamber of Commerce</span></p>
     <h1>ARAB<span class="x">X</span></h1>
     <p class="hero__sub">The National Arab American Entrepreneurship Conference</p>
-    <p class="hero__date">October 29 &amp; 30, 2026 <span class="sep">&middot;</span> Detroit, Michigan</p>
+    <p class="hero__date">October 30, 2026 <span class="sep">&middot;</span> Detroit, Michigan</p>
     <div class="hero__cta">
-      <a class="btn btn--lime" href="mailto:sponsorship@americanarab.com?subject=Arab-X%202026%20Partnership%20Inquiry">Partner With Arab-X <span class="arw">&rarr;</span></a>
+      <a class="btn btn--lime" href="mailto:hello@tejara.org?subject=Arab-X%202026%20Partnership%20Inquiry">Partner With Arab-X <span class="arw">&rarr;</span></a>
       <a class="btn btn--ghost" href="#partnership">Partnership Levels</a>
     </div>
   </div>
   <div class="hero__strip">
     <div class="wrap">
-      <div class="cell"><div class="hstrip__k">Thursday, Evening</div><div class="hstrip__v">Welcome Reception</div></div>
-      <div class="cell"><div class="hstrip__k">Friday, All Day</div><div class="hstrip__v">Six Panels &amp; Signature Luncheon</div></div>
-      <div class="cell"><div class="hstrip__k">Friday, Evening</div><div class="hstrip__v">Arab-X Gala &amp; Keynote</div></div>
+      <div class="cell"><div class="hstrip__k">All Day</div><div class="hstrip__v">Six Panels &amp; Signature Luncheon</div></div>
+      <div class="cell"><div class="hstrip__k">Evening</div><div class="hstrip__v">Arab-X Gala &amp; Keynote</div></div>
     </div>
   </div>
 </section>
@@ -370,24 +342,18 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="label label--ondark">Program at a Glance</span>
-      <h2>Two evenings and one full working day.</h2>
-      <p class="lede">The reception builds the relationship. The conference day does the business. The gala makes it public. A partnership written across all three settings is seen by the same decision-makers three times in two days.</p>
+      <h2>One full working day.</h2>
+      <p class="lede">The conference day does the business. The gala makes it public. A single-track program keeps the same audience in the room from the welcome through the closing remarks.</p>
     </div>
     <div class="settings reveal">
-      <div class="setting">
-        <div class="setting__when">Thursday, October 29 &middot; Evening</div>
-        <h3>Welcome Reception</h3>
-        <p>An invitation-level gathering the evening before: sponsors, panelists, visiting delegations, and invited elected officials. No program to sit through. This is the room where the relationships that make Friday productive actually form.</p>
-        <div class="setting__foot">Access is a partnership benefit, not a general ticket.</div>
-      </div>
       <div class="setting">
         <div class="setting__when">Friday, October 30 &middot; All Day</div>
         <h3>The Conference</h3>
         <p>A full working day built around six panels, a hosted Signature Luncheon with a featured speaker, and an exhibition concourse open throughout. Single track: the same audience is in the room from welcome to closing.</p>
-        <div class="setting__foot">Breakfast from 7:30 am. Program runs to 4:05 pm.</div>
+        
       </div>
       <div class="setting">
-        <div class="setting__when">Friday, October 30 &middot; 7:00 pm</div>
+        <div class="setting__when">Friday, October 30 &middot; Evening</div>
         <h3>The Arab-X Gala</h3>
         <p>A seated dinner with a keynote address, and at a projected 450 guests, the public face of the convening: the room where the community, its business leadership, and its elected officials are seen together.</p>
         <div class="setting__foot">Reserved tables of eight. Press and photography throughout.</div>
@@ -395,20 +361,20 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
     </div>
 
     <div class="agenda reveal">
-      <div class="agenda__day">Friday, October 30 &middot; Conference Day</div>
-      <div class="agenda__row"><span class="agenda__time">7:30 am</span><span class="agenda__what">Registration and Breakfast</span><span class="agenda__len">50 min</span></div>
-      <div class="agenda__row"><span class="agenda__time">8:20 am</span><span class="agenda__what">Welcome and Remarks, Special Guest</span><span class="agenda__len">20 min</span></div>
-      <div class="agenda__row"><span class="agenda__time">8:45 am</span><span class="agenda__what">Panel 01 &middot; Building a Successful Arab American Business</span><span class="agenda__len">50 min</span></div>
-      <div class="agenda__row"><span class="agenda__time">9:35 am</span><span class="agenda__what">Panel 02 &middot; Taking Your Business to the Next Level</span><span class="agenda__len">50 min</span></div>
-      <div class="agenda__row"><span class="agenda__time">10:30 am</span><span class="agenda__what">Panel 03 &middot; Social Impact: Invest in Your Business and the Community</span><span class="agenda__len">50 min</span></div>
-      <div class="agenda__row"><span class="agenda__time">11:30 am</span><span class="agenda__what">Signature Luncheon, Featured Speaker</span><span class="agenda__len">1 hour</span></div>
-      <div class="agenda__row"><span class="agenda__time">12:30 pm</span><span class="agenda__what">Panel 04 &middot; VC Attraction</span><span class="agenda__len">50 min</span></div>
-      <div class="agenda__row"><span class="agenda__time">1:25 pm</span><span class="agenda__what">Panel 05 &middot; Policy Impacting Local Businesses</span><span class="agenda__len">50 min</span></div>
-      <div class="agenda__row"><span class="agenda__time">2:20 pm</span><span class="agenda__what">Panel 06 &middot; How AI Will Impact Entrepreneurship</span><span class="agenda__len">50 min</span></div>
-      <div class="agenda__row"><span class="agenda__time">3:15 pm</span><span class="agenda__what">Closing Remarks</span><span class="agenda__len">50 min</span></div>
-      <div class="agenda__row"><span class="agenda__time">7:00 pm</span><span class="agenda__what">Arab-X Gala, Keynote Address</span><span class="agenda__len">Evening</span></div>
+      <div class="agenda__day">Friday, October 30 &middot; Conference Program</div>
+      <div class="agenda__row"><span class="agenda__what">Registration and Breakfast</span></div>
+      <div class="agenda__row"><span class="agenda__what">Welcome</span></div>
+      <div class="agenda__row"><span class="agenda__num">Panel 1</span><span class="agenda__what">Future of Arab American Entrepreneurship</span></div>
+      <div class="agenda__row"><span class="agenda__num">Panel 2</span><span class="agenda__what">Access to Capital: VC and Investors</span></div>
+      <div class="agenda__row"><span class="agenda__num">Panel 3</span><span class="agenda__what">Leadership, Scaling and Growth</span></div>
+      <div class="agenda__row"><span class="agenda__what">Signature Luncheon and Featured Speaker</span></div>
+      <div class="agenda__row"><span class="agenda__num">Panel 4</span><span class="agenda__what">AI and Innovation</span></div>
+      <div class="agenda__row"><span class="agenda__num">Panel 5</span><span class="agenda__what">Women in Business</span></div>
+      <div class="agenda__row"><span class="agenda__num">Panel 6</span><span class="agenda__what">Legacy and Succession</span></div>
+      <div class="agenda__row"><span class="agenda__what">Closing Remarks</span></div>
+      <div class="agenda__row"><span class="agenda__what">Arab-X Gala and Keynote Address</span></div>
     </div>
-    <p class="agenda__note reveal">Agenda is in draft. Times, panel titles, and speakers remain subject to development. An invitation-only Executive Roundtable for 25 to 50 senior executives, investors, and public officials is also planned alongside the main program.</p>
+    <p class="agenda__note reveal">Program is in development. Session times and speakers will be announced.</p>
   </div>
 </section>
 
@@ -466,122 +432,25 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
 </section>
 
 <!-- ===================== PARTNERSHIP ===================== -->
-<section class="section anchor" id="partnership" aria-label="Partnership levels">
+<section class="section anchor" id="partnership" aria-label="Partnership">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="label">Partnership Opportunities</span>
-      <h2>The partnership portfolio.</h2>
-      <p class="lede">The senior positions, Tier I, the Luncheon, and the six panels, are limited so recognition at those levels carries real weight. Tier III is broad by design: the accessible level that puts a company in the room at both the conference and the gala.</p>
+      <span class="label">Partnership</span>
+      <h2>Partnership opportunities are open.</h2>
+      <p class="lede">A limited number of corporate partnerships are available for the inaugural Arab-X, from founding national positions to panel underwriting and enterprise-level support. Partnership levels, benefits, and investment are set out in the full prospectus, available on request.</p>
     </div>
-
-    <div class="ratecard reveal">
-      <div class="tierrow tierrow--flag">
-        <div class="tierrow__id">
-          <span class="avail">Tier I &middot; Three available</span>
-          <h3>Founding National Partner</h3>
-          <div class="price">$25,000</div>
-          <div class="per">Per partner</div>
-        </div>
-        <div class="tierrow__body">
-          <ul>
-            <li>Founding designation in the permanent record of the inaugural year</li>
-            <li>Logo beside the Arab-X name on the website, program, and main-stage backdrop</li>
-            <li>Three minutes of welcome remarks from the main stage and a seat on the Host Committee</li>
-            <li>Eight conference registrations, a premium gala table of eight, and a reserved reception table</li>
-            <li>Chamber-facilitated introductions to as many as five delegate organizations</li>
-          </ul>
-        </div>
-        <div class="tierrow__act"><a class="btn btn--lime" href="mailto:sponsorship@americanarab.com?subject=Arab-X%20Tier%20I%20Founding%20National%20Partner">Inquire</a></div>
+    <div class="cols2">
+      <div class="tcol tcol--lime reveal">
+        <h3>What partnership includes</h3>
+        <p>Recognition across the website, printed program, and concourse signage; delegate registrations and reserved gala seating; program advertisement and social recognition; and a named Chamber staff contact managing your partnership from commitment through delivery.</p>
       </div>
-      <div class="tierrow">
-        <div class="tierrow__id">
-          <span class="avail">One available &middot; Exclusive</span>
-          <h3>Signature Luncheon Underwriter</h3>
-          <div class="price">$25,000</div>
-          <div class="per">Exclusive</div>
-        </div>
-        <div class="tierrow__body">
-          <ul>
-            <li>Exclusive naming: &ldquo;The [Company] Signature Luncheon&rdquo;</li>
-            <li>The one seated, hosted hour when the entire conference sits down together</li>
-            <li>Five minutes of remarks and introduction of the luncheon keynote</li>
-            <li>Eight conference registrations, a reserved gala table of eight, and a reception table</li>
-          </ul>
-        </div>
-        <div class="tierrow__act"><a class="tlink" href="mailto:sponsorship@americanarab.com?subject=Arab-X%20Signature%20Luncheon%20Underwriter">Inquire &rarr;</a></div>
-      </div>
-      <div class="tierrow">
-        <div class="tierrow__id">
-          <span class="avail">Tier II &middot; Five available</span>
-          <h3>Innovation Partner</h3>
-          <div class="price">$10,000</div>
-          <div class="per">Per partner</div>
-        </div>
-        <div class="tierrow__body">
-          <ul>
-            <li>Eight conference registrations, a reserved gala table of eight, and eight reception invitations</li>
-            <li>Half-page program advertisement and two dedicated social posts</li>
-            <li>Standard exhibition table in the concourse</li>
-            <li>Chamber-facilitated introductions to as many as two delegate organizations</li>
-          </ul>
-        </div>
-        <div class="tierrow__act"><a class="tlink" href="mailto:sponsorship@americanarab.com?subject=Arab-X%20Tier%20II%20Innovation%20Partner">Inquire &rarr;</a></div>
-      </div>
-      <div class="tierrow">
-        <div class="tierrow__id">
-          <span class="avail">Six available &middot; One per panel</span>
-          <h3>Panel Underwriter</h3>
-          <div class="price">$10,000</div>
-          <div class="per">Per panel</div>
-        </div>
-        <div class="tierrow__body">
-          <ul>
-            <li>&ldquo;This panel is presented by [Company],&rdquo; in front of the entire conference</li>
-            <li>Sole brand associated with one full fifty-minute panel, with framing remarks</li>
-            <li>Co-branded panel recording for your own channels</li>
-            <li>Four conference registrations, four gala seats, and four reception invitations</li>
-          </ul>
-        </div>
-        <div class="tierrow__act"><a class="tlink" href="mailto:sponsorship@americanarab.com?subject=Arab-X%20Panel%20Underwriter">Inquire &rarr;</a></div>
-      </div>
-      <div class="tierrow">
-        <div class="tierrow__id">
-          <span class="avail">Tier III &middot; Thirty-two available</span>
-          <h3>Enterprise Partner</h3>
-          <div class="price">$5,000</div>
-          <div class="per">Per partner</div>
-        </div>
-        <div class="tierrow__body">
-          <ul>
-            <li>Four conference registrations and four gala seats</li>
-            <li>Logo on the sponsor page, printed program, and concourse signage</li>
-            <li>Quarter-page program advertisement and one dedicated social post</li>
-            <li>Add-ons: private gala table of eight with signage ($1,000), reception access for two ($500)</li>
-          </ul>
-        </div>
-        <div class="tierrow__act"><a class="tlink" href="mailto:sponsorship@americanarab.com?subject=Arab-X%20Tier%20III%20Enterprise%20Partner">Inquire &rarr;</a></div>
+      <div class="tcol tcol--lime reveal d1">
+        <h3>Partner-only access</h3>
+        <p>Corporate partners are invited to an invitation-level Welcome Reception the evening before the conference, alongside panelists, visiting delegations, and invited elected officials. Access is a partnership benefit rather than a general ticket.</p>
       </div>
     </div>
-
-    <p class="combine reveal"><strong>Combine a panel with a tier.</strong> A Panel Underwriting at $10,000 combines with Tier II at $10,000 for a $20,000 total commitment: panel naming plus the full Tier II package, recognized immediately below Tier I across all materials. In-kind, nonprofit, multi-year, and fully custom structures are also available; the Chamber would rather design the right partnership than sell a listed one.</p>
-
-    <div class="matrix reveal">
-      <h3>The portfolio at a glance</h3>
-      <div class="scrollx">
-      <table class="mtable">
-        <thead>
-          <tr><th>Partnership</th><th>Investment</th><th>Available</th><th>Conference seats</th><th>Gala seats</th><th>Reception</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Tier I &middot; Founding National Partner</td><td>$25,000</td><td>3</td><td>8</td><td>Table of 8</td><td>Table of 8</td></tr>
-          <tr><td>Signature Luncheon Underwriter</td><td>$25,000</td><td>1, exclusive</td><td>8</td><td>Table of 8</td><td>Table of 8</td></tr>
-          <tr><td>Tier II &middot; Innovation Partner</td><td>$10,000</td><td>5</td><td>8</td><td>Table of 8</td><td>8 invitations</td></tr>
-          <tr><td>Panel Underwriter</td><td>$10,000</td><td>6, one per panel</td><td>4</td><td>4</td><td>4 invitations</td></tr>
-          <tr><td>Tier III &middot; Enterprise Partner</td><td>$5,000</td><td>32</td><td>4</td><td>4</td><td>Add-on</td></tr>
-        </tbody>
-      </table>
-      </div>
-    </div>
+    <p class="combine reveal"><strong>Every partnership can be tailored.</strong> In-kind, nonprofit, multi-year, and fully custom structures are available. If your organization has a marketing objective, a procurement target, or a program idea that does not map to a standard level, the Chamber will build a partnership around it. Contact us for the full prospectus.</p>
+    <div style="margin-top:34px;" class="reveal"><a class="btn" href="mailto:hello@tejara.org?subject=Arab-X%202026%20Partnership%20Inquiry">Request the Prospectus <span class="arw">&rarr;</span></a></div>
   </div>
 </section>
 
@@ -599,8 +468,7 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
         <h3>Tejara Innovation Hub</h3>
         <p>Tejara is the Chamber's entrepreneurship platform and physical hub in Metro Detroit: the pipeline that develops founders and early-stage companies through programming, technical assistance, capital readiness, and access to a working network of operators. Arab-X is Tejara's national convening.</p>
         <div class="inst__stats">
-          <div class="inst__stat"><b>100+</b><span>Entrepreneurs supported</span></div>
-          <div class="inst__stat"><b>Dozens</b><span>Early-stage companies</span></div>
+          <div class="inst__stat"><b>700+</b><span>Entrepreneurs supported</span></div>
         </div>
       </div>
       <div class="inst reveal d1">
@@ -638,19 +506,8 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
           <li>Concourse access, delegate materials, and the printed program</li>
         </ul>
       </div>
-      <div class="pass reveal d1">
-        <h3>Gala Table Seat</h3>
-        <div class="pass__price">$250</div>
-        <div class="pass__per">Per seat</div>
-        <ul>
-          <li>A reserved seated place at the Arab-X Gala</li>
-          <li>Cocktail reception beforehand and assigned table seating</li>
-          <li>Full plated dinner, with halal and vegetarian service</li>
-          <li>The complete gala program, including the keynote address</li>
-        </ul>
-      </div>
     </div>
-    <p class="passes__note reveal">Registration opens ahead of the conference. Halal and vegetarian service is accommodated; note requirements at registration. Registrations are transferable to another named attendee up to seven days before the conference.</p>
+    <p class="passes__note reveal">Registration opens ahead of the conference. Halal and vegetarian service is accommodated; note requirements at registration.</p>
   </div>
 </section>
 
@@ -663,9 +520,9 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
     <h2 class="reveal">Partner with the inaugural Arab-X.</h2>
     <p class="reveal d1">Arab-X is built to run annually, and founding partners of the first year are named in its permanent record. The number of founding positions is small, and the Chamber would rather design the right partnership than sell a listed one.</p>
     <div class="close__cta reveal d2">
-      <a class="btn btn--lime" href="mailto:sponsorship@americanarab.com?subject=Arab-X%202026%20Partnership%20Inquiry">Become a Partner <span class="arw">&rarr;</span></a>
+      <a class="btn btn--lime" href="mailto:hello@tejara.org?subject=Arab-X%202026%20Partnership%20Inquiry">Become a Partner <span class="arw">&rarr;</span></a>
     </div>
-    <p class="close__contact reveal d3">Partnership inquiries &middot; <a href="mailto:sponsorship@americanarab.com">sponsorship@americanarab.com</a></p>
+    <p class="close__contact reveal d3">Partnership inquiries &middot; <a href="mailto:hello@tejara.org">hello@tejara.org</a></p>
   </div>
 </section>
 
@@ -678,12 +535,12 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
       <div class="ft__links">
         <a href="https://tejara.org" target="_blank" rel="noopener">tejara.org</a>
         <a href="https://americanarab.com" target="_blank" rel="noopener">americanarab.com</a>
-        <a href="mailto:sponsorship@americanarab.com">sponsorship@americanarab.com</a>
+        <a href="mailto:hello@tejara.org">hello@tejara.org</a>
       </div>
     </div>
     <div class="ft__line">
       <span>Presented by the Tejara Innovation Hub, in partnership with the American Arab Chamber of Commerce.</span>
-      <span>October 29 &amp; 30, 2026 &middot; Detroit, Michigan</span>
+      <span>October 30, 2026 &middot; Detroit, Michigan</span>
     </div>
   </div>
 </footer>
