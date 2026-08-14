@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Arab-X 2026 | The National Arab American Entrepreneurship Conference</title>
+<meta name="description" content="Arab-X is the national convening of Arab American enterprise. October 29 and 30, 2026, Detroit. Presented by the Tejara Innovation Hub in partnership with the American Arab Chamber of Commerce." />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --petrol:#12495C; --petrol-deep:#0C3140; --tealblack:#092832;
+  --lime:#A5CE5D; --lime-dark:#5F8A2A;
+  --ink:#10272F; --body:#42565F; --mut:#7A8B93;
+  --bg:#FFFFFF; --bg-alt:#F6F8F9;
+  --line:#E2E8EB; --line-dark:rgba(255,255,255,.16);
+  --sans:'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --maxw:1200px; --gutter:clamp(22px,5vw,52px);
+  --pad-y:clamp(80px,9vw,132px);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; scroll-padding-top:88px; -webkit-text-size-adjust:100%; }
+body{ margin:0; font-family:var(--sans); font-size:16px; line-height:1.7; color:var(--body); background:var(--bg); -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; overflow-x:hidden; }
+h1,h2,h3,h4{ color:var(--ink); margin:0; font-weight:700; line-height:1.12; letter-spacing:-.02em; }
+p{ margin:0; }
+a{ color:inherit; text-decoration:none; }
+img{ max-width:100%; display:block; }
+::selection{ background:var(--petrol); color:#fff; }
+:focus-visible{ outline:2px solid var(--lime-dark); outline-offset:3px; }
+.wrap{ max-width:var(--maxw); margin:0 auto; padding-inline:var(--gutter); }
+.anchor{ scroll-margin-top:92px; }
+
+.label{ font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.18em; color:var(--petrol); }
+.label--ondark{ color:var(--lime); }
+.sec-head{ margin-bottom:clamp(40px,4.5vw,60px); }
+.sec-head .label{ display:block; margin-bottom:18px; }
+.sec-head h2{ font-size:clamp(28px,3.6vw,44px); max-width:22em; }
+.sec-head .lede{ margin-top:18px; font-size:17px; line-height:1.7; max-width:66ch; }
+.ondark{ color:rgba(255,255,255,.78); }
+.ondark h2, .ondark h3{ color:#fff; }
+.ondark .lede{ color:rgba(255,255,255,.75); }
+
+.btn{ display:inline-flex; align-items:center; gap:10px; font-family:var(--sans); font-size:12.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  padding:16px 28px; border:1.5px solid var(--petrol); background:var(--petrol); color:#fff; cursor:pointer; line-height:1; border-radius:2px;
+  transition:background .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease); }
+.btn:hover{ background:var(--petrol-deep); border-color:var(--petrol-deep); }
+.btn .arw{ transition:transform .2s var(--ease); }
+.btn:hover .arw{ transform:translateX(4px); }
+.btn--lime{ background:var(--lime); border-color:var(--lime); color:var(--tealblack); }
+.btn--lime:hover{ background:#B5DB70; border-color:#B5DB70; }
+.btn--ghost{ background:transparent; border-color:rgba(255,255,255,.55); color:#fff; }
+.btn--ghost:hover{ background:rgba(255,255,255,.1); border-color:#fff; }
+.tlink{ font-size:12.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--petrol); display:inline-flex; align-items:center; gap:8px; position:relative; }
+.tlink::after{ content:""; position:absolute; left:0; bottom:-4px; height:1.5px; width:0; background:var(--petrol); transition:width .25s var(--ease); }
+.tlink:hover::after{ width:100%; }
+
+/* ===================== NAV ===================== */
+header.nav{ position:fixed; top:0; left:0; right:0; z-index:60; border-bottom:1px solid transparent;
+  transition:background .3s var(--ease), border-color .3s var(--ease); }
+header.nav.solid{ background:rgba(255,255,255,.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+.nav__inner{ max-width:var(--maxw); margin:0 auto; padding:18px var(--gutter); display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.brand{ font-weight:800; font-size:20px; letter-spacing:.06em; color:#fff; white-space:nowrap; transition:color .3s var(--ease); }
+.brand .x{ color:var(--lime); margin-left:.14em; }
+header.nav.solid .brand{ color:var(--ink); }
+header.nav.solid .brand .x{ color:var(--lime-dark); }
+nav.links{ display:flex; align-items:center; gap:30px; }
+nav.links a{ font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.13em; color:rgba(255,255,255,.88); padding:6px 0; position:relative; transition:color .3s var(--ease); }
+header.nav.solid nav.links a{ color:var(--body); }
+nav.links a::after{ content:""; position:absolute; left:0; bottom:0; height:1.5px; width:0; background:var(--lime); transition:width .25s var(--ease); }
+header.nav.solid nav.links a::after{ background:var(--petrol); }
+nav.links a:hover::after{ width:100%; }
+.nav__cta .btn{ padding:12px 22px; font-size:11.5px; background:transparent; border-color:rgba(255,255,255,.6); color:#fff; }
+.nav__cta .btn:hover{ background:rgba(255,255,255,.12); border-color:#fff; }
+header.nav.solid .nav__cta .btn{ background:var(--petrol); border-color:var(--petrol); color:#fff; }
+header.nav.solid .nav__cta .btn:hover{ background:var(--petrol-deep); }
+.menu-btn{ display:none; background:none; border:1px solid rgba(255,255,255,.5); border-radius:2px; color:#fff; padding:10px; cursor:pointer; line-height:0; }
+header.nav.solid .menu-btn{ border-color:var(--line); color:var(--ink); }
+.mobile-menu{ position:fixed; inset:0; z-index:70; background:var(--petrol-deep); padding:92px var(--gutter) 40px; overflow-y:auto;
+  transform:translateY(-12px); opacity:0; visibility:hidden; transition:opacity .3s var(--ease), transform .3s var(--ease), visibility .3s; }
+.mobile-menu.open{ opacity:1; visibility:visible; transform:none; }
+.mobile-menu a{ display:block; color:#fff; font-weight:700; font-size:22px; padding:16px 0; border-bottom:1px solid rgba(255,255,255,.14); }
+.mobile-close{ position:absolute; top:20px; right:var(--gutter); background:none; border:1px solid rgba(255,255,255,.4); border-radius:2px; color:#fff; padding:10px; cursor:pointer; line-height:0; }
+
+/* ===================== HERO ===================== */
+.hero{ position:relative; min-height:92vh; display:flex; flex-direction:column; justify-content:flex-end; background:var(--petrol-deep); color:#fff; overflow:hidden; }
+.hero__bg{ position:absolute; inset:0; }
+.hero__bg img{ width:100%; height:100%; object-fit:cover; filter:saturate(.5) brightness(.62); transform:scale(1.05); animation:heroDrift 20s var(--ease) forwards; }
+@keyframes heroDrift{ from{ transform:scale(1.09);} to{ transform:scale(1.02);} }
+.hero__scrim{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(12,49,64,.55) 0%, rgba(12,49,64,.25) 40%, rgba(9,40,50,.92) 100%); }
+.hero__inner{ position:relative; z-index:2; padding:170px 0 0; }
+.hero__presenter{ font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.2em; color:var(--lime); margin-bottom:30px; }
+.hero__presenter span{ display:inline-block; margin-top:7px; color:rgba(255,255,255,.65); }
+.hero h1{ color:#fff; font-size:clamp(58px,9.5vw,128px); font-weight:800; letter-spacing:.01em; line-height:.95; }
+.hero h1 .x{ color:var(--lime); margin-left:.14em; }
+.hero__sub{ font-size:clamp(19px,2.1vw,26px); font-weight:500; line-height:1.4; color:rgba(255,255,255,.92); max-width:26em; margin-top:24px; }
+.hero__date{ font-size:14px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#fff; margin-top:26px; }
+.hero__date .sep{ color:var(--lime); padding-inline:10px; }
+.hero__cta{ display:flex; gap:14px; flex-wrap:wrap; margin-top:38px; }
+.hero__strip{ position:relative; z-index:2; margin-top:64px; border-top:1px solid rgba(255,255,255,.22); }
+.hero__strip .wrap{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; }
+.hero__strip .cell{ padding:22px 26px 26px 0; }
+.hero__strip .cell + .cell{ padding-left:26px; border-left:1px solid rgba(255,255,255,.22); }
+.hstrip__k{ font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.18em; color:var(--lime); }
+.hstrip__v{ font-size:15px; font-weight:600; color:#fff; margin-top:4px; }
+
+/* ===================== INTRO / STATS ===================== */
+.intro{ padding:var(--pad-y) 0; }
+.intro__grid{ display:grid; grid-template-columns:1.15fr 1fr; gap:clamp(36px,5vw,80px); align-items:start; }
+.intro__grid h2{ font-size:clamp(28px,3.4vw,42px); }
+.intro__grid .body{ font-size:16.5px; line-height:1.75; padding-top:8px; }
+.intro__grid .body p + p{ margin-top:16px; }
+.statrow{ margin-top:clamp(48px,6vw,72px); border-top:1px solid var(--line); display:grid; grid-template-columns:repeat(4,1fr); }
+.stat{ padding:28px 26px 0 0; }
+.stat + .stat{ padding-left:26px; border-left:1px solid var(--line); }
+.stat__num{ font-weight:800; font-size:clamp(34px,3.8vw,52px); color:var(--petrol); letter-spacing:-.02em; line-height:1; }
+.stat__label{ margin-top:8px; font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.14em; color:var(--mut); }
+.statrow__note{ margin-top:22px; font-size:12px; color:var(--mut); }
+
+/* ===================== PRINCIPLES / PILLARS (text columns) ===================== */
+.section{ padding:var(--pad-y) 0; }
+.section--alt{ background:var(--bg-alt); }
+.cols3{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(28px,4vw,56px); }
+.cols2{ display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(28px,4vw,56px) clamp(32px,5vw,72px); }
+.tcol{ border-top:2px solid var(--ink); padding-top:20px; }
+.tcol--lime{ border-top-color:var(--lime); }
+.tcol h3{ font-size:18.5px; margin:0 0 10px; }
+.tcol p{ font-size:14.5px; line-height:1.68; }
+
+/* ===================== PROGRAM (dark band) ===================== */
+.program{ background:var(--petrol-deep); }
+.settings{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-top:1px solid var(--line-dark); }
+.setting{ padding:30px 30px 34px 0; }
+.setting + .setting{ padding-left:30px; border-left:1px solid var(--line-dark); }
+.setting__when{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.16em; color:var(--lime); }
+.setting h3{ font-size:20px; margin:12px 0 10px; }
+.setting p{ font-size:14.5px; line-height:1.68; color:rgba(255,255,255,.72); }
+.setting__foot{ margin-top:14px; font-size:13px; font-weight:600; color:rgba(255,255,255,.55); }
+.agenda{ margin-top:clamp(44px,5vw,64px); }
+.agenda__day{ font-size:11.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--lime); padding-bottom:14px; border-bottom:1px solid rgba(255,255,255,.3); }
+.agenda__row{ display:grid; grid-template-columns:150px 1fr auto; gap:20px; padding:13px 0; border-bottom:1px solid var(--line-dark); font-size:15px; align-items:baseline; }
+.agenda__time{ font-weight:700; color:#fff; font-size:13.5px; letter-spacing:.06em; white-space:nowrap; }
+.agenda__what{ color:rgba(255,255,255,.88); font-weight:500; }
+.agenda__len{ font-size:11.5px; color:rgba(255,255,255,.42); text-transform:uppercase; letter-spacing:.1em; white-space:nowrap; }
+.agenda__note{ margin-top:18px; font-size:12.5px; color:rgba(255,255,255,.5); max-width:78ch; }
+
+/* ===================== ROOM ===================== */
+.projrow{ display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); margin-bottom:clamp(44px,5vw,60px); }
+.proj{ padding:24px 24px 0 0; }
+.proj + .proj{ padding-left:24px; border-left:1px solid var(--line); }
+.proj__n{ font-weight:800; font-size:clamp(24px,2.8vw,36px); color:var(--petrol); letter-spacing:-.02em; line-height:1.05; }
+.proj__l{ margin-top:6px; font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.12em; color:var(--mut); }
+.audgrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(26px,3.5vw,48px) clamp(28px,4vw,56px); }
+.aud{ border-top:1px solid var(--line); padding-top:18px; }
+.aud h3{ font-size:16px; margin-bottom:8px; }
+.aud p{ font-size:14px; line-height:1.65; }
+
+/* ===================== CASE ===================== */
+.floor{ margin-top:clamp(44px,5vw,64px); border-top:1px solid var(--line); padding-top:34px; }
+.floor h3{ font-size:19px; margin-bottom:20px; }
+.floor ul{ margin:0; padding:0; list-style:none; display:grid; grid-template-columns:repeat(2,1fr); gap:12px 44px; }
+.floor li{ font-size:14.5px; line-height:1.6; padding-left:22px; position:relative; }
+.floor li::before{ content:""; position:absolute; left:0; top:9px; width:8px; height:2px; background:var(--lime-dark); }
+
+/* ===================== PARTNERSHIP ===================== */
+.ratecard{ border-top:2px solid var(--ink); }
+.tierrow{ display:grid; grid-template-columns:minmax(260px,1.15fr) 1.6fr auto; gap:clamp(24px,3.5vw,48px); padding:34px 0; border-bottom:1px solid var(--line); align-items:start; }
+.tierrow__id .avail{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.15em; color:var(--lime-dark); display:block; margin-bottom:8px; }
+.tierrow__id h3{ font-size:21px; letter-spacing:-.01em; }
+.tierrow__id .price{ font-weight:800; font-size:30px; color:var(--petrol); margin-top:12px; letter-spacing:-.02em; }
+.tierrow__id .per{ font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.13em; color:var(--mut); margin-top:2px; }
+.tierrow__body ul{ margin:0; padding:0; list-style:none; display:grid; gap:8px; }
+.tierrow__body li{ font-size:14px; line-height:1.6; padding-left:20px; position:relative; }
+.tierrow__body li::before{ content:""; position:absolute; left:0; top:9px; width:8px; height:2px; background:var(--lime-dark); }
+.tierrow__act{ padding-top:6px; }
+.tierrow--flag{ background:var(--petrol-deep); margin-inline:calc(var(--gutter) * -1); padding-inline:var(--gutter); border-bottom:none; }
+.tierrow--flag .tierrow__id h3{ color:#fff; }
+.tierrow--flag .tierrow__id .avail{ color:var(--lime); }
+.tierrow--flag .tierrow__id .price{ color:#fff; }
+.tierrow--flag .tierrow__id .per{ color:rgba(255,255,255,.55); }
+.tierrow--flag .tierrow__body li{ color:rgba(255,255,255,.82); }
+.tierrow--flag .tierrow__body li::before{ background:var(--lime); }
+.combine{ margin-top:clamp(36px,4vw,52px); border-left:2px solid var(--lime-dark); padding:6px 0 6px 26px; font-size:15px; line-height:1.7; max-width:88ch; }
+.combine strong{ color:var(--ink); }
+
+/* matrix table */
+.matrix{ margin-top:clamp(48px,5vw,68px); }
+.matrix h3{ font-size:19px; margin-bottom:18px; }
+.matrix .scrollx{ overflow-x:auto; }
+table.mtable{ width:100%; border-collapse:collapse; font-size:14px; min-width:760px; }
+.mtable th{ text-align:left; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.13em; color:#fff; background:var(--petrol); padding:13px 16px; }
+.mtable th:first-child{ border-radius:0; }
+.mtable td{ padding:12px 16px; border-bottom:1px solid var(--line); color:var(--body); }
+.mtable td:first-child{ font-weight:600; color:var(--ink); }
+.mtable tr:nth-child(even) td{ background:var(--bg-alt); }
+
+/* ===================== INSTITUTIONS ===================== */
+.insts{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,5vw,72px); }
+.inst{ border-top:2px solid var(--ink); padding-top:22px; }
+.inst__tag{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.16em; color:var(--lime-dark); display:block; margin-bottom:10px; }
+.inst h3{ font-size:21px; margin-bottom:12px; }
+.inst p{ font-size:14.5px; line-height:1.7; }
+.inst__stats{ display:flex; gap:36px; margin-top:22px; flex-wrap:wrap; }
+.inst__stat b{ display:block; font-weight:800; font-size:24px; color:var(--petrol); letter-spacing:-.01em; }
+.inst__stat span{ font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--mut); }
+
+/* ===================== ATTEND ===================== */
+.passes{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,5vw,72px); max-width:900px; }
+.pass{ border-top:2px solid var(--ink); padding-top:22px; }
+.pass h3{ font-size:19px; }
+.pass__price{ font-weight:800; font-size:38px; color:var(--petrol); letter-spacing:-.02em; margin-top:12px; }
+.pass__per{ font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.13em; color:var(--mut); margin:2px 0 16px; }
+.pass ul{ margin:0; padding:0; list-style:none; display:grid; gap:8px; }
+.pass li{ font-size:14px; line-height:1.6; padding-left:20px; position:relative; }
+.pass li::before{ content:""; position:absolute; left:0; top:9px; width:8px; height:2px; background:var(--lime-dark); }
+.passes__note{ margin-top:26px; font-size:13px; color:var(--mut); max-width:74ch; }
+
+/* ===================== CLOSE ===================== */
+.close{ position:relative; background:var(--petrol-deep); color:#fff; padding:var(--pad-y) 0; overflow:hidden; }
+.close__bg{ position:absolute; inset:0; }
+.close__bg img{ width:100%; height:100%; object-fit:cover; filter:saturate(.5) brightness(.5); }
+.close__scrim{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(9,40,50,.93), rgba(12,49,64,.88)); }
+.close .wrap{ position:relative; z-index:2; max-width:880px; }
+.close__tag{ font-size:11.5px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--lime); margin-bottom:24px; }
+.close h2{ color:#fff; font-size:clamp(30px,4.2vw,50px); letter-spacing:-.02em; }
+.close p{ margin-top:20px; font-size:16.5px; line-height:1.7; color:rgba(255,255,255,.78); max-width:60ch; }
+.close__cta{ display:flex; gap:14px; flex-wrap:wrap; margin-top:34px; }
+.close__contact{ margin-top:26px; font-size:14px; color:rgba(255,255,255,.6); }
+.close__contact a{ color:var(--lime); font-weight:700; }
+
+/* ===================== FOOTER ===================== */
+footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 34px; }
+.ft__inner{ display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap; }
+.ft__brand{ font-weight:800; font-size:17px; color:#fff; letter-spacing:.06em; }
+.ft__brand .x{ color:var(--lime); margin-left:.12em; }
+.ft__links{ display:flex; gap:24px; font-size:13px; font-weight:500; }
+.ft__links a:hover{ color:#fff; }
+.ft__line{ margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,.12); font-size:12px; color:rgba(255,255,255,.38); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+
+/* reveals */
+.reveal{ opacity:0; transform:translateY(22px); transition:opacity .65s var(--ease), transform .65s var(--ease); }
+.reveal.in{ opacity:1; transform:none; }
+.reveal.d1{ transition-delay:.07s; } .reveal.d2{ transition-delay:.14s; } .reveal.d3{ transition-delay:.21s; }
+
+@media (max-width:1000px){
+  nav.links{ display:none; }
+  .menu-btn{ display:inline-flex; }
+  .nav__cta{ display:none; }
+  .hero__strip .wrap{ grid-template-columns:1fr; }
+  .hero__strip .cell + .cell{ padding-left:0; border-left:0; border-top:1px solid rgba(255,255,255,.22); }
+  .intro__grid{ grid-template-columns:1fr; }
+  .statrow{ grid-template-columns:1fr 1fr; }
+  .stat:nth-child(3){ padding-left:0; border-left:0; }
+  .stat{ padding-bottom:8px; }
+  .cols3{ grid-template-columns:1fr; }
+  .cols2{ grid-template-columns:1fr; }
+  .settings{ grid-template-columns:1fr; }
+  .setting + .setting{ padding-left:0; border-left:0; border-top:1px solid var(--line-dark); }
+  .projrow{ grid-template-columns:1fr 1fr; }
+  .proj:nth-child(3){ padding-left:0; border-left:0; }
+  .audgrid{ grid-template-columns:1fr; }
+  .floor ul{ grid-template-columns:1fr; }
+  .tierrow{ grid-template-columns:1fr; gap:18px; }
+  .insts{ grid-template-columns:1fr; }
+  .passes{ grid-template-columns:1fr; }
+  .agenda__row{ grid-template-columns:1fr; gap:3px; }
+}
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none !important; scroll-behavior:auto; }
+  .reveal{ opacity:1; transform:none; transition:none; }
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="#top" aria-label="Arab-X home">ARAB<span class="x">X</span></a>
+    <nav class="links" aria-label="Primary">
+      <a href="#convening">About</a>
+      <a href="#program">Program</a>
+      <a href="#room">Audience</a>
+      <a href="#partnership">Partnership</a>
+      <a href="#attend">Attend</a>
+    </nav>
+    <div class="nav__cta">
+      <a class="btn" href="mailto:sponsorship@americanarab.com?subject=Arab-X%202026%20Partnership%20Inquiry">Partner With Us</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <svg width="22" height="15" viewBox="0 0 22 15" fill="none"><path d="M0 1.5h22M0 7.5h22M0 13.5h22" stroke="currentColor" stroke-width="1.7"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M1 1l18 18M19 1L1 19" stroke="currentColor" stroke-width="1.7"/></svg></button>
+  <a href="#convening">About</a>
+  <a href="#program">Program</a>
+  <a href="#room">Audience</a>
+  <a href="#partnership">Partnership</a>
+  <a href="#attend">Attend</a>
+  <a href="mailto:sponsorship@americanarab.com?subject=Arab-X%202026%20Partnership%20Inquiry">Partner With Us</a>
+</div>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top" aria-label="Arab-X 2026">
+  <div class="hero__bg" aria-hidden="true"><img src="assets/img/arabx-audience.jpg" alt="" /></div>
+  <div class="hero__scrim" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <p class="hero__presenter">Presented by the Tejara Innovation Hub<br/><span>In partnership with the American Arab Chamber of Commerce</span></p>
+    <h1>ARAB<span class="x">X</span></h1>
+    <p class="hero__sub">The National Arab American Entrepreneurship Conference</p>
+    <p class="hero__date">October 29 &amp; 30, 2026 <span class="sep">&middot;</span> Detroit, Michigan</p>
+    <div class="hero__cta">
+      <a class="btn btn--lime" href="mailto:sponsorship@americanarab.com?subject=Arab-X%202026%20Partnership%20Inquiry">Partner With Arab-X <span class="arw">&rarr;</span></a>
+      <a class="btn btn--ghost" href="#partnership">Partnership Levels</a>
+    </div>
+  </div>
+  <div class="hero__strip">
+    <div class="wrap">
+      <div class="cell"><div class="hstrip__k">Thursday, Evening</div><div class="hstrip__v">Welcome Reception</div></div>
+      <div class="cell"><div class="hstrip__k">Friday, All Day</div><div class="hstrip__v">Six Panels &amp; Signature Luncheon</div></div>
+      <div class="cell"><div class="hstrip__k">Friday, Evening</div><div class="hstrip__v">Arab-X Gala &amp; Keynote</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INTRO + STATS ===================== -->
+<section class="intro anchor" id="convening" aria-label="About Arab-X">
+  <div class="wrap">
+    <div class="intro__grid">
+      <div class="reveal">
+        <span class="label">About Arab-X</span>
+        <h2 style="margin-top:16px;">The national convening of Arab American enterprise.</h2>
+      </div>
+      <div class="body reveal d1">
+        <p>Arab-X is a working assembly of the founders, corporations, investors, and public officials whose decisions determine where capital and contracts go.</p>
+        <p>Most conferences are organized around visibility. Arab-X is organized around transaction and consequence: a single-track program, a deliberately composed room, and partnership positions structured against every setting of the two days.</p>
+      </div>
+    </div>
+    <div class="statrow reveal">
+      <div class="stat"><div class="stat__num" data-count="450">450</div><div class="stat__label">Projected gala guests</div></div>
+      <div class="stat"><div class="stat__num">300&ndash;400</div><div class="stat__label">Conference delegates</div></div>
+      <div class="stat"><div class="stat__num" data-count="6">6</div><div class="stat__label">Single-track panels</div></div>
+      <div class="stat"><div class="stat__num" data-count="47">47</div><div class="stat__label">Partnership positions</div></div>
+    </div>
+    <p class="statrow__note">Attendance figures are planning targets for the inaugural year and will be confirmed as registration opens.</p>
+  </div>
+</section>
+
+<!-- ===================== PRINCIPLES ===================== -->
+<section class="section section--alt" aria-label="How Arab-X is designed">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">How It Is Built</span>
+      <h2>Three design principles govern the program.</h2>
+    </div>
+    <div class="cols3">
+      <div class="tcol reveal"><h3>Concentration</h3><p>The agenda stays focused on where Arab American enterprise has national leverage: business data, entrepreneurship pipelines, and MENA trade, rather than spreading thin across unrelated topics.</p></div>
+      <div class="tcol reveal d1"><h3>Alignment</h3><p>Corporate partners, foundations, elected officials, universities, and diaspora leaders leave carrying the same narrative. Repetition across credible voices is what hardens a market position.</p></div>
+      <div class="tcol reveal d2"><h3>Concentrated attention</h3><p>The program is single track, so the whole room hears the same conversation and leaves with the same reference points. The measure of the conference is what gets built afterward.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROGRAM ===================== -->
+<section class="section program ondark anchor" id="program" aria-label="Program">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label label--ondark">Program at a Glance</span>
+      <h2>Two evenings and one full working day.</h2>
+      <p class="lede">The reception builds the relationship. The conference day does the business. The gala makes it public. A partnership written across all three settings is seen by the same decision-makers three times in two days.</p>
+    </div>
+    <div class="settings reveal">
+      <div class="setting">
+        <div class="setting__when">Thursday, October 29 &middot; Evening</div>
+        <h3>Welcome Reception</h3>
+        <p>An invitation-level gathering the evening before: sponsors, panelists, visiting delegations, and invited elected officials. No program to sit through. This is the room where the relationships that make Friday productive actually form.</p>
+        <div class="setting__foot">Access is a partnership benefit, not a general ticket.</div>
+      </div>
+      <div class="setting">
+        <div class="setting__when">Friday, October 30 &middot; All Day</div>
+        <h3>The Conference</h3>
+        <p>A full working day built around six panels, a hosted Signature Luncheon with a featured speaker, and an exhibition concourse open throughout. Single track: the same audience is in the room from welcome to closing.</p>
+        <div class="setting__foot">Breakfast from 7:30 am. Program runs to 4:05 pm.</div>
+      </div>
+      <div class="setting">
+        <div class="setting__when">Friday, October 30 &middot; 7:00 pm</div>
+        <h3>The Arab-X Gala</h3>
+        <p>A seated dinner with a keynote address, and at a projected 450 guests, the public face of the convening: the room where the community, its business leadership, and its elected officials are seen together.</p>
+        <div class="setting__foot">Reserved tables of eight. Press and photography throughout.</div>
+      </div>
+    </div>
+
+    <div class="agenda reveal">
+      <div class="agenda__day">Friday, October 30 &middot; Conference Day</div>
+      <div class="agenda__row"><span class="agenda__time">7:30 am</span><span class="agenda__what">Registration and Breakfast</span><span class="agenda__len">50 min</span></div>
+      <div class="agenda__row"><span class="agenda__time">8:20 am</span><span class="agenda__what">Welcome and Remarks, Special Guest</span><span class="agenda__len">20 min</span></div>
+      <div class="agenda__row"><span class="agenda__time">8:45 am</span><span class="agenda__what">Panel 01 &middot; Building a Successful Arab American Business</span><span class="agenda__len">50 min</span></div>
+      <div class="agenda__row"><span class="agenda__time">9:35 am</span><span class="agenda__what">Panel 02 &middot; Taking Your Business to the Next Level</span><span class="agenda__len">50 min</span></div>
+      <div class="agenda__row"><span class="agenda__time">10:30 am</span><span class="agenda__what">Panel 03 &middot; Social Impact: Invest in Your Business and the Community</span><span class="agenda__len">50 min</span></div>
+      <div class="agenda__row"><span class="agenda__time">11:30 am</span><span class="agenda__what">Signature Luncheon, Featured Speaker</span><span class="agenda__len">1 hour</span></div>
+      <div class="agenda__row"><span class="agenda__time">12:30 pm</span><span class="agenda__what">Panel 04 &middot; VC Attraction</span><span class="agenda__len">50 min</span></div>
+      <div class="agenda__row"><span class="agenda__time">1:25 pm</span><span class="agenda__what">Panel 05 &middot; Policy Impacting Local Businesses</span><span class="agenda__len">50 min</span></div>
+      <div class="agenda__row"><span class="agenda__time">2:20 pm</span><span class="agenda__what">Panel 06 &middot; How AI Will Impact Entrepreneurship</span><span class="agenda__len">50 min</span></div>
+      <div class="agenda__row"><span class="agenda__time">3:15 pm</span><span class="agenda__what">Closing Remarks</span><span class="agenda__len">50 min</span></div>
+      <div class="agenda__row"><span class="agenda__time">7:00 pm</span><span class="agenda__what">Arab-X Gala, Keynote Address</span><span class="agenda__len">Evening</span></div>
+    </div>
+    <p class="agenda__note reveal">Agenda is in draft. Times, panel titles, and speakers remain subject to development. An invitation-only Executive Roundtable for 25 to 50 senior executives, investors, and public officials is also planned alongside the main program.</p>
+  </div>
+</section>
+
+<!-- ===================== WHO IS IN THE ROOM ===================== -->
+<section class="section anchor" id="room" aria-label="Who is in the room">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">The Audience</span>
+      <h2>Who is in the room.</h2>
+      <p class="lede">Arab-X is a decision-maker convening. The value of a partnership here is not audience size; it is audience composition.</p>
+    </div>
+    <div class="projrow reveal">
+      <div class="proj"><div class="proj__n">450</div><div class="proj__l">Gala guests, Friday evening</div></div>
+      <div class="proj"><div class="proj__n">300&ndash;400</div><div class="proj__l">Conference delegates</div></div>
+      <div class="proj"><div class="proj__n">150&ndash;200</div><div class="proj__l">Reception, invitation only</div></div>
+      <div class="proj"><div class="proj__n">25&ndash;50</div><div class="proj__l">Executive roundtable</div></div>
+    </div>
+    <div class="audgrid">
+      <div class="aud reveal"><h3>Founders, owners &amp; operators</h3><p>Arab American business owners across retail, real estate, logistics, food, healthcare, professional services, manufacturing, and technology.</p></div>
+      <div class="aud reveal d1"><h3>Corporate procurement</h3><p>Sourcing, supplier diversity, and category leads from regional and national corporations looking for qualified vendors and measurable diverse-spend outcomes.</p></div>
+      <div class="aud reveal d2"><h3>Capital</h3><p>Commercial lenders, SBA-preferred lenders, CDFIs, family offices, angel investors, and venture funds active in the Midwest and in MENA-linked deal flow.</p></div>
+      <div class="aud reveal"><h3>Public sector</h3><p>Federal, state, county, and municipal economic development officials, elected officials, and agency representatives with contracting and incentive authority.</p></div>
+      <div class="aud reveal d1"><h3>Institutional partners</h3><p>Universities, community colleges, workforce boards, foundations, and nonprofit partners tied to entrepreneurship and small-business development.</p></div>
+      <div class="aud reveal d2"><h3>International &amp; trade</h3><p>MENA trade delegations, consular and commercial representatives, and diaspora business leadership from outside Michigan.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CASE FOR PARTNERSHIP ===================== -->
+<section class="section section--alt" aria-label="The case for partnership">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">Why Partner</span>
+      <h2>Four returns. Structural, not incidental.</h2>
+      <p class="lede">Sponsorship of Arab-X is a market-access decision.</p>
+    </div>
+    <div class="cols2">
+      <div class="tcol tcol--lime reveal"><h3>Market access</h3><p>Arab American consumers and businesses represent a growing, brand-loyal, and under-served commercial market. Arab-X puts your organization in front of its ownership class directly, in a room where credibility transfers.</p></div>
+      <div class="tcol tcol--lime reveal d1"><h3>Procurement and supplier pipeline</h3><p>If your organization carries diverse-spend or local-sourcing targets, this is a qualified-vendor pipeline in one room, with the Chamber available to support verification, readiness, and follow-through.</p></div>
+      <div class="tcol tcol--lime reveal"><h3>Data and thought leadership</h3><p>The Chamber is building the national economic intelligence layer for Arab American business. Partners are positioned alongside that work: on the panels, in the publications, and in the coverage that follows.</p></div>
+      <div class="tcol tcol--lime reveal d1"><h3>National visibility with substance</h3><p>Founding partners of the inaugural Arab-X are named in the record of the first year of a convening built to run for decades, and are credited across the Chamber's channels well beyond the conference dates.</p></div>
+    </div>
+    <div class="floor reveal">
+      <h3>What every corporate partner receives</h3>
+      <ul>
+        <li>Logo recognition on the Arab-X sponsor page and in the printed program</li>
+        <li>Logo on concourse recognition signage at the conference</li>
+        <li>Verbal recognition from the podium during the program</li>
+        <li>Inclusion in the post-conference report to delegates, partners, and press</li>
+        <li>A named Chamber staff contact from commitment through delivery</li>
+        <li>A written post-conference recap of what your partnership delivered</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PARTNERSHIP ===================== -->
+<section class="section anchor" id="partnership" aria-label="Partnership levels">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">Partnership Opportunities</span>
+      <h2>The partnership portfolio.</h2>
+      <p class="lede">The senior positions, Tier I, the Luncheon, and the six panels, are limited so recognition at those levels carries real weight. Tier III is broad by design: the accessible level that puts a company in the room at both the conference and the gala.</p>
+    </div>
+
+    <div class="ratecard reveal">
+      <div class="tierrow tierrow--flag">
+        <div class="tierrow__id">
+          <span class="avail">Tier I &middot; Three available</span>
+          <h3>Founding National Partner</h3>
+          <div class="price">$25,000</div>
+          <div class="per">Per partner</div>
+        </div>
+        <div class="tierrow__body">
+          <ul>
+            <li>Founding designation in the permanent record of the inaugural year</li>
+            <li>Logo beside the Arab-X name on the website, program, and main-stage backdrop</li>
+            <li>Three minutes of welcome remarks from the main stage and a seat on the Host Committee</li>
+            <li>Eight conference registrations, a premium gala table of eight, and a reserved reception table</li>
+            <li>Chamber-facilitated introductions to as many as five delegate organizations</li>
+          </ul>
+        </div>
+        <div class="tierrow__act"><a class="btn btn--lime" href="mailto:sponsorship@americanarab.com?subject=Arab-X%20Tier%20I%20Founding%20National%20Partner">Inquire</a></div>
+      </div>
+      <div class="tierrow">
+        <div class="tierrow__id">
+          <span class="avail">One available &middot; Exclusive</span>
+          <h3>Signature Luncheon Underwriter</h3>
+          <div class="price">$25,000</div>
+          <div class="per">Exclusive</div>
+        </div>
+        <div class="tierrow__body">
+          <ul>
+            <li>Exclusive naming: &ldquo;The [Company] Signature Luncheon&rdquo;</li>
+            <li>The one seated, hosted hour when the entire conference sits down together</li>
+            <li>Five minutes of remarks and introduction of the luncheon keynote</li>
+            <li>Eight conference registrations, a reserved gala table of eight, and a reception table</li>
+          </ul>
+        </div>
+        <div class="tierrow__act"><a class="tlink" href="mailto:sponsorship@americanarab.com?subject=Arab-X%20Signature%20Luncheon%20Underwriter">Inquire &rarr;</a></div>
+      </div>
+      <div class="tierrow">
+        <div class="tierrow__id">
+          <span class="avail">Tier II &middot; Five available</span>
+          <h3>Innovation Partner</h3>
+          <div class="price">$10,000</div>
+          <div class="per">Per partner</div>
+        </div>
+        <div class="tierrow__body">
+          <ul>
+            <li>Eight conference registrations, a reserved gala table of eight, and eight reception invitations</li>
+            <li>Half-page program advertisement and two dedicated social posts</li>
+            <li>Standard exhibition table in the concourse</li>
+            <li>Chamber-facilitated introductions to as many as two delegate organizations</li>
+          </ul>
+        </div>
+        <div class="tierrow__act"><a class="tlink" href="mailto:sponsorship@americanarab.com?subject=Arab-X%20Tier%20II%20Innovation%20Partner">Inquire &rarr;</a></div>
+      </div>
+      <div class="tierrow">
+        <div class="tierrow__id">
+          <span class="avail">Six available &middot; One per panel</span>
+          <h3>Panel Underwriter</h3>
+          <div class="price">$10,000</div>
+          <div class="per">Per panel</div>
+        </div>
+        <div class="tierrow__body">
+          <ul>
+            <li>&ldquo;This panel is presented by [Company],&rdquo; in front of the entire conference</li>
+            <li>Sole brand associated with one full fifty-minute panel, with framing remarks</li>
+            <li>Co-branded panel recording for your own channels</li>
+            <li>Four conference registrations, four gala seats, and four reception invitations</li>
+          </ul>
+        </div>
+        <div class="tierrow__act"><a class="tlink" href="mailto:sponsorship@americanarab.com?subject=Arab-X%20Panel%20Underwriter">Inquire &rarr;</a></div>
+      </div>
+      <div class="tierrow">
+        <div class="tierrow__id">
+          <span class="avail">Tier III &middot; Thirty-two available</span>
+          <h3>Enterprise Partner</h3>
+          <div class="price">$5,000</div>
+          <div class="per">Per partner</div>
+        </div>
+        <div class="tierrow__body">
+          <ul>
+            <li>Four conference registrations and four gala seats</li>
+            <li>Logo on the sponsor page, printed program, and concourse signage</li>
+            <li>Quarter-page program advertisement and one dedicated social post</li>
+            <li>Add-ons: private gala table of eight with signage ($1,000), reception access for two ($500)</li>
+          </ul>
+        </div>
+        <div class="tierrow__act"><a class="tlink" href="mailto:sponsorship@americanarab.com?subject=Arab-X%20Tier%20III%20Enterprise%20Partner">Inquire &rarr;</a></div>
+      </div>
+    </div>
+
+    <p class="combine reveal"><strong>Combine a panel with a tier.</strong> A Panel Underwriting at $10,000 combines with Tier II at $10,000 for a $20,000 total commitment: panel naming plus the full Tier II package, recognized immediately below Tier I across all materials. In-kind, nonprofit, multi-year, and fully custom structures are also available; the Chamber would rather design the right partnership than sell a listed one.</p>
+
+    <div class="matrix reveal">
+      <h3>The portfolio at a glance</h3>
+      <div class="scrollx">
+      <table class="mtable">
+        <thead>
+          <tr><th>Partnership</th><th>Investment</th><th>Available</th><th>Conference seats</th><th>Gala seats</th><th>Reception</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Tier I &middot; Founding National Partner</td><td>$25,000</td><td>3</td><td>8</td><td>Table of 8</td><td>Table of 8</td></tr>
+          <tr><td>Signature Luncheon Underwriter</td><td>$25,000</td><td>1, exclusive</td><td>8</td><td>Table of 8</td><td>Table of 8</td></tr>
+          <tr><td>Tier II &middot; Innovation Partner</td><td>$10,000</td><td>5</td><td>8</td><td>Table of 8</td><td>8 invitations</td></tr>
+          <tr><td>Panel Underwriter</td><td>$10,000</td><td>6, one per panel</td><td>4</td><td>4</td><td>4 invitations</td></tr>
+          <tr><td>Tier III &middot; Enterprise Partner</td><td>$5,000</td><td>32</td><td>4</td><td>4</td><td>Add-on</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INSTITUTIONS ===================== -->
+<section class="section section--alt" aria-label="The institutions">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">The Institutions</span>
+      <h2>Tejara and the Chamber.</h2>
+      <p class="lede">Tejara develops the pipeline. The Chamber aggregates the data, capital, and convening power around it. Arab-X is where the two meet in public.</p>
+    </div>
+    <div class="insts">
+      <div class="inst reveal">
+        <span class="inst__tag">The Presenter</span>
+        <h3>Tejara Innovation Hub</h3>
+        <p>Tejara is the Chamber's entrepreneurship platform and physical hub in Metro Detroit: the pipeline that develops founders and early-stage companies through programming, technical assistance, capital readiness, and access to a working network of operators. Arab-X is Tejara's national convening.</p>
+        <div class="inst__stats">
+          <div class="inst__stat"><b>100+</b><span>Entrepreneurs supported</span></div>
+          <div class="inst__stat"><b>Dozens</b><span>Early-stage companies</span></div>
+        </div>
+      </div>
+      <div class="inst reveal d1">
+        <span class="inst__tag">The Partner</span>
+        <h3>American Arab Chamber of Commerce</h3>
+        <p>Founded in the early 1990s and rooted in Dearborn, Michigan, the Chamber serves as the economic arm of the Arab American community: advancing entrepreneurship, expanding access to capital and procurement, convening national economic leadership, and strengthening connections to global markets.</p>
+        <div class="inst__stats">
+          <div class="inst__stat"><b>30+</b><span>Years of institutional work</span></div>
+          <div class="inst__stat"><b>2,100+</b><span>Members nationwide</span></div>
+          <div class="inst__stat"><b>70+</b><span>Partner organizations</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ATTEND ===================== -->
+<section class="section anchor" id="attend" aria-label="Individual attendance">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">Attendance &amp; Tickets</span>
+      <h2>Individual attendance.</h2>
+      <p class="lede">Open to Chamber members, non-members, and guests. Corporate partners receive registrations as part of their package and do not need to purchase separately.</p>
+    </div>
+    <div class="passes">
+      <div class="pass reveal">
+        <h3>Full Access Pass</h3>
+        <div class="pass__price">$485</div>
+        <div class="pass__per">Per person</div>
+        <ul>
+          <li>Welcome Reception on Thursday evening</li>
+          <li>The full conference day: welcome remarks and all six panels</li>
+          <li>The Signature Luncheon, seated</li>
+          <li>A reserved seat at the Arab-X Gala with plated dinner and keynote</li>
+          <li>Concourse access, delegate materials, and the printed program</li>
+        </ul>
+      </div>
+      <div class="pass reveal d1">
+        <h3>Gala Table Seat</h3>
+        <div class="pass__price">$250</div>
+        <div class="pass__per">Per seat</div>
+        <ul>
+          <li>A reserved seated place at the Arab-X Gala</li>
+          <li>Cocktail reception beforehand and assigned table seating</li>
+          <li>Full plated dinner, with halal and vegetarian service</li>
+          <li>The complete gala program, including the keynote address</li>
+        </ul>
+      </div>
+    </div>
+    <p class="passes__note reveal">Registration opens ahead of the conference. Halal and vegetarian service is accommodated; note requirements at registration. Registrations are transferable to another named attendee up to seven days before the conference.</p>
+  </div>
+</section>
+
+<!-- ===================== CLOSE ===================== -->
+<section class="close" aria-label="Become a partner">
+  <div class="close__bg" aria-hidden="true"><img src="assets/img/arabx-audience.jpg" alt="" /></div>
+  <div class="close__scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="close__tag reveal">Building Economic Bridges. Advancing Economic Power.</p>
+    <h2 class="reveal">Partner with the inaugural Arab-X.</h2>
+    <p class="reveal d1">Arab-X is built to run annually, and founding partners of the first year are named in its permanent record. The number of founding positions is small, and the Chamber would rather design the right partnership than sell a listed one.</p>
+    <div class="close__cta reveal d2">
+      <a class="btn btn--lime" href="mailto:sponsorship@americanarab.com?subject=Arab-X%202026%20Partnership%20Inquiry">Become a Partner <span class="arw">&rarr;</span></a>
+    </div>
+    <p class="close__contact reveal d3">Partnership inquiries &middot; <a href="mailto:sponsorship@americanarab.com">sponsorship@americanarab.com</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft__inner">
+      <div class="ft__brand">ARAB<span class="x">X</span></div>
+      <div class="ft__links">
+        <a href="https://tejara.org" target="_blank" rel="noopener">tejara.org</a>
+        <a href="https://americanarab.com" target="_blank" rel="noopener">americanarab.com</a>
+        <a href="mailto:sponsorship@americanarab.com">sponsorship@americanarab.com</a>
+      </div>
+    </div>
+    <div class="ft__line">
+      <span>Presented by the Tejara Innovation Hub, in partnership with the American Arab Chamber of Commerce.</span>
+      <span>October 29 &amp; 30, 2026 &middot; Detroit, Michigan</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var nav = document.getElementById('nav');
+  function onScroll(){ var y = window.scrollY || window.pageYOffset; if(y > 56){ nav.classList.add('solid'); } else if(y < 20){ nav.classList.remove('solid'); } }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  var menu = document.getElementById('mobileMenu');
+  var mBtn = document.getElementById('menuBtn');
+  var mClose = document.getElementById('mobileClose');
+  function setMenu(open){ menu.classList.toggle('open', open); mBtn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+  if(mBtn){ mBtn.addEventListener('click', function(){ setMenu(true); }); }
+  if(mClose){ mClose.addEventListener('click', function(){ setMenu(false); }); }
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ setMenu(false); } });
+
+  var revs = document.querySelectorAll('.reveal');
+  if(reduce || !('IntersectionObserver' in window)){
+    revs.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.13});
+    revs.forEach(function(el){ io.observe(el); });
+  }
+
+  var counters = document.querySelectorAll('[data-count]');
+  function animate(el){
+    var to = parseInt(el.getAttribute('data-count'), 10);
+    var t0 = null, dur = 1200;
+    function frame(t){
+      if(!t0){ t0 = t; }
+      var p = Math.min((t - t0) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(to * eased).toLocaleString('en-US');
+      if(p < 1){ requestAnimationFrame(frame); }
+    }
+    requestAnimationFrame(frame);
+  }
+  if(!reduce && 'IntersectionObserver' in window){
+    var cio = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ animate(e.target); cio.unobserve(e.target); } });
+    }, {threshold:.6});
+    counters.forEach(function(el){ cio.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
