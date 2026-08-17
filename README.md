@@ -25,11 +25,22 @@ Then open http://localhost:8139/
 
 ## Notes
 
-- Brand tokens: petrol `#12495C` / deep `#0C3140` / teal-black `#092832`, flat lime `#A5CE5D`
-  (dark variant `#5F8A2A` on white). Font: Montserrat only. No gradients on components, no script fonts.
+- Brand tokens are sampled from the Arab-X logo: navy `#16345C` / logo-ground `#0F2440` /
+  deepest `#091729`, and the two greens of the X mark, lime `#84C862` (on navy) and
+  teal-green `#2E8C6C` / `#1F7A5C` (on white). CSS variable names still read `--petrol*`
+  and `--lime*` from the earlier teal build; only the values moved.
+  Font: Montserrat only. No gradients on components, no script fonts.
+- The wordmark is sentence-case `Arab` + a gradient `X` (`.x`), matching the logo lockup.
+  It uses `background-image` plus `background-clip:text`. Never switch that to the
+  `background` shorthand: the shorthand resets `background-clip` and the X renders as a
+  solid green block.
 - Hero/closing photo is the Chamber's own event photograph extracted from the packet
   (`assets/img/arabx-audience.jpg`). Wikimedia Detroit photos remain in assets (unused
   by index.html) with attribution in `assets/img/CREDITS.md`.
 - Partnership CTAs point to sponsorship@americanarab.com (from the packet).
 - The $370,000 total partnership goal is deliberately NOT on the public page.
-- No venue named yet; registration not wired (see registration research in project notes).
+- Venue is The Westin Book Cadillac Detroit; the Marriott room block releases Sept 25, 2026.
+- Registration is wired to Stripe Payment Links. The gala-only link is in the markup but
+  commented out at the Chamber's request.
+- The logo artwork itself is not in `assets/` yet, so the wordmark is set in type rather
+  than placed as the real vector mark. Drop the file in and swap it when available.
