@@ -25,15 +25,17 @@ Then open http://localhost:8139/
 
 ## Notes
 
-- Brand tokens are sampled from the Arab-X logo: navy `#16345C` / logo-ground `#0F2440` /
-  deepest `#091729`, and the two greens of the X mark, lime `#84C862` (on navy) and
-  teal-green `#2E8C6C` / `#1F7A5C` (on white). CSS variable names still read `--petrol*`
-  and `--lime*` from the earlier teal build; only the values moved.
-  Font: Montserrat only. No gradients on components, no script fonts.
-- The wordmark is sentence-case `Arab` + a gradient `X` (`.x`), matching the logo lockup.
-  It uses `background-image` plus `background-clip:text`. Never switch that to the
-  `background` shorthand: the shorthand resets `background-clip` and the X renders as a
-  solid green block.
+- Brand tokens are sampled pixel-for-pixel from the logo file, not estimated: plate navy
+  `#021D3B`, and the X mark's own teal `#1A6F6C`, green `#0D806A`, and lime `#99D274`.
+  CSS variable names still read `--petrol*` and `--lime*` from the earlier teal build;
+  only the values moved. Font: Montserrat only. No gradients on components, no script fonts.
+- The wordmark is the logo artwork, not type. Two files in `assets/img/`:
+  - `arabx-logo.png` is the logo exactly as supplied, navy plate included.
+  - `arabx-logo-alpha.png` is the same artwork with the flat plate keyed out, so the mark
+    can sit over the hero photograph without a rectangle behind it.
+  Both are needed because the wordmark is white and the nav turns white on scroll: the
+  nav shows the alpha version while transparent and swaps to the plate version when solid.
+  If the brand ever supplies a vector or a dark-text variant, swap those in.
 - Hero/closing photo is the Chamber's own event photograph extracted from the packet
   (`assets/img/arabx-audience.jpg`). Wikimedia Detroit photos remain in assets (unused
   by index.html) with attribution in `assets/img/CREDITS.md`.
@@ -42,5 +44,5 @@ Then open http://localhost:8139/
 - Venue is The Westin Book Cadillac Detroit; the Marriott room block releases Sept 25, 2026.
 - Registration is wired to Stripe Payment Links. The gala-only link is in the markup but
   commented out at the Chamber's request.
-- The logo artwork itself is not in `assets/` yet, so the wordmark is set in type rather
-  than placed as the real vector mark. Drop the file in and swap it when available.
+- Only a raster logo exists so far. A vector (SVG/AI/EPS) from the brand would render
+  sharper at the hero size and would let the two derived files be generated properly.
