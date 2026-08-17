@@ -9,12 +9,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
 :root{
-  /* Palette is taken from the Arab-X logo: navy ground, white wordmark, and the
-     two greens of the X mark (teal-green at the fold, lime on the bright panel).
-     Names are kept from the previous teal build so every downstream rule still
-     resolves; only the values moved. */
-  --petrol:#16345C; --petrol-deep:#0F2440; --tealblack:#091729;
-  --lime:#84C862; --lime-dark:#1F7A5C; --green-mid:#2E8C6C;
+  /* Sampled pixel-for-pixel out of assets/img/arabx-logo.png, not approximated:
+     #021D3B is the logo plate, and the three greens are the X mark's own teal, green,
+     and bright panel. All three greens clear 4.5:1 on white (5.94 / 4.87 / used only
+     on navy), so the brand colors are used directly with nothing invented.
+     Variable names still read --petrol/--lime from the earlier teal build; only the
+     values moved, so every downstream rule still resolves. */
+  --petrol:#021D3B; --petrol-deep:#01142B; --tealblack:#010F21;
+  --lime:#99D274; --lime-dark:#0D806A; --green-mid:#1A6F6C;
   /* --mut is only ever used at 11-13px, so it has to clear 4.5:1 on white, not the
      3:1 large-text floor. #68778A measures 4.57:1. */
   --ink:#0F2033; --body:#44515F; --mut:#68778A;
@@ -66,19 +68,15 @@ header.nav{ position:fixed; top:0; left:0; right:0; z-index:60; border-bottom:1p
   transition:background .3s var(--ease), border-color .3s var(--ease); }
 header.nav.solid{ background:rgba(255,255,255,.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
 .nav__inner{ max-width:var(--maxw); margin:0 auto; padding:18px var(--gutter); display:flex; align-items:center; justify-content:space-between; gap:24px; }
-.brand{ font-weight:800; font-size:20px; letter-spacing:-.005em; color:#fff; white-space:nowrap; transition:color .3s var(--ease); }
-/* The X in the logo is a single mark that runs teal-green at the fold into lime on
-   the bright panel, so the letterform carries both greens rather than one flat tint.
-   The solid `color` is the fallback if background-clip:text is unsupported. */
-/* `background-image`, never the `background` shorthand: the shorthand resets
-   background-clip to border-box, which drops the text clip and paints a solid
-   green block over the glyph. Overrides below must use the longhand too. */
-.x{ color:var(--lime); margin-left:.03em;
-    background-image:linear-gradient(115deg, var(--green-mid) 0%, var(--green-mid) 38%, var(--lime) 78%);
-    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
-header.nav.solid .brand{ color:var(--ink); }
-header.nav.solid .brand .x{ color:var(--lime-dark);
-    background-image:linear-gradient(115deg, var(--lime-dark) 0%, var(--lime-dark) 38%, var(--green-mid) 82%); }
+/* The wordmark is the supplied logo artwork, not type. Two files are needed because
+   the mark's wordmark is white while the nav turns white on scroll:
+     -alpha  = navy plate keyed out, for dark grounds and over photography
+     (plain) = the logo exactly as supplied, plate included, for the white nav */
+.brand{ display:block; line-height:0; }
+.brand__mark{ height:30px; width:auto; display:block; }
+.brand__mark--plate{ display:none; }
+header.nav.solid .brand__mark--alpha{ display:none; }
+header.nav.solid .brand__mark--plate{ display:block; }
 nav.links{ display:flex; align-items:center; gap:30px; }
 nav.links a{ font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.13em; color:rgba(255,255,255,.88); padding:6px 0; position:relative; transition:color .3s var(--ease); }
 header.nav.solid nav.links a{ color:var(--body); }
@@ -106,8 +104,8 @@ header.nav.solid .menu-btn{ border-color:var(--line); color:var(--ink); }
 .hero__inner{ position:relative; z-index:2; padding:170px 0 0; }
 .hero__presenter{ font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.2em; color:var(--lime); margin-bottom:30px; }
 .hero__presenter span{ display:inline-block; margin-top:7px; color:rgba(255,255,255,.65); }
-.hero h1{ color:#fff; font-size:clamp(58px,9.5vw,128px); font-weight:800; letter-spacing:-.02em; line-height:.95; }
-.hero h1 .x{ margin-left:.02em; }
+.hero h1{ margin:0; line-height:0; }
+.hero h1 img{ width:min(560px,74vw); height:auto; }
 .hero__sub{ font-size:clamp(19px,2.1vw,26px); font-weight:500; line-height:1.4; color:rgba(255,255,255,.92); max-width:26em; margin-top:24px; }
 .hero__date{ font-size:14px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#fff; margin-top:26px; }
 .hero__date .sep{ color:var(--lime); padding-inline:10px; }
@@ -224,8 +222,8 @@ header.nav.solid .menu-btn{ border-color:var(--line); color:var(--ink); }
 /* ===================== FOOTER ===================== */
 footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 34px; }
 .ft__inner{ display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap; }
-.ft__brand{ font-weight:800; font-size:17px; color:#fff; letter-spacing:-.005em; }
-.ft__brand .x{ margin-left:.03em; }
+.ft__brand{ line-height:0; }
+.ft__brand img{ height:28px; width:auto; }
 .ft__links{ display:flex; gap:24px; font-size:13px; font-weight:500; }
 .ft__links a:hover{ color:#fff; }
 .ft__line{ margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,.12); font-size:12px; color:rgba(255,255,255,.38); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
@@ -267,7 +265,10 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
 
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a class="brand" href="#top" aria-label="Arab-X home">Arab<span class="x">X</span></a>
+    <a class="brand" href="#top" aria-label="Arab-X home">
+      <img class="brand__mark brand__mark--alpha" src="assets/img/arabx-logo-alpha.png" width="1002" height="320" alt="Arab-X" />
+      <img class="brand__mark brand__mark--plate" src="assets/img/arabx-logo.png" width="1002" height="320" alt="" aria-hidden="true" />
+    </a>
     <nav class="links" aria-label="Primary">
       <a href="#convening">About</a>
       <a href="#program">Program</a>
@@ -304,7 +305,7 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
   <div class="hero__scrim" aria-hidden="true"></div>
   <div class="wrap hero__inner">
     <p class="hero__presenter">Presented by the Tejara Innovation Hub<br/><span>In partnership with the American Arab Chamber of Commerce</span></p>
-    <h1>Arab<span class="x">X</span></h1>
+    <h1><img src="assets/img/arabx-logo-alpha.png" width="1002" height="320" alt="Arab-X" /></h1>
     <p class="hero__sub">The National Arab American Entrepreneurship Conference</p>
     <p class="hero__date">October 30, 2026 <span class="sep">&middot;</span> Detroit, Michigan</p>
     <div class="hero__cta">
@@ -577,7 +578,7 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
 <footer>
   <div class="wrap">
     <div class="ft__inner">
-      <div class="ft__brand">Arab<span class="x">X</span></div>
+      <div class="ft__brand"><img src="assets/img/arabx-logo-alpha.png" width="1002" height="320" alt="Arab-X" /></div>
       <div class="ft__links">
         <a href="https://tejara.org" target="_blank" rel="noopener">tejara.org</a>
         <a href="https://americanarab.com" target="_blank" rel="noopener">americanarab.com</a>
