@@ -66,29 +66,23 @@ img{ max-width:100%; display:block; }
 /* ===================== NAV ===================== */
 header.nav{ position:fixed; top:0; left:0; right:0; z-index:60; border-bottom:1px solid transparent;
   transition:background .3s var(--ease), border-color .3s var(--ease); }
-header.nav.solid{ background:rgba(255,255,255,.95); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+/* Scrolled state settles to the logo's own plate navy, not white. That keeps the bar
+   dark in both states, so the mark stays the white-wordmark version throughout and
+   never has to swap to the plate-backed file. */
+header.nav.solid{ background:rgba(2,29,59,.94); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,.14); }
 .nav__inner{ max-width:var(--maxw); margin:0 auto; padding:18px var(--gutter); display:flex; align-items:center; justify-content:space-between; gap:24px; }
-/* The wordmark is the supplied logo artwork, not type. Two files are needed because
-   the mark's wordmark is white while the nav turns white on scroll:
-     -alpha  = navy plate keyed out, for dark grounds and over photography
-     (plain) = the logo exactly as supplied, plate included, for the white nav */
+/* The wordmark is the supplied logo artwork, not type. The bar is dark in both states,
+   so only the keyed-out file is ever needed here. assets/img/arabx-logo.png is kept as
+   the untouched original but is no longer referenced by the page. */
 .brand{ display:block; line-height:0; }
 .brand__mark{ height:30px; width:auto; display:block; }
-.brand__mark--plate{ display:none; }
-header.nav.solid .brand__mark--alpha{ display:none; }
-header.nav.solid .brand__mark--plate{ display:block; }
 nav.links{ display:flex; align-items:center; gap:30px; }
 nav.links a{ font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.13em; color:rgba(255,255,255,.88); padding:6px 0; position:relative; transition:color .3s var(--ease); }
-header.nav.solid nav.links a{ color:var(--body); }
 nav.links a::after{ content:""; position:absolute; left:0; bottom:0; height:1.5px; width:0; background:var(--lime); transition:width .25s var(--ease); }
-header.nav.solid nav.links a::after{ background:var(--petrol); }
 nav.links a:hover::after{ width:100%; }
 .nav__cta .btn{ padding:12px 22px; font-size:11.5px; background:transparent; border-color:rgba(255,255,255,.6); color:#fff; }
 .nav__cta .btn:hover{ background:rgba(255,255,255,.12); border-color:#fff; }
-header.nav.solid .nav__cta .btn{ background:var(--petrol); border-color:var(--petrol); color:#fff; }
-header.nav.solid .nav__cta .btn:hover{ background:var(--petrol-deep); }
 .menu-btn{ display:none; background:none; border:1px solid rgba(255,255,255,.5); border-radius:2px; color:#fff; padding:10px; cursor:pointer; line-height:0; }
-header.nav.solid .menu-btn{ border-color:var(--line); color:var(--ink); }
 .mobile-menu{ position:fixed; inset:0; z-index:70; background:var(--petrol-deep); padding:92px var(--gutter) 40px; overflow-y:auto;
   transform:translateY(-12px); opacity:0; visibility:hidden; transition:opacity .3s var(--ease), transform .3s var(--ease), visibility .3s; }
 .mobile-menu.open{ opacity:1; visibility:visible; transform:none; }
@@ -266,8 +260,7 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
 <header class="nav" id="nav">
   <div class="nav__inner">
     <a class="brand" href="#top" aria-label="Arab-X home">
-      <img class="brand__mark brand__mark--alpha" src="assets/img/arabx-logo-alpha.png" width="1002" height="320" alt="Arab-X" />
-      <img class="brand__mark brand__mark--plate" src="assets/img/arabx-logo.png" width="1002" height="320" alt="" aria-hidden="true" />
+      <img class="brand__mark" src="assets/img/arabx-logo-alpha.png" width="1002" height="320" alt="Arab-X" />
     </a>
     <nav class="links" aria-label="Primary">
       <a href="#convening">About</a>
