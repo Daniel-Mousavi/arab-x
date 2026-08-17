@@ -179,8 +179,12 @@ header.nav.solid .menu-btn{ border-color:var(--line); color:var(--ink); }
 .inst__stat span{ font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--mut); }
 
 /* ===================== ATTEND ===================== */
-.passes{ display:grid; grid-template-columns:1fr; gap:clamp(32px,5vw,72px); max-width:520px; }
-.pass{ border-top:2px solid var(--ink); padding-top:22px; }
+.attend-cols{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,5vw,72px); }
+.pass, .venue{ border-top:2px solid var(--ink); padding-top:22px; }
+.pass .btn{ margin-top:26px; }
+.venue h3{ font-size:19px; }
+.venue p{ font-size:14.5px; line-height:1.7; margin-top:14px; }
+.venue .tlink{ display:inline-flex; }
 .pass h3{ font-size:19px; }
 .pass__price{ font-weight:800; font-size:38px; color:var(--petrol); letter-spacing:-.02em; margin-top:12px; }
 .pass__per{ font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.13em; color:var(--mut); margin:2px 0 16px; }
@@ -235,7 +239,7 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
   .audgrid{ grid-template-columns:1fr; }
   .floor ul{ grid-template-columns:1fr; }
   .insts{ grid-template-columns:1fr; }
-  .passes{ grid-template-columns:1fr; }
+  .attend-cols{ grid-template-columns:1fr; }
   .agenda__row{ grid-template-columns:1fr; gap:3px; }
 }
 @media (prefers-reduced-motion: reduce){
@@ -252,12 +256,13 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
     <nav class="links" aria-label="Primary">
       <a href="#convening">About</a>
       <a href="#program">Program</a>
+      <a href="#pillars">Pillars</a>
       <a href="#room">Audience</a>
       <a href="#partnership">Partnership</a>
       <a href="#attend">Attend</a>
     </nav>
     <div class="nav__cta">
-      <a class="btn" href="mailto:hello@tejara.org?subject=Arab-X%202026%20Partnership%20Inquiry">Partner With Us</a>
+      <a class="btn" href="https://airtable.com/appI0H0TUo4rmvqaN/pagDIGgF91BHX9Vkk/form" target="_blank" rel="noopener">Partner With Us</a>
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
       <svg width="22" height="15" viewBox="0 0 22 15" fill="none"><path d="M0 1.5h22M0 7.5h22M0 13.5h22" stroke="currentColor" stroke-width="1.7"/></svg>
@@ -269,10 +274,11 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
   <button class="mobile-close" id="mobileClose" aria-label="Close menu"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M1 1l18 18M19 1L1 19" stroke="currentColor" stroke-width="1.7"/></svg></button>
   <a href="#convening">About</a>
   <a href="#program">Program</a>
+  <a href="#pillars">Pillars</a>
   <a href="#room">Audience</a>
   <a href="#partnership">Partnership</a>
   <a href="#attend">Attend</a>
-  <a href="mailto:hello@tejara.org?subject=Arab-X%202026%20Partnership%20Inquiry">Partner With Us</a>
+  <a href="https://airtable.com/appI0H0TUo4rmvqaN/pagDIGgF91BHX9Vkk/form" target="_blank" rel="noopener">Partner With Us</a>
 </div>
 
 <main id="main">
@@ -287,7 +293,7 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
     <p class="hero__sub">The National Arab American Entrepreneurship Conference</p>
     <p class="hero__date">October 30, 2026 <span class="sep">&middot;</span> Detroit, Michigan</p>
     <div class="hero__cta">
-      <a class="btn btn--lime" href="mailto:hello@tejara.org?subject=Arab-X%202026%20Partnership%20Inquiry">Partner With Arab-X <span class="arw">&rarr;</span></a>
+      <a class="btn btn--lime" href="https://airtable.com/appI0H0TUo4rmvqaN/pagDIGgF91BHX9Vkk/form" target="_blank" rel="noopener">Partner With Arab-X <span class="arw">&rarr;</span></a>
       <a class="btn btn--ghost" href="#partnership">Partnership Levels</a>
     </div>
   </div>
@@ -364,17 +370,31 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
       <div class="agenda__day">Friday, October 30 &middot; Conference Program</div>
       <div class="agenda__row"><span class="agenda__what">Registration and Breakfast</span></div>
       <div class="agenda__row"><span class="agenda__what">Welcome</span></div>
-      <div class="agenda__row"><span class="agenda__num">Panel 1</span><span class="agenda__what">Future of Arab American Entrepreneurship</span></div>
-      <div class="agenda__row"><span class="agenda__num">Panel 2</span><span class="agenda__what">Access to Capital: VC and Investors</span></div>
-      <div class="agenda__row"><span class="agenda__num">Panel 3</span><span class="agenda__what">Leadership, Scaling and Growth</span></div>
+      <div class="agenda__row"><span class="agenda__num">Panels</span><span class="agenda__what">Three morning panel sessions</span></div>
       <div class="agenda__row"><span class="agenda__what">Signature Luncheon and Featured Speaker</span></div>
-      <div class="agenda__row"><span class="agenda__num">Panel 4</span><span class="agenda__what">AI and Innovation</span></div>
-      <div class="agenda__row"><span class="agenda__num">Panel 5</span><span class="agenda__what">Women in Business</span></div>
-      <div class="agenda__row"><span class="agenda__num">Panel 6</span><span class="agenda__what">Legacy and Succession</span></div>
+      <div class="agenda__row"><span class="agenda__num">Panels</span><span class="agenda__what">Three afternoon panel sessions</span></div>
       <div class="agenda__row"><span class="agenda__what">Closing Remarks</span></div>
       <div class="agenda__row"><span class="agenda__what">Arab-X Gala and Keynote Address</span></div>
     </div>
-    <p class="agenda__note reveal">Program is in development. Session times and speakers will be announced.</p>
+    <p class="agenda__note reveal">Six panel sessions run across the day, single track, each drawn from the conference pillars. Panel titles, session times, and speakers will be announced.</p>
+  </div>
+</section>
+
+
+<!-- ===================== CONFERENCE PILLARS ===================== -->
+<section class="section section--alt anchor" id="pillars" aria-label="Conference pillars">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">Conference Pillars</span>
+      <h2>What the program is built on.</h2>
+      <p class="lede">Arab-X programming is drawn from the four areas the Chamber is building nationally. Every panel on the agenda sits under one of them. Panel titles and speakers will be announced ahead of the conference.</p>
+    </div>
+    <div class="cols2">
+      <div class="tcol tcol--lime reveal"><h3>National economic intelligence</h3><p>Economic impact research, a national business index, verified directory work, and quarterly economic briefs. Power follows data, and the Chamber intends to own the numbers.</p></div>
+      <div class="tcol tcol--lime reveal d1"><h3>Capital and procurement infrastructure</h3><p>Investment networks, corporate and municipal procurement pipelines, supplier certification, and long-term capital-access vehicles now in development.</p></div>
+      <div class="tcol tcol--lime reveal"><h3>National convening infrastructure</h3><p>Arab-X, CEO roundtables, investor forums, policy convenings, and trade delegations, built as recurring national infrastructure rather than a calendar of events.</p></div>
+      <div class="tcol tcol--lime reveal d1"><h3>Institutional mediation and global trade</h3><p>The Chamber as a bridge between MENA capital and U.S. markets, and as a credible intermediary between government and the business community.</p></div>
+    </div>
   </div>
 </section>
 
@@ -449,8 +469,8 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
         <p><strong>Thursday, October 29:</strong> the Arab-X Welcome Reception, an invitation-level evening of registration, cocktails, and entertainment held ahead of the conference. Corporate partners join panelists, visiting delegations, and invited elected officials in the room where the relationships that make Friday productive are formed. Access is a partnership benefit rather than a general ticket, and is not sold separately.</p>
       </div>
     </div>
-    <p class="combine reveal"><strong>Every partnership can be tailored.</strong> In-kind, nonprofit, multi-year, and fully custom structures are available. If your organization has a marketing objective, a procurement target, or a program idea that does not map to a standard level, the Chamber will build a partnership around it. Contact us for the full prospectus.</p>
-    <div style="margin-top:34px;" class="reveal"><a class="btn" href="mailto:hello@tejara.org?subject=Arab-X%202026%20Partnership%20Inquiry">Request the Prospectus <span class="arw">&rarr;</span></a></div>
+    <p class="combine reveal"><strong>Every partnership can be tailored.</strong> In-kind, nonprofit, multi-year, and fully custom structures are available. If your organization has a marketing objective, a procurement target, or a program idea that does not map to a standard level, the Chamber will build a partnership around it. Submit an inquiry and the full prospectus will follow.</p>
+    <div style="margin-top:34px;" class="reveal"><a class="btn" href="https://airtable.com/appI0H0TUo4rmvqaN/pagDIGgF91BHX9Vkk/form" target="_blank" rel="noopener">Submit a Partnership Inquiry <span class="arw">&rarr;</span></a></div>
   </div>
 </section>
 
@@ -493,21 +513,32 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
       <h2>Individual attendance.</h2>
       <p class="lede">Open to Chamber members, non-members, and guests. Corporate partners receive registrations as part of their package and do not need to purchase separately.</p>
     </div>
-    <div class="passes">
+    <div class="attend-cols">
       <div class="pass reveal">
         <h3>Full Access Pass</h3>
         <div class="pass__price">$485</div>
         <div class="pass__per">Per person</div>
         <ul>
-          <li>Welcome Reception on Thursday evening</li>
-          <li>The full conference day: welcome remarks and all six panels</li>
+          <li>The full conference day: welcome remarks and all panel sessions</li>
           <li>The Signature Luncheon, seated</li>
           <li>A reserved seat at the Arab-X Gala with plated dinner and keynote</li>
           <li>Concourse access, delegate materials, and the printed program</li>
         </ul>
+        <a class="btn" href="https://buy.stripe.com/3cIcN40zFcAyaL96Xxds40f" target="_blank" rel="noopener">Register &middot; $485 <span class="arw">&rarr;</span></a>
+        <!-- GALA-ONLY TICKET ($250): live Stripe link below, intentionally not published.
+             The Chamber asked to hold gala-only sales until closer to the date. To enable,
+             uncomment this block and restore the second pass card.
+             <a class="btn btn--ghost-dark" href="https://buy.stripe.com/8x2eVcgyD586dXl2Hhds40e" target="_blank" rel="noopener">Gala Seat Only</a>
+        -->
+      </div>
+      <div class="venue reveal d1">
+        <h3>Venue and accommodations</h3>
+        <p>Arab-X takes place at the conference hotel in Detroit, where a room block has been reserved for delegates, partners, and visiting delegations at a negotiated group rate.</p>
+        <p style="margin-top:14px;">Reserve within the block to be housed with the rest of the convening. Rooms are limited and released ahead of the conference.</p>
+        <a class="tlink" style="margin-top:22px;" href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1786741187425&amp;key=GRP&amp;app=resvlink" target="_blank" rel="noopener">Reserve a Room <span class="arw">&rarr;</span></a>
       </div>
     </div>
-    <p class="passes__note reveal">Registration opens ahead of the conference. Halal and vegetarian service is accommodated; note requirements at registration.</p>
+    <p class="passes__note reveal">Registration is processed securely through Stripe. Halal and vegetarian service is accommodated; note requirements at registration. Corporate partners receive registrations as part of their package.</p>
   </div>
 </section>
 
@@ -520,7 +551,7 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
     <h2 class="reveal">Partner with the inaugural Arab-X.</h2>
     <p class="reveal d1">Arab-X is built to run annually, and founding partners of the first year are named in its permanent record. The number of founding positions is small, and the Chamber would rather design the right partnership than sell a listed one.</p>
     <div class="close__cta reveal d2">
-      <a class="btn btn--lime" href="mailto:hello@tejara.org?subject=Arab-X%202026%20Partnership%20Inquiry">Become a Partner <span class="arw">&rarr;</span></a>
+      <a class="btn btn--lime" href="https://airtable.com/appI0H0TUo4rmvqaN/pagDIGgF91BHX9Vkk/form" target="_blank" rel="noopener">Become a Partner <span class="arw">&rarr;</span></a>
     </div>
     <p class="close__contact reveal d3">Partnership inquiries &middot; <a href="mailto:hello@tejara.org">hello@tejara.org</a></p>
   </div>
