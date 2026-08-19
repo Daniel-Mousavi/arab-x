@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Arab-X 2026 | The National Arab American Entrepreneurship Conference</title>
-<meta name="description" content="Arab-X is the national convening of Arab American enterprise. October 30, 2026, at The Westin Book Cadillac Detroit. Presented by the Tejara Innovation Hub in partnership with the American Arab Chamber of Commerce." />
+<meta name="description" content="Bigger Than Us. Arab-X, the National Arab American Entrepreneurship Conference, brings founders, capital, corporate leadership, and government into one room. October 30, 2026, at The Westin Book Cadillac Detroit. Registration is open." />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
@@ -56,12 +56,14 @@ img{ max-width:100%; display:block; }
 .btn .arw{ transition:transform .2s var(--ease); }
 .btn:hover .arw{ transform:translateX(4px); }
 .btn--lime{ background:var(--lime); border-color:var(--lime); color:var(--tealblack); }
-.btn--lime:hover{ background:#9AD67B; border-color:#9AD67B; }
+.btn--lime:hover{ background:#A9DC88; border-color:#A9DC88; }
 .btn--ghost{ background:transparent; border-color:rgba(255,255,255,.55); color:#fff; }
 .btn--ghost:hover{ background:rgba(255,255,255,.1); border-color:#fff; }
 .tlink{ font-size:12.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--petrol); display:inline-flex; align-items:center; gap:8px; position:relative; }
 .tlink::after{ content:""; position:absolute; left:0; bottom:-4px; height:1.5px; width:0; background:var(--petrol); transition:width .25s var(--ease); }
 .tlink:hover::after{ width:100%; }
+.program .tlink{ color:var(--lime); }
+.program .tlink::after{ background:var(--lime); }
 
 /* ===================== NAV ===================== */
 header.nav{ position:fixed; top:0; left:0; right:0; z-index:60; border-bottom:1px solid transparent;
@@ -80,8 +82,13 @@ nav.links{ display:flex; align-items:center; gap:30px; }
 nav.links a{ font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.13em; color:rgba(255,255,255,.88); padding:6px 0; position:relative; transition:color .3s var(--ease); }
 nav.links a::after{ content:""; position:absolute; left:0; bottom:0; height:1.5px; width:0; background:var(--lime); transition:width .25s var(--ease); }
 nav.links a:hover::after{ width:100%; }
+.nav__cta{ display:flex; gap:10px; align-items:center; }
 .nav__cta .btn{ padding:12px 22px; font-size:11.5px; background:transparent; border-color:rgba(255,255,255,.6); color:#fff; }
 .nav__cta .btn:hover{ background:rgba(255,255,255,.12); border-color:#fff; }
+/* the compound .nav__cta .btn rule above outweighs .btn--lime, so the lime
+   register button needs its own equally specific rule to stay lime */
+.nav__cta .btn--lime{ background:var(--lime); border-color:var(--lime); color:var(--tealblack); }
+.nav__cta .btn--lime:hover{ background:#A9DC88; border-color:#A9DC88; color:var(--tealblack); }
 .menu-btn{ display:none; background:none; border:1px solid rgba(255,255,255,.5); border-radius:2px; color:#fff; padding:10px; cursor:pointer; line-height:0; }
 .mobile-menu{ position:fixed; inset:0; z-index:70; background:var(--petrol-deep); padding:92px var(--gutter) 40px; overflow-y:auto;
   transform:translateY(-12px); opacity:0; visibility:hidden; transition:opacity .3s var(--ease), transform .3s var(--ease), visibility .3s; }
@@ -98,8 +105,10 @@ nav.links a:hover::after{ width:100%; }
 .hero__inner{ position:relative; z-index:2; padding:170px 0 0; }
 .hero__presenter{ font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.2em; color:var(--lime); margin-bottom:30px; }
 .hero__presenter span{ display:inline-block; margin-top:7px; color:rgba(255,255,255,.65); }
-.hero h1{ margin:0; line-height:0; }
-.hero h1 img{ width:min(560px,74vw); height:auto; }
+.hero__mark{ margin:0 0 30px; line-height:0; }
+.hero__mark img{ width:min(400px,58vw); height:auto; }
+.hero h1{ margin:0; color:#fff; font-size:clamp(46px,7.2vw,96px); font-weight:800; letter-spacing:-.02em; line-height:1.02; }
+.vh{ position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
 .hero__sub{ font-size:clamp(19px,2.1vw,26px); font-weight:500; line-height:1.4; color:rgba(255,255,255,.92); max-width:26em; margin-top:24px; }
 .hero__date{ font-size:14px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#fff; margin-top:26px; }
 .hero__date .sep{ color:var(--lime); padding-inline:10px; }
@@ -120,9 +129,8 @@ nav.links a:hover::after{ width:100%; }
 .statrow{ margin-top:clamp(48px,6vw,72px); border-top:1px solid var(--line); display:grid; grid-template-columns:repeat(4,1fr); }
 .stat{ padding:28px 26px 0 0; }
 .stat + .stat{ padding-left:26px; border-left:1px solid var(--line); }
-.stat__num{ font-weight:800; font-size:clamp(34px,3.8vw,52px); color:var(--petrol); letter-spacing:-.02em; line-height:1; }
+.stat__t{ font-weight:800; font-size:clamp(19px,1.9vw,24px); color:var(--petrol); letter-spacing:-.01em; line-height:1.2; }
 .stat__label{ margin-top:8px; font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.14em; color:var(--mut); }
-.statrow__note{ margin-top:22px; font-size:12px; color:var(--mut); }
 
 /* ===================== PRINCIPLES / PILLARS (text columns) ===================== */
 .section{ padding:var(--pad-y) 0; }
@@ -136,7 +144,7 @@ nav.links a:hover::after{ width:100%; }
 
 /* ===================== PROGRAM (dark band) ===================== */
 .program{ background:var(--petrol-deep); }
-.settings{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-top:1px solid var(--line-dark); }
+.settings{ display:grid; grid-template-columns:repeat(2,1fr); gap:0; border-top:1px solid var(--line-dark); }
 .setting{ padding:30px 30px 34px 0; }
 .setting + .setting{ padding-left:30px; border-left:1px solid var(--line-dark); }
 .setting__when{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.16em; color:var(--lime); }
@@ -148,17 +156,10 @@ nav.links a:hover::after{ width:100%; }
 .agenda__row{ display:grid; grid-template-columns:96px 1fr; gap:20px; padding:14px 0; border-bottom:1px solid var(--line-dark); font-size:15.5px; align-items:baseline; }
 .agenda__row .agenda__what:only-child{ grid-column:1 / -1; color:rgba(255,255,255,.6); font-weight:500; }
 .agenda__num{ font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--lime); }
-.agenda__time{ font-weight:700; color:#fff; font-size:13.5px; letter-spacing:.06em; white-space:nowrap; }
 .agenda__what{ color:rgba(255,255,255,.88); font-weight:500; }
-.agenda__len{ font-size:11.5px; color:rgba(255,255,255,.42); text-transform:uppercase; letter-spacing:.1em; white-space:nowrap; }
 .agenda__note{ margin-top:18px; font-size:12.5px; color:rgba(255,255,255,.5); max-width:78ch; }
 
 /* ===================== ROOM ===================== */
-.projrow{ display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); margin-bottom:clamp(44px,5vw,60px); }
-.proj{ padding:24px 24px 0 0; }
-.proj + .proj{ padding-left:24px; border-left:1px solid var(--line); }
-.proj__n{ font-weight:800; font-size:clamp(24px,2.8vw,36px); color:var(--petrol); letter-spacing:-.02em; line-height:1.05; }
-.proj__l{ margin-top:6px; font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.12em; color:var(--mut); }
 .audgrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(26px,3.5vw,48px) clamp(28px,4vw,56px); }
 .aud{ border-top:1px solid var(--line); padding-top:18px; }
 .aud h3{ font-size:16px; margin-bottom:8px; }
@@ -198,6 +199,7 @@ nav.links a:hover::after{ width:100%; }
 .pass ul{ margin:0; padding:0; list-style:none; display:grid; gap:8px; }
 .pass li{ font-size:14px; line-height:1.6; padding-left:20px; position:relative; }
 .pass li::before{ content:""; position:absolute; left:0; top:9px; width:8px; height:2px; background:var(--lime-dark); }
+.pass__tease{ margin-top:14px; font-size:12.5px; color:var(--mut); }
 .passes__note{ margin-top:26px; font-size:13px; color:var(--mut); max-width:74ch; }
 
 /* ===================== CLOSE ===================== */
@@ -223,14 +225,68 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
 .ft__line{ margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,.12); font-size:12px; color:rgba(255,255,255,.38); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
 
 /* reveals */
-.reveal{ opacity:0; transform:translateY(22px); transition:opacity .65s var(--ease), transform .65s var(--ease); }
-.reveal.in{ opacity:1; transform:none; }
-.reveal.d1{ transition-delay:.07s; } .reveal.d2{ transition-delay:.14s; } .reveal.d3{ transition-delay:.21s; }
+/* Scroll-reveal fade/shift animation removed deliberately: content is simply present,
+   the way institutional conference pages behave. Leftover class="reveal" attributes in
+   the markup are inert. Interaction transitions (hover, nav, menu) are kept. */
+
+/* ===================== SPEAKER SLOTS (program band) ===================== */
+.spk{ margin-top:clamp(52px,6vw,72px); border-top:1px solid var(--line-dark); padding-top:34px; }
+.spk .label{ display:block; margin-bottom:14px; }
+.spk__h{ color:#fff; font-size:clamp(22px,2.6vw,30px); }
+.spk__lede{ margin-top:12px; font-size:15.5px; line-height:1.7; color:rgba(255,255,255,.72); max-width:60ch; }
+.spk__btn{ margin-top:24px; background:none; border:1px solid rgba(255,255,255,.4); border-radius:2px; color:#fff; font-family:var(--sans); font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; padding:14px 22px; cursor:pointer; display:inline-flex; align-items:center; gap:10px; transition:border-color .2s var(--ease), background .2s var(--ease); }
+.spk__btn:hover{ border-color:var(--lime); background:rgba(255,255,255,.05); }
+.spk__btn .pm{ color:var(--lime); font-size:16px; line-height:1; }
+.spk__grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:26px; }
+/* an explicit display: beats the UA [hidden] rule, so restate it */
+.spk__grid[hidden]{ display:none; }
+.spkcard{ border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.03); }
+.spkcard__stage{ position:relative; display:flex; align-items:center; justify-content:center; padding:44px 0 54px; border-bottom:1px solid rgba(255,255,255,.1); }
+.spkcard__stage img{ width:31%; max-width:96px; height:auto; }
+.spkcard__chip{ position:absolute; left:14px; bottom:12px; font-size:9.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--lime); border:1px solid rgba(153,210,116,.45); border-radius:2px; padding:6px 9px; }
+.spkcard__meta{ padding:14px 16px 16px; }
+.spkcard__meta b{ display:block; color:#fff; font-size:14.5px; font-weight:700; }
+.spkcard__meta span{ display:block; margin-top:3px; font-size:11.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+
+/* ===================== GLOBAL MAP ===================== */
+.gmap svg{ width:100%; height:auto; display:block; }
+.gmap .land{ fill:rgba(255,255,255,.08); stroke:rgba(255,255,255,.12); stroke-width:.5; }
+.gmap .arc{ fill:none; stroke:var(--lime); stroke-width:1.4; stroke-dasharray:2 7; opacity:.6; animation:arcflow 26s linear infinite; }
+@keyframes arcflow{ to{ stroke-dashoffset:-522; } }
+.gmap .pin{ fill:var(--lime); }
+.gmap .pinring{ fill:none; stroke:var(--lime); stroke-width:1; opacity:.4; }
+.gmap text{ font-family:var(--sans); font-size:11.5px; font-weight:700; letter-spacing:.14em; fill:rgba(255,255,255,.75); }
+.gmap text.home{ font-size:13px; font-weight:800; fill:#fff; letter-spacing:.18em; }
+.gmap__legend{ display:none; margin-top:16px; flex-wrap:wrap; gap:10px 22px; }
+.gmap__legend span{ font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.72); display:inline-flex; align-items:center; gap:8px; }
+.gmap__legend i{ width:7px; height:7px; border-radius:50%; background:var(--lime); }
+.global__cols{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,56px); margin-top:clamp(40px,5vw,60px); }
+.gcol{ border-top:1px solid var(--line-dark); padding-top:18px; }
+.gcol h3{ font-size:16.5px; margin-bottom:8px; }
+.gcol p{ font-size:14.5px; line-height:1.7; color:rgba(255,255,255,.7); }
+
+/* ===================== FAQ ===================== */
+.faq{ max-width:860px; }
+.faq details{ border-bottom:1px solid var(--line); }
+.faq details:first-of-type{ border-top:1px solid var(--line); }
+.faq summary{ cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:20px 0; font-weight:700; font-size:16px; color:var(--ink); }
+.faq summary::-webkit-details-marker{ display:none; }
+.faq summary::after{ content:"+"; flex:0 0 auto; font-size:22px; font-weight:400; color:var(--lime-dark); line-height:1; transition:transform .2s var(--ease); }
+.faq details[open] summary::after{ transform:rotate(45deg); }
+.faq__a{ padding:0 44px 22px 0; font-size:15px; line-height:1.75; max-width:72ch; }
+.faq__a .tlink{ margin-top:14px; }
+
+/* ===================== FLOATING REGISTER ===================== */
+.fab{ position:fixed; right:clamp(16px,3vw,30px); bottom:clamp(16px,3vw,30px); z-index:65; opacity:0; visibility:hidden; transform:translateY(10px); transition:opacity .25s var(--ease), transform .25s var(--ease), visibility .25s; }
+.fab.show{ opacity:1; visibility:visible; transform:none; }
+.fab .btn{ box-shadow:0 10px 30px rgba(1,15,33,.5); }
 
 @media (max-width:1000px){
   nav.links{ display:none; }
   .menu-btn{ display:inline-flex; }
-  .nav__cta{ display:none; }
+  .nav__cta{ margin-left:auto; }
+  .nav__cta .btn:not(.btn--lime){ display:none; }
+  .nav__cta .btn--lime{ padding:11px 16px; }
   .hero__strip .wrap{ grid-template-columns:1fr; }
   .hero__strip .cell + .cell{ padding-left:0; border-left:0; border-top:1px solid rgba(255,255,255,.22); }
   .intro__grid{ grid-template-columns:1fr; }
@@ -241,17 +297,21 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
   .cols2{ grid-template-columns:1fr; }
   .settings{ grid-template-columns:1fr; }
   .setting + .setting{ padding-left:0; border-left:0; border-top:1px solid var(--line-dark); }
-  .projrow{ grid-template-columns:1fr 1fr; }
-  .proj:nth-child(3){ padding-left:0; border-left:0; }
   .audgrid{ grid-template-columns:1fr; }
   .floor ul{ grid-template-columns:1fr; }
   .insts{ grid-template-columns:1fr; }
   .attend-cols{ grid-template-columns:1fr; }
   .agenda__row{ grid-template-columns:1fr; gap:3px; }
+  .spk__grid{ grid-template-columns:1fr 1fr; }
+  .global__cols{ grid-template-columns:1fr; }
+}
+@media (max-width:640px){
+  .spk__grid{ grid-template-columns:1fr; }
+  .gmap svg text{ display:none; }
+  .gmap__legend{ display:flex; }
 }
 @media (prefers-reduced-motion: reduce){
   *{ animation:none !important; scroll-behavior:auto; }
-  .reveal{ opacity:1; transform:none; transition:none; }
 }
 </style>
 </head>
@@ -268,9 +328,9 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
       <a href="#pillars">Pillars</a>
       <a href="#room">Audience</a>
       <a href="#partnership">Partnership</a>
-      <a href="#attend">Attend</a>
     </nav>
     <div class="nav__cta">
+      <a class="btn btn--lime" href="#attend">Register</a>
       <a class="btn" href="https://airtable.com/appI0H0TUo4rmvqaN/pagDIGgF91BHX9Vkk/form" target="_blank" rel="noopener">Partner With Us</a>
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
@@ -286,7 +346,7 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
   <a href="#pillars">Pillars</a>
   <a href="#room">Audience</a>
   <a href="#partnership">Partnership</a>
-  <a href="#attend">Attend</a>
+  <a href="#attend">Register</a>
   <a href="https://airtable.com/appI0H0TUo4rmvqaN/pagDIGgF91BHX9Vkk/form" target="_blank" rel="noopener">Partner With Us</a>
 </div>
 
@@ -298,18 +358,20 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
   <div class="hero__scrim" aria-hidden="true"></div>
   <div class="wrap hero__inner">
     <p class="hero__presenter">Presented by the Tejara Innovation Hub<br/><span>In partnership with the American Arab Chamber of Commerce</span></p>
-    <h1><img src="assets/img/arabx-logo-alpha.png" width="1002" height="320" alt="Arab-X" /></h1>
-    <p class="hero__sub">The National Arab American Entrepreneurship Conference</p>
-    <p class="hero__date">October 30, 2026 <span class="sep">&middot;</span> Detroit, Michigan</p>
+    <p class="hero__mark"><img src="assets/img/arabx-logo-alpha.png" width="1002" height="320" alt="Arab-X" /></p>
+    <h1><span class="vh">Arab-X: </span>Bigger Than Us.</h1>
+    <p class="hero__sub">The National Arab American Entrepreneurship Conference brings founders, capital, corporate leadership, and government into one room, for one day, in Detroit.</p>
+    <p class="hero__date">October 30, 2026 <span class="sep">&middot;</span> The Westin Book Cadillac Detroit</p>
     <div class="hero__cta">
-      <a class="btn btn--lime" href="https://airtable.com/appI0H0TUo4rmvqaN/pagDIGgF91BHX9Vkk/form" target="_blank" rel="noopener">Partner With Arab-X <span class="arw">&rarr;</span></a>
-      <a class="btn btn--ghost" href="#partnership">Partnership Levels</a>
+      <a class="btn btn--lime" href="#attend">Register <span class="arw">&rarr;</span></a>
+      <a class="btn btn--ghost" href="#partnership">Partner With Arab-X</a>
     </div>
   </div>
   <div class="hero__strip">
     <div class="wrap">
-      <div class="cell"><div class="hstrip__k">All Day</div><div class="hstrip__v">Six Panels &amp; Signature Luncheon</div></div>
+      <div class="cell"><div class="hstrip__k">All Day</div><div class="hstrip__v">Panels &amp; Signature Luncheon</div></div>
       <div class="cell"><div class="hstrip__k">Evening</div><div class="hstrip__v">Arab-X Gala &amp; Keynote</div></div>
+      <div class="cell"><div class="hstrip__k">Speakers &amp; Panels</div><div class="hstrip__v">Announced in the weeks ahead</div></div>
     </div>
   </div>
 </section>
@@ -324,162 +386,15 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
       </div>
       <div class="body reveal d1">
         <p>Arab-X is a working assembly of the founders, corporations, investors, and public officials whose decisions determine where capital and contracts go.</p>
-        <p>Most conferences are organized around visibility. Arab-X is organized around transaction and consequence: a single-track program, a deliberately composed room, and partnership positions structured against every setting of the two days.</p>
+        <p>Arab-X is organized around the room itself: a single-track program and a deliberately composed audience, so the people worth meeting are not scattered across breakout tracks. The room is built to seat them around you.</p>
       </div>
     </div>
     <div class="statrow reveal">
-      <div class="stat"><div class="stat__num" data-count="450">450</div><div class="stat__label">Projected gala guests</div></div>
-      <div class="stat"><div class="stat__num">300&ndash;400</div><div class="stat__label">Conference delegates</div></div>
-      <div class="stat"><div class="stat__num" data-count="6">6</div><div class="stat__label">Single-track panels</div></div>
-      <div class="stat"><div class="stat__num" data-count="47">47</div><div class="stat__label">Partnership positions</div></div>
+      <div class="stat"><div class="stat__t">Founders &amp; operators</div><div class="stat__label">Owners building across every sector</div></div>
+      <div class="stat"><div class="stat__t">Capital</div><div class="stat__label">Lenders, funds &amp; family offices</div></div>
+      <div class="stat"><div class="stat__t">Corporate &amp; procurement</div><div class="stat__label">Buyers with supplier mandates</div></div>
+      <div class="stat"><div class="stat__t">Public sector &amp; global trade</div><div class="stat__label">Officials &amp; visiting delegations</div></div>
     </div>
-    <p class="statrow__note">Attendance figures are planning targets for the inaugural year and will be confirmed as registration opens.</p>
-  </div>
-</section>
-
-<!-- ===================== PRINCIPLES ===================== -->
-<section class="section section--alt" aria-label="How Arab-X is designed">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="label">How It Is Built</span>
-      <h2>Three design principles govern the program.</h2>
-    </div>
-    <div class="cols3">
-      <div class="tcol reveal"><h3>Concentration</h3><p>The agenda stays focused on where Arab American enterprise has national leverage: business data, entrepreneurship pipelines, and MENA trade, rather than spreading thin across unrelated topics.</p></div>
-      <div class="tcol reveal d1"><h3>Alignment</h3><p>Corporate partners, foundations, elected officials, universities, and diaspora leaders leave carrying the same narrative. Repetition across credible voices is what hardens a market position.</p></div>
-      <div class="tcol reveal d2"><h3>Concentrated attention</h3><p>The program is single track, so the whole room hears the same conversation and leaves with the same reference points. The measure of the conference is what gets built afterward.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== PROGRAM ===================== -->
-<section class="section program ondark anchor" id="program" aria-label="Program">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="label label--ondark">Program at a Glance</span>
-      <h2>One full working day.</h2>
-      <p class="lede">The conference day does the business. The gala makes it public. A single-track program keeps the same audience in the room from the welcome through the closing remarks.</p>
-    </div>
-    <div class="settings reveal">
-      <div class="setting">
-        <div class="setting__when">Friday, October 30 &middot; All Day</div>
-        <h3>The Conference</h3>
-        <p>A full working day built around six panels, a hosted Signature Luncheon with a featured speaker, and an exhibition concourse open throughout. Single track: the same audience is in the room from welcome to closing.</p>
-        
-      </div>
-      <div class="setting">
-        <div class="setting__when">Friday, October 30 &middot; Evening</div>
-        <h3>The Arab-X Gala</h3>
-        <p>A seated dinner with a keynote address, and at a projected 450 guests, the public face of the convening: the room where the community, its business leadership, and its elected officials are seen together.</p>
-        <div class="setting__foot">Reserved tables of eight. Press and photography throughout.</div>
-      </div>
-    </div>
-
-    <div class="agenda reveal">
-      <div class="agenda__day">Friday, October 30 &middot; Conference Program</div>
-      <div class="agenda__row"><span class="agenda__what">Registration and Breakfast</span></div>
-      <div class="agenda__row"><span class="agenda__what">Welcome</span></div>
-      <div class="agenda__row"><span class="agenda__num">Panels</span><span class="agenda__what">Three morning panel sessions</span></div>
-      <div class="agenda__row"><span class="agenda__what">Signature Luncheon and Featured Speaker</span></div>
-      <div class="agenda__row"><span class="agenda__num">Panels</span><span class="agenda__what">Three afternoon panel sessions</span></div>
-      <div class="agenda__row"><span class="agenda__what">Closing Remarks</span></div>
-      <div class="agenda__row"><span class="agenda__what">Arab-X Gala and Keynote Address</span></div>
-    </div>
-    <p class="agenda__note reveal">Six panel sessions run across the day, single track, each drawn from the conference pillars. Panel titles, session times, and speakers will be announced.</p>
-  </div>
-</section>
-
-
-<!-- ===================== CONFERENCE PILLARS ===================== -->
-<section class="section section--alt anchor" id="pillars" aria-label="Conference pillars">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="label">Conference Pillars</span>
-      <h2>What the program is built on.</h2>
-      <p class="lede">Arab-X programming is drawn from the four areas the Chamber is building nationally. Every panel on the agenda sits under one of them. Panel titles and speakers will be announced ahead of the conference.</p>
-    </div>
-    <div class="cols2">
-      <div class="tcol tcol--lime reveal"><h3>National economic intelligence</h3><p>Economic impact research, a national business index, verified directory work, and quarterly economic briefs. Power follows data, and the Chamber intends to own the numbers.</p></div>
-      <div class="tcol tcol--lime reveal d1"><h3>Capital and procurement infrastructure</h3><p>Investment networks, corporate and municipal procurement pipelines, supplier certification, and long-term capital-access vehicles now in development.</p></div>
-      <div class="tcol tcol--lime reveal"><h3>National convening infrastructure</h3><p>Arab-X, CEO roundtables, investor forums, policy convenings, and trade delegations, built as recurring national infrastructure rather than a calendar of events.</p></div>
-      <div class="tcol tcol--lime reveal d1"><h3>Institutional mediation and global trade</h3><p>The Chamber as a bridge between MENA capital and U.S. markets, and as a credible intermediary between government and the business community.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== WHO IS IN THE ROOM ===================== -->
-<section class="section anchor" id="room" aria-label="Who is in the room">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="label">The Audience</span>
-      <h2>Who is in the room.</h2>
-      <p class="lede">Arab-X is a decision-maker convening. The value of a partnership here is not audience size; it is audience composition.</p>
-    </div>
-    <div class="projrow reveal">
-      <div class="proj"><div class="proj__n">450</div><div class="proj__l">Gala guests, Friday evening</div></div>
-      <div class="proj"><div class="proj__n">300&ndash;400</div><div class="proj__l">Conference delegates</div></div>
-      <div class="proj"><div class="proj__n">150&ndash;200</div><div class="proj__l">Reception, invitation only</div></div>
-      <div class="proj"><div class="proj__n">25&ndash;50</div><div class="proj__l">Executive roundtable</div></div>
-    </div>
-    <div class="audgrid">
-      <div class="aud reveal"><h3>Founders, owners &amp; operators</h3><p>Arab American business owners across retail, real estate, logistics, food, healthcare, professional services, manufacturing, and technology.</p></div>
-      <div class="aud reveal d1"><h3>Corporate procurement</h3><p>Sourcing, supplier diversity, and category leads from regional and national corporations looking for qualified vendors and measurable diverse-spend outcomes.</p></div>
-      <div class="aud reveal d2"><h3>Capital</h3><p>Commercial lenders, SBA-preferred lenders, CDFIs, family offices, angel investors, and venture funds active in the Midwest and in MENA-linked deal flow.</p></div>
-      <div class="aud reveal"><h3>Public sector</h3><p>Federal, state, county, and municipal economic development officials, elected officials, and agency representatives with contracting and incentive authority.</p></div>
-      <div class="aud reveal d1"><h3>Institutional partners</h3><p>Universities, community colleges, workforce boards, foundations, and nonprofit partners tied to entrepreneurship and small-business development.</p></div>
-      <div class="aud reveal d2"><h3>International &amp; trade</h3><p>MENA trade delegations, consular and commercial representatives, and diaspora business leadership from outside Michigan.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== CASE FOR PARTNERSHIP ===================== -->
-<section class="section section--alt" aria-label="The case for partnership">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="label">Why Partner</span>
-      <h2>Four returns. Structural, not incidental.</h2>
-      <p class="lede">Sponsorship of Arab-X is a market-access decision.</p>
-    </div>
-    <div class="cols2">
-      <div class="tcol tcol--lime reveal"><h3>Market access</h3><p>Arab American consumers and businesses represent a growing, brand-loyal, and under-served commercial market. Arab-X puts your organization in front of its ownership class directly, in a room where credibility transfers.</p></div>
-      <div class="tcol tcol--lime reveal d1"><h3>Procurement and supplier pipeline</h3><p>If your organization carries diverse-spend or local-sourcing targets, this is a qualified-vendor pipeline in one room, with the Chamber available to support verification, readiness, and follow-through.</p></div>
-      <div class="tcol tcol--lime reveal"><h3>Data and thought leadership</h3><p>The Chamber is building the national economic intelligence layer for Arab American business. Partners are positioned alongside that work: on the panels, in the publications, and in the coverage that follows.</p></div>
-      <div class="tcol tcol--lime reveal d1"><h3>National visibility with substance</h3><p>Founding partners of the inaugural Arab-X are named in the record of the first year of a convening built to run for decades, and are credited across the Chamber's channels well beyond the conference dates.</p></div>
-    </div>
-    <div class="floor reveal">
-      <h3>What every corporate partner receives</h3>
-      <ul>
-        <li>Logo recognition on the Arab-X sponsor page and in the printed program</li>
-        <li>Logo on concourse recognition signage at the conference</li>
-        <li>Verbal recognition from the podium during the program</li>
-        <li>Inclusion in the post-conference report to delegates, partners, and press</li>
-        <li>A named Chamber staff contact from commitment through delivery</li>
-        <li>A written post-conference recap of what your partnership delivered</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== PARTNERSHIP ===================== -->
-<section class="section anchor" id="partnership" aria-label="Partnership">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="label">Partnership</span>
-      <h2>Partnership opportunities are open.</h2>
-      <p class="lede">A limited number of corporate partnerships are available for the inaugural Arab-X, from founding national positions to panel underwriting and enterprise-level support. Partnership levels, benefits, and investment are set out in the full prospectus, available on request.</p>
-    </div>
-    <div class="cols2">
-      <div class="tcol tcol--lime reveal">
-        <h3>What partnership includes</h3>
-        <p>Recognition across the website, printed program, and concourse signage; delegate registrations and reserved gala seating; program advertisement and social recognition; and a named Chamber staff contact managing your partnership from commitment through delivery.</p>
-      </div>
-      <div class="tcol tcol--lime reveal d1">
-        <h3>Partner-only access</h3>
-        <p><strong>Thursday, October 29:</strong> the Arab-X Welcome Reception, an invitation-level evening of registration, cocktails, and entertainment held ahead of the conference. Corporate partners join panelists, visiting delegations, and invited elected officials in the room where the relationships that make Friday productive are formed. Access is a partnership benefit rather than a general ticket, and is not sold separately.</p>
-      </div>
-    </div>
-    <p class="combine reveal"><strong>Every partnership can be tailored.</strong> In-kind, nonprofit, multi-year, and fully custom structures are available. If your organization has a marketing objective, a procurement target, or a program idea that does not map to a standard level, the Chamber will build a partnership around it. Submit an inquiry and the full prospectus will follow.</p>
-    <div style="margin-top:34px;" class="reveal"><a class="btn" href="https://airtable.com/appI0H0TUo4rmvqaN/pagDIGgF91BHX9Vkk/form" target="_blank" rel="noopener">Submit a Partnership Inquiry <span class="arw">&rarr;</span></a></div>
   </div>
 </section>
 
@@ -514,13 +429,137 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
   </div>
 </section>
 
-<!-- ===================== ATTEND ===================== -->
-<section class="section anchor" id="attend" aria-label="Individual attendance">
+<!-- ===================== PRINCIPLES ===================== -->
+<section class="section" aria-label="How Arab-X is designed">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="label">Attendance &amp; Tickets</span>
-      <h2>Individual attendance.</h2>
-      <p class="lede">Open to Chamber members, non-members, and guests. Corporate partners receive registrations as part of their package and do not need to purchase separately.</p>
+      <span class="label">How It Is Built</span>
+      <h2>Three design principles govern the program.</h2>
+    </div>
+    <div class="cols3">
+      <div class="tcol reveal"><h3>Concentration</h3><p>The agenda stays focused on where Arab American enterprise has national leverage: business data, entrepreneurship pipelines, and MENA trade, rather than spreading thin across unrelated topics.</p></div>
+      <div class="tcol reveal d1"><h3>Alignment</h3><p>Corporate partners, foundations, elected officials, universities, and diaspora leaders leave carrying the same narrative.</p></div>
+      <div class="tcol reveal d2"><h3>One conversation</h3><p>The program is single track, so the whole room hears the same conversation and leaves with the same reference points.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROGRAM ===================== -->
+<section class="section program ondark anchor" id="program" aria-label="Program">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label label--ondark">Program at a Glance</span>
+      <h2>One full working day.</h2>
+      <p class="lede">The day is given to the working sessions; the evening to the gala. A single-track program keeps the same audience in the room from the welcome through the closing remarks.</p>
+    </div>
+    <div class="settings reveal">
+      <div class="setting">
+        <div class="setting__when">Friday, October 30 &middot; All Day</div>
+        <h3>The Conference</h3>
+        <p>A full working day of single-track panels, a hosted Signature Luncheon with a featured speaker, and an exhibition concourse open throughout. The same audience is in the room from welcome to closing.</p>
+        
+      </div>
+      <div class="setting">
+        <div class="setting__when">Friday, October 30 &middot; Evening</div>
+        <h3>The Arab-X Gala</h3>
+        <p>A seated dinner with a keynote address, built as the public face of the convening: the room where the community, its business leadership, and its elected officials are seen together.</p>
+        <div class="setting__foot">Reserved tables of eight. Press and photography throughout.</div>
+      </div>
+    </div>
+
+    <div class="agenda reveal">
+      <div class="agenda__day">Friday, October 30 &middot; Conference Program</div>
+      <div class="agenda__row"><span class="agenda__what">Registration and Breakfast</span></div>
+      <div class="agenda__row"><span class="agenda__what">Welcome</span></div>
+      <div class="agenda__row"><span class="agenda__num">Panels</span><span class="agenda__what">Morning panel sessions</span></div>
+      <div class="agenda__row"><span class="agenda__what">Signature Luncheon and Featured Speaker</span></div>
+      <div class="agenda__row"><span class="agenda__num">Panels</span><span class="agenda__what">Afternoon panel sessions</span></div>
+      <div class="agenda__row"><span class="agenda__what">Closing Remarks</span></div>
+      <div class="agenda__row"><span class="agenda__what">Arab-X Gala and Keynote Address</span></div>
+    </div>
+    <p class="agenda__note reveal">The panels run single track across the day, each drawn from the conference pillars. Titles, sessions, and speakers are announced in the weeks ahead.</p>
+    <div class="spk">
+      <span class="label label--ondark">On the Arab-X Stage</span>
+      <h3 class="spk__h">The leaders on the Arab-X stage.</h3>
+      <p class="spk__lede">Founders, CEOs, investors, policymakers, and global market leaders. The first speaker class is announced in the weeks ahead.</p>
+      <button class="spk__btn" id="spkBtn" aria-expanded="false" aria-controls="spkGrid">View the Speaker Slots <span class="pm" aria-hidden="true">+</span></button>
+      <div class="spk__grid" id="spkGrid" hidden>
+        <div class="spkcard"><div class="spkcard__stage"><img src="assets/img/arabx-x.png" alt="" width="277" height="246" loading="lazy" /><span class="spkcard__chip">Announcing Soon</span></div><div class="spkcard__meta"><b>Keynote Speaker</b><span>Arab-X Gala</span></div></div>
+        <div class="spkcard"><div class="spkcard__stage"><img src="assets/img/arabx-x.png" alt="" width="277" height="246" loading="lazy" /><span class="spkcard__chip">Announcing Soon</span></div><div class="spkcard__meta"><b>Featured Speaker</b><span>Signature Luncheon</span></div></div>
+        <div class="spkcard"><div class="spkcard__stage"><img src="assets/img/arabx-x.png" alt="" width="277" height="246" loading="lazy" /><span class="spkcard__chip">Announcing Soon</span></div><div class="spkcard__meta"><b>Founder Conversations</b><span>Main Stage</span></div></div>
+        <div class="spkcard"><div class="spkcard__stage"><img src="assets/img/arabx-x.png" alt="" width="277" height="246" loading="lazy" /><span class="spkcard__chip">Announcing Soon</span></div><div class="spkcard__meta"><b>Capital &amp; Investment</b><span>Main Stage</span></div></div>
+        <div class="spkcard"><div class="spkcard__stage"><img src="assets/img/arabx-x.png" alt="" width="277" height="246" loading="lazy" /><span class="spkcard__chip">Announcing Soon</span></div><div class="spkcard__meta"><b>Global Trade Leaders</b><span>U.S. &amp; MENA</span></div></div>
+        <div class="spkcard"><div class="spkcard__stage"><img src="assets/img/arabx-x.png" alt="" width="277" height="246" loading="lazy" /><span class="spkcard__chip">Announcing Soon</span></div><div class="spkcard__meta"><b>Policy &amp; Public Sector</b><span>Main Stage</span></div></div>
+      </div>
+    </div>
+    <div style="margin-top:30px;"><a class="tlink" href="#attend">Register for Arab-X <span class="arw">&rarr;</span></a></div>
+  </div>
+</section>
+
+
+<!-- ===================== CONFERENCE PILLARS ===================== -->
+<section class="section section--alt anchor" id="pillars" aria-label="Conference pillars">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">Conference Pillars</span>
+      <h2>What the program is built on.</h2>
+      <p class="lede">Arab-X programming is drawn from the four areas the Chamber is building nationally. Every panel on the agenda sits under one of them. Panel titles and speakers will be announced ahead of the conference.</p>
+    </div>
+    <div class="cols2">
+      <div class="tcol tcol--lime reveal"><h3>National economic intelligence</h3><p>Economic impact research, a national business index, verified directory work, and quarterly economic briefs, built so decisions about this market are made on the Chamber's numbers.</p></div>
+      <div class="tcol tcol--lime reveal d1"><h3>Capital and procurement infrastructure</h3><p>Investment networks, corporate and municipal procurement pipelines, supplier certification, and long-term capital-access vehicles now in development.</p></div>
+      <div class="tcol tcol--lime reveal"><h3>National convening infrastructure</h3><p>Arab-X, CEO roundtables, investor forums, policy convenings, and trade delegations, built as recurring national infrastructure rather than a calendar of events.</p></div>
+      <div class="tcol tcol--lime reveal d1"><h3>Institutional mediation and global trade</h3><p>The Chamber as a bridge between MENA capital and U.S. markets, and as a credible intermediary between government and the business community.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHO IS IN THE ROOM ===================== -->
+<section class="section anchor" id="room" aria-label="Who the room is built for">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">The Audience</span>
+      <h2>Who the room is built for.</h2>
+      <p class="lede">Arab-X is a decision-maker convening. The value of the room, to a delegate or to a partner, is who is in it, and what each person walks out with.</p>
+    </div>
+    <div class="audgrid">
+      <div class="aud"><h3>Founders &amp; entrepreneurs</h3><p>Build relationships, access resources, meet investors, and explore new markets for your company.</p></div>
+      <div class="aud"><h3>Investors &amp; financial institutions</h3><p>Discover emerging companies, connect with founders, and build relationships across growing markets.</p></div>
+      <div class="aud"><h3>Corporate leaders</h3><p>Meet suppliers, innovators, entrepreneurs, talent, and international partners across industries.</p></div>
+      <div class="aud"><h3>Government &amp; economic development</h3><p>Advance trade, entrepreneurship, investment, and economic development opportunities.</p></div>
+      <div class="aud"><h3>International business leaders</h3><p>Build U.S. market relationships and connect directly with American companies and institutions.</p></div>
+      <div class="aud"><h3>Young professionals &amp; future leaders</h3><p>Access leaders, ideas, career opportunities, and a professional network that spans the globe.</p></div>
+    </div>
+    <p class="combine reveal"><strong>Who you meet is the reason to come.</strong> The day is built for it: one track, a seated luncheon, a single concourse, and the gala in the evening, so the same people keep crossing paths from breakfast onward.</p>
+  </div>
+</section>
+
+<!-- ===================== GLOBAL ===================== -->
+<section class="section program ondark anchor" id="global" aria-label="The global story">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label label--ondark">The Global Story</span>
+      <h2>Two sides of the global economy.</h2>
+      <p class="lede">Arab-X connects entrepreneurs and institutions across the United States with opportunity across the Middle East and North Africa: international delegations, trade initiatives, and market-entry relationships, brought into one room in Detroit.</p>
+    </div>
+    <div class="gmap" role="img" aria-label="World map with connection lines from Detroit to North Africa, the Levant, and the Gulf markets">
+      <svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="land" d="M352.7 263.1L348.7 263.6L347.9 263.2L349.2 261.9L349.1 260L351.9 259.4L352.9 259.5L352.7 263.1Z M330.5 224.4L329.3 225.6L325.7 225.6L322.9 225.8L322.7 223.7L323.3 223L327.2 223.1L329.7 223.5L330.5 224.4Z M276.7 226.2L275.2 226.9L272.5 226.2L269.8 224.4L270.4 223.4L272.4 223L273.5 223.2L276.7 223.6L279.2 224.8L280 226.1L276.7 226.2Z M297.2 216.6L301.4 217.4L302 216.5L305.7 216.6L308.5 217.8L309.8 217.7L310.6 219.4L313.2 219.3L313.1 220.7L315.2 220.9L317.5 222.6L315.8 224.5L313.5 223.5L311.3 223.7L309.7 223.5L308.9 224.4L307.1 224.6L306.3 223.5L304.8 224.2L302.9 227.4L301.6 226.7L301.4 225.3L298.2 224.5L296 224.8L293.1 224.5L290.8 225.4L288.3 223.9L288.7 222.4L293.1 223L296.7 223.4L298.4 222.3L296.2 220.3L296.3 218.5L293.3 217.7L294.3 216.4L297.2 216.6Z M263.4 202.8L265.3 204.6L269.8 204L271.5 205.2L275.5 208.1L278.5 210.3L280 210.2L282.9 211.2L282.5 212.5L286 212.7L289.6 214.6L289.1 215.8L285.9 216.4L282.7 216.6L279.4 216.2L272.6 216.7L275.8 214L273.8 212.8L270.8 212.5L269.1 211.1L268 208.4L265.3 208.6L260.9 207.3L259.4 206.3L253.2 205.6L251.6 204.6L253.4 203.4L248.7 203.2L245.3 205.7L243.3 205.7L242.6 206.9L240.3 207.4L238.2 207L240.7 205.5L241.8 203.8L243.9 202.7L246.3 201.8L250 201.3L251.1 200.8L255.2 201.2L259 201.2L263.4 202.8Z M273.6 198.1L272.5 198.3L271.3 195.6L269.5 194.2L270.5 191.2L272 191.4L273.6 195.3L273.6 198.1Z M276.2 184.6L275.4 188L274.5 187.4L274.6 184.9L272.4 183L272.4 182.5L276.2 184.6Z M807.5 141.4L804.3 143.4L804.6 144.3L804.8 144.7L799.9 146.6L797.6 146L796.5 144.1L798.7 143.9L799.1 143.9L799.7 142.7L803.2 142.8L807.5 141.4Z M755.7 141.2L758.3 142.8L762 142.5L765.6 142.9L765.5 143.7L768 143.1L767.5 144.5L760.6 145L760.6 144.2L754.8 143.2L755.7 141.2Z M716.8 129.2L715 132.9L715.8 134.4L714.8 136.9L711.1 135.1L708.7 134.5L702.1 132.1L702.7 129.7L708.3 130.1L713.1 129.6L716.8 129.2Z M686.7 115L689.6 118.4L688.9 124.7L686.7 124.4L684.8 126L683 124.7L682.8 119L681.7 116.2L684.3 116.5L686.7 115Z M688.4 110.5L686.8 114.2L684.6 113.2L683.5 110L684.5 108.2L687.6 106.4L688.4 110.5Z M339.7 89.6L343.1 90.2L347.6 90.1L345.2 92L343.5 92.3L337.4 90.3L336.2 88.7L338 87.3L339.7 89.6Z M348.5 77.4L346.2 77.5L340.1 76L335.6 73.7L337.3 73.3L343.5 74.5L348.4 76.5L348.5 77.4Z M54.7 80.2L52.3 80.9L44.5 78.7L43.1 77L38.8 75.4L38 74L33.1 73.2L31.2 70.6L31.6 69.5L36.6 70.5L39.5 71.2L44 71.7L45.6 73.4L48 75.6L52.7 77.6L54.7 80.2Z M375.6 69.9L372.4 74L375.5 72.4L378.7 73.4L377 75.1L381.3 76.4L383.5 75.3L388.2 76.7L386.7 80.2L390.1 79.4L390.7 81.9L392.2 84.9L390.1 89.1L388 89.2L384.9 88.3L385.9 84.5L384.6 83.8L379 88L376.2 87.8L379.6 85.6L375 84.4L369.9 84.7L360.6 84.6L359.9 83.1L362.9 81.5L360.8 80.2L364.8 77.3L369.7 69.7L372.7 67L376.8 65.4L379 65.6L378.1 66.9L375.6 69.9Z M10.9 53.9L15.5 53.5L14.1 58.9L18.2 62.8L16.3 62.8L13.4 60.6L11.7 58.4L9.3 56.9L8.4 54.8L8.7 53.3L10.9 53.9Z M610.5 62.4L602.1 65.2L595.3 64.5L599.2 59.5L596.7 54.7L603.2 50.9L606.8 48.7L610.8 48.5L615.9 51.5L613.3 54.7L614.1 58.1L610.5 62.4Z M703.3 46.4L700.4 50.3L695.4 47.6L694.8 45.6L701.8 44L703.3 46.4Z M628.5 32L623.5 37.2L628.3 36.5L633.5 36.5L632.3 40.4L628 44.7L632.9 45L637.5 51.1L640.8 51.9L643.7 57.3L645.1 59.2L650.9 60.1L650.3 63.1L647.9 64.5L649.8 67L645.5 69.5L639.1 69.5L631 70.8L628.8 69.8L625.6 72.1L621.2 71.5L617.9 73.3L615.3 72.4L622.3 67.4L626.6 66.4L619.1 65.6L617.8 63.7L622.8 62.2L620.1 59.6L621 56.5L628.1 56.9L628.8 54.2L625.6 51.2L619.8 50.3L618.7 49L620.4 46.9L618.8 45.6L616.3 47.9L616 43.3L613.6 40.8L615.3 35.9L619 32L622.8 32.4L628.5 32Z M265.4 15.2L263.5 17.7L261.4 17.3L260.2 15.9L260.4 15.6L262.2 14.2L264.2 14.3L265.4 15.2Z M252.9 12.6L247.3 15.2L243.9 15.1L242.9 13.8L246.4 11.6L253 11.7L252.9 12.6Z M237.3 -1.4L238.2 0.7L240.6 -0.1L243.4 1.2L248.6 2.8L254.1 4.3L254.5 6.6L258 6.2L261.4 7.8L257.2 9.3L249.8 8.1L247.1 6L242.4 8.5L235.6 11L234 8.2L227.5 8.7L231.7 6.3L232.3 2.6L233.9 -1.8L237.3 -1.4Z M573.8 -5.2L572.7 -2.1L578 1.1L571.9 4.7L558.1 8L554 8.9L547.7 8.2L534.5 6.7L539.2 4.6L528.8 2.2L537.2 1.3L537 -0.1L527 -1.2L530.2 -4.3L537.5 -5L544.9 -1.8L552.1 -4.4L558.1 -3L565.9 -5.6L573.8 -5.2Z M281.6 -8.5L276.3 -8.3L275.1 -10.6L277.1 -13.3L281.5 -13.9L285.2 -12.6L285.2 -10.6L284.7 -9.9L281.6 -8.5Z M187.4 -17.8L184.4 -16.2L178 -17.6L174.1 -17.1L167.6 -19.2L171.8 -20.7L175.2 -22.8L180.2 -21.4L183.1 -20.6L184.5 -19.7L187.4 -17.8Z M211.7 -19.7L211.7 -14.8L218 -18.6L223.7 -15.5L222.3 -12L226.9 -8.8L231.9 -12.2L235.3 -16.3L235.6 -21.5L242.4 -21.2L249.4 -20.5L255.8 -18.1L256.1 -15.7L252.6 -13.2L255.9 -10.7L255.3 -8.3L246 -5L239.4 -4.3L234.4 -5.7L233 -3.3L228.4 0.7L227 2.8L221.5 6L214.7 6.3L210.9 8.3L210.6 11.4L205.1 12L199.3 15.9L194.1 21.2L192.2 25L192 30.5L199 31.3L201.1 35.8L203.3 39.4L210 38.5L218.9 40.5L223.6 42.3L227 44.6L233 45.9L238 47.9L245.9 48.2L251.1 48.6L250.3 52.8L251.8 57.5L255.2 62.9L262.3 67.4L266 65.8L268.6 60.9L266.1 53.4L262.7 50.9L270.3 48.7L275.7 45.3L278.4 42L278 38.8L274.8 34.8L269 31.2L274.6 26.2L272.5 21.9L270.9 14.5L274.2 13.4L282.4 14.7L287.3 15.1L291.2 13.9L295.7 15.5L301.5 18.3L303 20.1L311.5 20.5L311.3 24.5L312.9 30.5L317.3 31.2L320.7 34L327.6 31.4L332.2 26.1L335.3 23.9L339 28.2L345.2 34.3L350.5 40L348.6 43L354.9 45.6L359.2 48.4L366.8 49.6L369.8 51.1L371.7 55.1L375.4 55.8L377.4 57.6L377.7 62.9L374.2 64.7L370.8 66.4L363 68.1L357 72L348.9 72.8L338.8 71.8L331.6 71.7L326.7 72.1L322.7 75.5L316.6 77.6L309.7 83.9L304.3 88.3L308.3 87.5L316 81.2L325.9 77.3L333.1 76.8L337.3 79.1L332.8 82.3L334.3 87.5L335.8 91.1L342 93.4L349.9 92.7L354.7 87.4L355 90.8L358.1 92.6L352.2 95.7L341.6 98.5L336.9 100.4L331.6 103.9L328 103.5L327.8 99.5L336.1 95.6L328.4 95.7L323.2 96.3L324 97.9L318.9 100.2L314 101.8L309 103.2L306.2 106.3L305.6 107.1L305.6 109.6L307.2 112.2L309.1 112.3L308.6 110.5L310.1 111.6L309.7 113L306.5 113.7L304.2 113.6L300.7 114.5L298.6 114.7L295.8 114.9L291.9 116.3L298.9 115.4L300.3 116.3L293.6 117.8L290.6 117.8L290.7 117.2L289.3 118.5L290.7 118.7L289.6 122.1L286.2 125.8L285.8 124.6L284.8 124.3L283.2 123.2L284.2 125.7L285.3 126.6L285.4 128.4L283.9 130.2L281.2 134L280.8 133.8L282.3 130.6L279.8 128.8L279.3 124.8L278.4 126.9L279.4 129.9L276.4 129.2L279.5 130.7L279.7 135.2L281.1 135.5L281.6 137.2L282.3 141.9L279.2 145.5L274.3 146.9L271.2 149.7L268.8 150L266.4 151.7L265.7 153.3L260.5 156.4L257.8 158.7L255.5 161.5L254.8 164.9L255.6 168.2L257.2 172.3L259.4 175.7L259.4 177.7L261.6 183.2L261.5 186.4L261.3 188.3L260.1 191.2L258.7 191.8L256.3 191.2L255.6 189.1L253.8 188L251.2 184L249 180.3L248.3 178.4L249.3 175.3L248 172.7L244.2 168.7L242.4 168L237.6 170.1L236.7 169.9L234.4 167.7L231.4 166.5L226 167.1L221.8 166.5L218.2 166.9L216.2 167.5L217.1 168.9L217 170.8L218 171.8L217.1 172.4L215.3 171.7L213.5 172.6L210.1 172.4L206.5 169.9L202.4 170.5L198.9 169.4L196 169.7L192 170.9L187.6 174.4L182.9 176.4L180.3 178.7L179.2 180.9L179.1 184.1L179.4 186.4L180.3 188L180.3 188.1L178.4 192.2L177.6 195.7L177.3 202L176.8 204.4L177.6 207L179.1 209.3L180.1 213L183.2 216.5L184.3 219.2L186.2 221.6L191.2 222.8L193.2 224.8L197.4 223.5L201 223L204.6 222.2L207.6 221.4L210.6 219.4L211.7 216.6L212.1 212.6L213 211.2L216.2 210L221.2 208.9L225.4 209.1L228.3 208.6L229.5 209.7L229.3 212L226.7 214.8L225.6 217.7L226.5 218.5L225.8 220.6L224.6 224.3L223.4 223.1L222.4 223.1L222.4 223.8L223.3 223.9L223.2 225.2L222.5 227.2L222.9 228L222.4 229.7L222.7 230.1L222.1 232.5L221.2 233.8L220.3 233.9L219.4 235.6L220.9 236.4L221.3 235.7L222.7 236.3L223.2 236.5L224.3 235.7L225.6 235.6L226.1 236L226.8 235.8L229 236.2L231.2 236.1L232.8 235.6L233.3 235L234.8 235.3L236 235.6L237.2 235.5L238.2 235.1L240.3 235.7L241.1 235.8L242.6 236.7L243.9 237.8L245.7 238.5L246.9 239.8L246.5 240.3L246.3 241.3L246.8 243.1L245.7 244.7L245.1 246.6L245 248.7L245.2 250L245.4 252.1L244.6 252.6L244.2 254.6L244.5 255.9L243.5 257.1L243.8 258.4L244.5 259.1L245.7 261.7L247.5 263.7L249.8 265.7L251.5 267.4L251.4 268.4L253.3 268.6L253.7 268.2L255.1 269.4L257.4 269.1L259.4 267.9L262.3 266.9L263.9 265.5L266.6 265.7L266.4 266.2L269 266.4L271.2 267.2L272.7 268.6L274.5 270L277 270.1L280.5 266.8L282.5 266.3L282.5 264.7L283.4 260.7L286.2 258.5L289.2 258.4L289.5 257.4L293.3 257.8L297 255.4L298.9 254.3L301.2 252L302.9 252.3L304.1 253.6L303.2 255.2L303 256.3L300.3 256.8L301.8 259L301.7 261.5L299.6 264.3L301.4 268L303.5 267.7L304.6 264.3L303.1 262.6L302.9 259L308.8 257.1L308.1 254.8L309.8 253.3L311.5 256.7L314.8 256.7L317.9 259.4L318.1 261L322.4 261L327.5 260.5L330.2 262.7L333.9 263.3L336.5 261.8L336.6 260.6L342.5 260.3L348.2 260.2L344.1 261.6L345.8 263.9L349.6 264.2L353.2 266.6L353.9 270.4L356.4 270.3L358.3 271.4L361.4 273.1L364.4 276.2L364.5 278.7L366.3 278.8L368.8 281.1L370.7 282.8L376.4 283.7L376.9 282.9L380.8 282.5L385.9 283.8L387.5 284.4L391 285.5L396.1 289.5L396.9 291.4L398.5 291.2L399.7 293.9L402.3 302.2L404.9 303L405 306.3L401.4 310.2L402.9 311.6L411.3 312.4L411.5 317.1L415.1 314L421.1 315.7L429 318.6L431.3 321.4L430.6 324.1L436.1 322.6L445.4 325.1L452.5 324.9L459.5 328.9L465.6 334.2L469.3 335.6L473.3 335.8L475.1 337.3L476.7 343.3L477.5 346.2L475.6 354.1L473.2 357.2L466.4 363.8L463.4 369.2L459.9 373.3L458.7 373.4L457.4 376.9L457.7 385.8L456.4 393.2L455.9 396.3L454.4 398.2L453.5 404.6L448.7 410.8L447.9 415.7L444 417.8L442.9 420.6L437.7 420.6L430.2 422.4L426.9 424.6L421.6 425.9L416 429.7L411.9 434.5L411.2 438L412 440.6L411.1 445.5L410.1 447.8L406.7 450.4L401.4 458.8L397.3 462.6L394 464.8L391.8 469.3L388.7 472L386.6 475L381.3 477.7L377.7 476.7L375.2 477.2L370.8 475.2L367.5 475.3L364.6 472.7L364.3 475.2L370.4 479.3L369.7 482.6L372.7 484.6L372.4 487L367.9 493.1L360.8 495.6L351.3 496.6L346 496.1L347 499L346 502.5L346.9 504.9L344.1 506.6L339.2 507.3L334.6 505.5L332.8 506.8L333.4 511.5L336.7 512.9L339.3 511.4L340.7 513.9L336.3 515.4L332.5 518.4L331.8 523.1L330.6 525.7L326.1 525.7L322.4 528.2L321 531.7L325.7 535.2L330.3 536.2L328.6 540.4L323 543.1L319.9 548.7L315.6 550.6L313.6 552.8L315.2 557.8L318.3 560.5L316.3 560.3L312.1 560.2L309.8 561.4L305.5 563.1L304.7 567.6L302.7 567.7L297.3 566.1L291.9 562.8L286 560.1L284.5 557.1L285.8 554.3L283.4 551.1L282.8 543L284.8 538.4L289.9 534.8L282.6 533.4L287.2 529.2L288.8 521.3L294.1 522.9L296.6 513.1L293.4 511.8L291.9 517.7L288.9 517.1L290.4 510.3L292 501.4L294.2 498.2L292.8 493.5L292.4 488.2L294.4 488L297.4 480.3L300.7 472.7L302.7 465.6L301.6 458.5L303 454.6L302.4 448.7L305.2 442.9L306.1 433.6L307.6 423.8L309.1 413.1L308.7 405.3L307.8 398.6L303 395.9L302.6 393.9L293.1 389.1L284.6 383.9L280.9 381L278.9 377.1L279.7 375.7L275.7 369.4L271 360.7L266.5 351.2L264.5 349L263 345.5L259.3 342.4L256 340.5L257.5 338.3L255.2 333.8L256.7 330.5L260.5 327.5L263 323.9L262 321.8L260.1 324L257.3 321.9L258.3 320.6L257.5 316.3L259.1 315.6L260 312.6L261.8 309.5L261.5 307.6L264.1 306.6L267.4 304.7L266.7 303.2L268.5 302.8L268.3 300.4L269.4 298.7L271.8 298.4L273.8 295.4L275.6 292.9L273.8 291.8L274.7 289L273.7 284.7L274.7 283.4L273.9 279.4L272 276.8L270.4 275.5L269.4 272.9L270.6 271.6L269.4 271.3L268.5 269.7L266.1 268.4L264 268.7L263 270.4L261.1 271.6L260.1 271.7L259.6 272.7L261.9 275.3L260.6 275.9L259.9 276.6L257.7 276.9L256.9 274L256.2 274.8L254.7 274.5L253.7 272.6L251.8 272.3L250.5 271.8L248.5 271.8L248.3 272.8L247.8 272.1L245.2 271L244.2 270L244.8 269.2L244.6 268.1L243.3 267L241.4 266.1L239.8 265.5L239.5 264.1L238.2 263.2L238.5 264.6L237.6 265.7L236.5 264.4L234.9 263.9L234.3 263L234.3 261.5L235 260L233.6 259.4L234.7 258.4L233.1 256.9L230.8 255L229.8 253.4L227.8 251.9L225.4 249.8L225.9 249L226.7 249.7L227.1 249.4L226.2 247.9L224.8 247.5L224.3 248.6L221.5 248.6L219.8 248.1L217.8 247.1L215.2 246.9L213.8 245.8L211.4 245L208.4 244.9L206.2 244L203.7 242L198.3 236.9L195.8 235.3L191.9 234.1L189.3 234.4L185.5 236.2L183.1 236.7L179.7 235.4L176.1 234.5L171.7 232.4L168.1 231.7L162.7 229.5L158.7 227.2L157.5 225.9L154.9 225.6L150 224.1L148 222L142.9 219.3L140.5 216.3L139.4 213.9L141 213.5L140.5 212.1L141.6 210.9L141.6 209.2L140 207.1L139.6 205.2L138 202.8L133.8 198.1L129 194.3L126.7 191.4L122.6 189.4L121.7 188.3L122.4 185.3L120 184.2L117.2 181.9L116 178.6L113.4 178.2L110.7 175.7L108.4 173.4L108.2 171.9L105.7 168.3L104 164.6L104.1 162.8L100.6 160.9L99 161.1L96.3 159.8L95.5 161.7L96.3 164L96.8 167.6L98.4 169.6L102 172.8L102.7 174L103.5 174.3L104.1 175.9L104.9 175.9L105.9 179L107.3 180.2L108.4 181.8L111.3 184.3L112.9 188.7L114.3 190.8L115.7 193L115.9 195.5L118.2 195.7L120.1 197.9L121.9 200L121.7 200.8L119.7 202.6L118.9 202.6L117.6 199.7L114.5 196.9L111.1 194.6L108.7 193.4L108.8 190L108.1 187.4L105.8 185.9L102.5 183.8L101.9 184.4L100.7 183.1L97.8 182L95 179.2L95.3 178.9L97.3 179.1L99.1 177.4L99.2 175.2L95.6 171.8L92.8 170.5L91 167.5L89.2 164.4L87 160.6L85.1 156.3L84.3 153.9L81.2 151.1L79 150.6L78.5 149.2L75.8 149L74.1 147.7L69.7 147.2L68.5 146.4L67.9 143.8L63.3 139L59.3 132.4L59.5 131.3L57.4 129.7L53.7 125.8L53 121.9L50.5 119.3L51.5 115.3L51.4 111.2L49.8 107.6L51.7 103.1L52.9 94.5L52 88.1L50.5 84L49.1 81.8L49.7 80.9L56.6 82.5L59.1 87L60.3 85.7L59.5 81.8L57.9 77.9L57.3 77.9L48 73.2L44.6 71.2L36 69.2L33.4 65L34 62L28 60L27.1 56.2L21.4 52.7L21.3 50.3L18.6 48.5L14.4 47L13.1 42.8L7 39L4.4 34.5L-0.2 34.2L-7.8 34L-13.3 32.7L-23.2 27.7L-27.7 26.8L-36.1 25.1L-42.7 25.5L-52 23.3L-57.7 21.3L-63 22.3L-62 25.6L-64.6 25.9L-70.1 26.9L-74.3 28.5L-79.6 29.5L-80.3 26.7L-78.1 22.1L-73.1 20.6L-74.4 19.4L-80.5 22.1L-83.7 25.2L-90.6 28.6L-87.1 30.9L-91.6 34.4L-96.7 36.3L-101.5 37.8L-102.6 39.9L-110.1 42.4L-111.6 44.6L-117.2 46.6L-120.4 46.3L-124.9 47.6L-129.7 49.2L-133.7 50.8L-141.8 52.2L-142.6 51.4L-137.4 49.1L-132.7 47.7L-127.6 45.1L-121.7 44.5L-119.4 42.6L-112.8 39.7L-111.7 38.8L-108.2 37.1L-107.4 33.5L-105 30.7L-110.5 32.1L-112 31.3L-114.6 33L-117.7 30.6L-119 32.3L-120.7 29.9L-125.5 31.9L-128.4 31.8L-128.8 29L-128 27.3L-131 25.6L-137.2 26.5L-141.2 24.2L-144.5 23.1L-144.5 20.4L-148.2 18.4L-146.4 15.6L-142.5 13L-140.8 10.5L-136.9 10.2L-133.7 11L-129.8 8.7L-126.4 9.1L-122.7 7.6L-123.6 5.4L-126.3 4.6L-122.8 2.7L-125.7 2.8L-130.7 3.8L-132.2 4.9L-135.9 3.8L-142.7 4.3L-149.6 3.2L-151.6 1.3L-157.7 -1.5L-151 -3.5L-140.4 -5.8L-136.4 -5.8L-137.1 -3.4L-127 -3.6L-130.9 -6.5L-136.8 -8.4L-140.1 -10.7L-144.7 -12.8L-151.3 -14.3L-148.6 -16.8L-140.1 -16.9L-134.1 -19.1L-133 -21.4L-128.1 -23.7L-123.5 -24.2L-114.5 -26.3L-110.1 -26L-102.8 -28.6L-95.6 -27.6L-92.1 -25.4L-90 -26.3L-82 -26L-82.2 -25L-75 -24.1L-70.1 -24.6L-60.1 -23.1L-50.9 -22.7L-47.2 -22L-40.9 -22.8L-33.7 -21.4L-28.5 -20.7L-19.6 -19.6L-12.1 -17.3L-7.2 -16.8L-3 -18.8L2.8 -20.3L9.9 -19.7L17 -21.8L24.8 -23L28.1 -21L31.6 -22.2L32.7 -24.4L36 -23.9L44 -19.6L50.4 -22.9L51 -19.2L56.9 -20L58.7 -21.4L64.4 -21.1L71.7 -19.1L82.8 -17.4L89.4 -16.6L94.1 -16.9L100.5 -14.5L93.8 -12.1L102.4 -11.1L115.2 -11.6L119.3 -12.5L124.4 -9.6L129.6 -12L124.7 -14.1L127.8 -15.7L133.6 -15.9L137.4 -16.4L141.2 -15.2L146 -12.7L151.3 -13L159.7 -10.9L167.1 -11.6L174.1 -11.5L173.5 -14.5L177.8 -15.3L185.1 -13.7L185.1 -9.2L188.1 -13L192 -12.9L194.1 -17.7L189 -20.6L183.5 -22.5L183.9 -27.8L189.5 -31.2L195.8 -30.5L200.6 -28.4L207 -23L202.8 -20.7L211.7 -19.7Z M99.2 -37L96.8 -34.7L107.4 -36.2L114 -33.8L119.4 -36.2L123.8 -34.6L127.7 -30L130.1 -31.9L126.7 -36.8L130.9 -37.5L135.6 -36.7L140.9 -34.8L143.9 -30.2L145.4 -26.8L153.4 -24.5L162 -22.2L161.5 -20.1L153.7 -19.7L156.7 -17.9L155.1 -16.2L146.5 -16.9L138.3 -18.2L132.7 -17.9L123.8 -16.3L109.7 -15.4L103.3 -15.1L100.7 -17.4L94.2 -18.7L90 -18.1L84.1 -21.9L87.3 -22.4L94.6 -23.2L101.3 -23L107.5 -23.8L98.3 -25L88.2 -24.6L81.4 -24.7L78.9 -26.4L89.9 -28.3L82.6 -28.3L74.3 -29.5L78.3 -33.1L81.6 -35L94.3 -37.9L99.2 -37Z M145.2 -38.4L141 -35.2L133.6 -38.6L135.2 -39.2L141.6 -39.4L145.2 -38.4Z M279.3 -36.9L279.8 -35.6L274.7 -35.7L269.6 -35.8L264.4 -35.2L263 -35.4L257.7 -38L257.9 -39.7L260.2 -40L271.1 -39.5L279.3 -36.9Z M230.7 -37.1L234.4 -34.2L238.8 -38L250.9 -40L259 -35L258.3 -31.9L267.8 -33.3L272.3 -35.2L282.8 -32.8L289.4 -30.5L290 -28.4L298.8 -29.5L303.8 -26.5L315.3 -24.6L319.5 -22.7L324 -18.2L315.2 -16L326.4 -12.9L334 -11.8L340.8 -7.5L348.3 -7.2L346.8 -3.8L338.5 1.7L332.6 -0.3L325.1 -4.9L319 -4.3L318.4 -1.6L323.4 1.2L329.8 3.4L331.8 4.7L334.9 9.4L333.3 12.8L327.3 11.5L315.3 7.7L322 11.8L327 14.7L327.8 16.3L314.9 14.4L304.7 11.7L298.9 9.3L300.5 8L293.4 5.6L286.5 3.2L286.6 4.6L272.8 5.4L268.8 3.7L271.9 0.2L280.9 0.2L290.7 -0.5L289.1 -2.2L290.7 -4.5L296.9 -9.2L295.6 -11.3L293.8 -12.9L286.5 -15.2L276.8 -16.8L279.9 -18L274.8 -21L270.6 -21.3L266.9 -22.9L264.3 -21.5L255.7 -20.9L238.4 -21.9L228.3 -23.3L220.6 -24.1L216.6 -25.7L221.6 -27.9L214.8 -27.9L213.3 -32.7L217 -37L221.9 -38.9L234.2 -40.2L230.7 -37.1Z M165 -40.4L170.6 -39.4L179.1 -40L180.4 -38.6L175.9 -36.3L183.1 -34.3L182.3 -30L174.5 -28.2L169.9 -28.6L166.6 -30.4L154.8 -34L154.9 -35.6L164.6 -35L159.3 -38.1L165 -40.4Z M199.1 -35.3L194 -31.7L188.5 -31.9L185.6 -36.1L185.6 -38.5L188.1 -40.5L192.8 -41.8L202.8 -41.6L211.9 -40.5L204.7 -36.2L199.1 -35.3Z M69.2 -28.8L56.7 -26.4L54.2 -28.5L43.2 -31L44.8 -32.5L48.5 -36.5L52.7 -39.6L48 -42.5L64.1 -43.3L70.9 -42.3L83.1 -42L87.7 -40.6L92.8 -38.6L86.8 -37.4L75.1 -34.1L69.2 -30.8L69.2 -28.8Z M197.1 -45.8L194.5 -44L187.6 -44.3L181.8 -45.6L184.3 -47.7L191.2 -49L195.3 -47.3L197.1 -45.8Z M173.8 -54.1L177.4 -51.9L177.6 -49.4L175.4 -45.9L167.6 -45.4L162.5 -46.2L162.6 -49L154.8 -48.6L154.4 -52.3L159.6 -52.1L166.7 -53.7L173.4 -53.5L173.8 -54.1Z M127.6 -51.6L129.4 -49.9L133.7 -50.7L138.7 -50.5L139.5 -48.2L136.6 -45.9L120.5 -45.2L108.5 -43.1L101.2 -43L100.6 -44.6L110.5 -46.7L89 -46.1L82.3 -47L88.8 -51.6L93.3 -52.9L106.7 -51.3L115.2 -48.5L123.5 -48.2L116.7 -52.7L121 -54.4L126 -53.9L127.6 -51.6Z M916.8 -25.5L914 -25.1L898.5 -25.7L897.2 -27.8L888.6 -29.1L887.9 -31.7L892.8 -32.7L892.6 -35.3L902 -39.4L897.7 -40L909.1 -44.1L907.8 -46.3L918.4 -48.8L934.1 -51.9L950 -52.8L958.1 -54.5L967.4 -55.1L970.7 -53.3L967.5 -51.8L950.7 -49.4L936.1 -47.1L921.3 -42.6L914.2 -38L906.8 -33.4L907.7 -29.4L916.8 -25.5Z M192 -55.9L197.3 -54.4L206.6 -54.4L210.8 -52.8L209.7 -51L215.1 -49.9L218.2 -48.8L224.6 -48.6L231.5 -48.2L239.1 -49.2L248.8 -49.6L256.5 -49.3L261.6 -47.5L262.7 -45.5L259.7 -44.3L252.6 -43.2L246.5 -43.8L232.9 -43.1L223.1 -43L215.4 -43.6L202.8 -45.1L201.1 -47.7L200.5 -50.1L195.7 -52.2L185.9 -52.8L180.4 -54.2L182.2 -56.2L192 -55.9Z M1152.2 -55.3L1153.5 -53L1157.9 -54.1L1171.8 -54L1182.5 -51.7L1186.4 -49.9L1185.2 -47.5L1179.9 -46.1L1167.4 -43.4L1163.8 -42L1169.7 -41.3L1176.8 -40.1L1181 -41L1183.5 -38L1185.6 -39.2L1193.2 -40L1208.5 -39.2L1209.6 -37L1229.5 -36.2L1229.8 -39.9L1239.9 -39L1247.5 -39.1L1255.2 -36.6L1257.4 -33.5L1254.6 -31.5L1260.6 -27.8L1268 -25.8L1272.6 -30.8L1280.3 -28.7L1288.4 -30L1297.6 -28.5L1301.1 -29.8L1308.9 -29.2L1305.5 -33.6L1311.8 -35.7L1354.8 -32.6L1358.8 -29.7L1371.3 -26.1L1390.5 -27L1400 -26.2L1404 -24.3L1403.4 -20.8L1409.2 -19.4L1415.6 -20.4L1424.1 -20.5L1433 -19.6L1442.1 -20.1L1450.4 -15.9L1456.3 -17.4L1452.4 -20.4L1454.5 -22.6L1469.7 -21.2L1479.6 -21.5L1493.3 -19.2L1500 -17.2L1500 1.8L1493.8 3.9L1487.7 3.6L1492 6.1L1494.8 10L1497 11.3L1497.6 13.3L1496.3 14.6L1487.4 13.5L1474.1 17.1L1469.9 17.7L1462.6 21L1455.7 23.9L1454 26.1L1447.1 22.8L1434.7 26.5L1432.6 24.8L1428 26.8L1421.6 26.1L1420.1 29.3L1414.4 33.9L1414.5 35.8L1420 36.9L1419.3 43.8L1414.9 44L1412.9 48L1414.8 50L1406.5 52.5L1404.9 57.9L1397.8 59.1L1396.3 63.9L1389.5 68.3L1387.7 65L1385.7 58.1L1383 47.5L1385.3 40.9L1389.3 38.1L1389.6 35.8L1397 34.8L1405.5 28.8L1413.7 23.9L1422.2 20.1L1426.1 13.4L1420.3 13.8L1417.4 17.7L1405.3 22.9L1401.4 17.1L1389.1 18.7L1377.2 26.7L1381.2 29.6L1370.5 30.8L1363.2 31.3L1363.5 27.9L1356.1 27.2L1350.2 29.5L1335.7 28.7L1320 30.1L1304.6 39.4L1286.3 50.6L1293.8 51.2L1296.2 54.2L1300.8 55.3L1303.8 52.9L1309.1 53.2L1315.9 58.4L1316.1 62.5L1312.4 67.2L1312 72.9L1309.8 80.5L1302.6 87.4L1301 90.7L1294.6 96.3L1288.2 101.8L1285.1 104.6L1278.7 107.4L1275.7 107.4L1272.8 105.1L1266.4 108.6L1265.6 110.2L1263.8 109.9L1261.7 111.5L1260.3 113.1L1260.5 116.6L1258 117.6L1257.2 118.5L1255.4 119.9L1252.2 120.6L1250.2 121.9L1250 124L1249.5 124.5L1251.3 125.3L1254 127.4L1258.2 133L1259.3 136.1L1259.4 141.6L1257.6 144.2L1253.3 145.1L1249.5 147.1L1245.2 147.5L1244.6 144.9L1245.5 141.3L1243.4 136.4L1247 135.6L1243.7 131.5L1241.4 130.6L1240.8 131.5L1239.4 131.9L1239.2 131L1238 130.5L1236.7 129.8L1238 127.7L1239.2 127.1L1238.7 126.2L1239.9 123.7L1239.6 122.9L1236.8 122.4L1234.6 121.1L1227.9 122.5L1224.4 124.7L1219.3 126L1221.8 123.8L1220.8 122L1224.6 118.8L1222.1 116.3L1217.9 117.9L1212.6 121.2L1209.6 124.3L1205 124.6L1202.5 126.8L1205 130L1208.9 130.8L1209.1 132.9L1212.9 134.3L1218.2 130.9L1222.4 132.8L1225.5 132.9L1226.3 135.4L1219.5 136.7L1217.3 139.3L1212.7 141.7L1210.2 145L1215.4 147.6L1217.2 152.3L1220.1 156.7L1223.4 160.3L1223.3 163.9L1220.3 165.2L1221.4 167.7L1224.2 169.2L1223.5 173.1L1222.3 176.8L1219.6 177.3L1216.2 182.4L1212.3 188.7L1207.9 194.3L1201.3 198.7L1194.7 202.7L1189.4 203.3L1186.4 205.4L1184.8 203.9L1182.1 206.2L1175.4 208.6L1170.4 209.3L1168.8 214.4L1166.1 214.7L1164.9 211.2L1166 209.4L1159.6 207.8L1157.4 208.6L1151 212.7L1147.1 217.2L1146 220.5L1149.7 225.5L1154.1 231.7L1158.4 234.7L1161.3 238.5L1163.5 247.3L1162.9 255.7L1158.9 258.8L1153.4 261.9L1149.5 265.9L1143.6 270.3L1141.9 267.2L1143.2 264L1139.7 261.3L1135.7 260.6L1133.8 258.1L1131.4 253.2L1127.1 251L1123 251.1L1123.7 247.4L1119.5 247.4L1119.1 252.6L1116.6 259.6L1115 263.8L1115.3 267.2L1118.4 267.4L1120.4 271.7L1121.2 275.9L1123.9 278.6L1126.8 279.1L1129.2 281.6L1130.3 282.1L1133.2 284.9L1135.1 288.1L1135.4 291.3L1134.9 293.5L1135.4 295.1L1135.7 297.9L1137.4 299.3L1139.3 303.5L1139.2 305.1L1135.8 305.4L1131.3 301.9L1125.7 298.1L1125.1 295.7L1122.4 292.5L1121.7 288.5L1120 285.9L1120.5 282.5L1119.5 280.5L1117.6 278.6L1116.8 276.3L1114.2 273.6L1111.9 271.3L1111.1 274.1L1110.2 271.5L1110.8 268.5L1112.2 263.9L1111.7 260.4L1113.2 256.8L1111.6 253.9L1112 248.8L1110 246.3L1108.5 240.6L1107.6 234.6L1105.5 230.6L1102.4 233L1097 236.4L1094.3 236L1091.4 234.9L1093 229L1092 224.5L1088.3 219L1088.9 217.3L1086.1 216.7L1082.7 212.8L1081.3 210.3L1081.1 207.9L1080.2 205.6L1078.2 202.8L1073.8 202.6L1074.2 204.6L1072.7 207.3L1070.7 206.3L1070 207.2L1068.7 206.6L1066.8 206.2L1066.1 207.9L1062.9 207.9L1057 208.9L1057.3 212.5L1054.8 215.3L1047.9 218.5L1042.6 224.1L1039 227.1L1034.3 230.2L1034.2 232.4L1031.9 233.6L1027.6 235.3L1025.4 235.5L1023.9 239.2L1024.9 245.4L1025.2 249.3L1023.2 253.8L1023.1 261.9L1020.7 262.1L1018.5 265.8L1020 267.3L1015.6 268.7L1014 271.9L1012.1 273.3L1007.6 268.9L1005.4 262.2L1003.6 257.4L1001.9 255.1L999.4 250.6L998.2 244.6L997.4 241.6L993 235.1L991 225.9L989.6 219.8L989.6 214L988.7 209.5L981.8 212.4L978.4 211.8L972.2 206.1L974.5 204.3L973.1 202.5L967.5 198.4L964 197.2L962.6 193.8L958.9 190.2L950.1 191.1L942.4 191.1L935.7 191.8L926.7 190.4L921.6 189.3L916.2 188.7L914.1 182.8L911.9 182L908.2 182.8L903.4 185.1L897.6 183.6L892.8 179.9L888.2 178.5L885 174L881.5 167.7L878.9 168.4L875.9 166.9L874.1 168.7L871.3 168.5L872.3 170.6L871.9 171.7L873.4 175.3L875.3 179.4L877.6 180.5L878.4 182.1L881.7 184.1L882 186.1L881.5 187.7L882.1 189.3L883.5 190.6L884.1 192.2L884.8 193.4L884.5 189.9L885.8 187.4L887.1 186.9L888.5 188.4L888.6 191.2L887.6 194L888.5 195.8L889.3 195.6L889.5 196.9L893.2 196.1L897.2 196.2L900 196.4L903.3 193.2L906.9 190.1L909.9 187.2L911.2 185.5L911.8 186L911.4 187.9L910.8 188.8L911.4 192.5L913.5 195.8L916.2 197.5L919.7 198.2L922.5 199L924.7 201.8L926 203.3L927.7 203.9L927.6 205L925.9 207.8L925.2 209.2L923.1 210.7L921.4 214L919.2 213.7L918.2 214.8L917.5 217.3L918 220.4L917.6 221L915.4 221L912.4 222.8L912 225.1L910.9 226.1L907.9 226.1L906 227.3L906.1 229.2L903.8 230.5L901.1 230.1L898 231.7L895.8 231.9L892.3 233.2L891.4 235.3L891.3 237L886.5 239L878.9 241.2L874.7 244.6L872.6 244.8L871.1 244.5L868.4 246.5L865.3 247.4L861.3 247.7L860.1 247.9L859.1 249.2L857.8 249.6L857.1 250.8L854.7 250.7L853.2 251.3L849.9 251.1L848.7 248.3L848.8 245.7L848 244.3L847.1 240.8L845.7 238.8L846.7 238.6L846.2 236.4L846.8 235.5L846.6 233.4L846 231.4L844.5 229.9L844.1 228L841.7 226.3L839.1 222.3L837.8 218.4L834.5 215.2L832.4 214.4L829.2 209.8L828.7 206.5L828.9 203.7L826.2 198.4L823.9 196.6L821.4 195.6L819.8 192.9L820 191.8L818.7 189.3L817.3 188.3L815.5 184.7L812.6 180.9L810.1 177.6L807.8 177.6L808.5 175L808.7 173.3L809.3 171.4L809.2 170.8L807.8 172.7L806.8 176.3L805.5 178.7L804.4 179.6L802.8 178L800.7 175.9L797.3 169.1L796.8 169.5L798.7 174.5L801.7 179.3L805.3 186.8L807 189.3L808.5 192L812.8 197.3L811.9 198.1L812 201.2L817.6 205.5L818.4 206.5L819.9 211.1L818.9 212L819.6 216.9L821.3 222.6L823.2 223.8L825.8 225.5L828.5 231L829.8 235.4L832.4 237.7L838.9 242.2L841.6 244.9L844.2 247.7L845.7 249.3L848 250.8L849.1 252.2L849 254.2L846.3 255.4L848.3 256.7L849.9 257.5L850.8 259.5L852.9 261.5L855.3 261.5L859.8 260.3L865 259.7L869.2 258.3L871.5 257.9L873.2 257.1L875.9 256.9L877.5 256.8L879.7 256.1L882.2 255.6L884.4 254L886.2 254L886.4 255.3L885.9 258.1L885.9 260.6L884.9 262.3L883.6 267.4L881.3 272.8L878.3 278.8L874.3 285.8L870.2 291.1L864.6 297.6L859.8 301.5L852.7 306.2L848.3 309.8L843.1 315.6L842 318.1L840.9 319.3L837.5 321.2L836.4 323.1L834.6 323.5L833.9 326.8L832.4 328.8L831.5 331.9L829.5 333.5L827.3 339.4L827.6 342.1L830.7 343.8L830.8 345L829.5 347.9L829.8 349.4L829.5 351.6L831.1 354.6L833.1 359.3L834.8 360.4L835.6 362.5L835.4 367.2L836 371.4L836.2 378.9L837 381.2L835.6 384.6L833.8 387.9L830.7 390.9L826.4 392.7L821 395L815.6 400.1L813.8 401L810.5 404.3L808.5 405.4L808.1 408.8L810.4 412.4L811.3 415.2L811.4 416.7L812.2 416.4L812.1 421.1L811.3 423.3L812.4 424.1L811.7 426.1L809.7 427.8L805.8 429.4L800.1 432L798 433.7L798.4 435.8L799.6 436.1L799.2 438.6L798 442L797.4 446L796.2 448.2L793 450.6L792 451.2L790 453.7L788.7 456.1L786 459.5L780.6 464.4L777.2 467.3L773.6 469.5L768.7 471.3L766.2 471.6L765.6 472.9L762.7 472.2L760.4 473.1L755.2 472.2L752.3 472.7L750.4 472.5L745.4 474.4L741.4 475.1L738.4 476.9L736.3 477L734.3 475.3L732.6 475.3L730.6 473.1L730.4 473.8L729.7 472.5L729.8 469.7L728.2 466.5L729.8 465.7L729.6 462L726.5 457.6L724.1 453.5L720.7 447.3L717.2 443.7L715.3 440.2L714.2 435.6L713.1 432.2L711.5 424.8L711.4 419.1L710.8 416.5L708.9 414.6L706.4 410.6L703.9 404.9L702.9 401.9L699 397.3L698.7 393.6L698.3 390.6L698.9 386.4L700.6 382.1L700.8 380L702.4 375.8L703.5 373.8L706.3 370.7L707.8 368.6L708.3 365L708 362.3L706.6 360.6L705.3 357.7L704.2 354.9L704.4 353.9L705.9 352L704.4 347.4L703.5 344.2L701.1 341.2L701.5 340.3L700.9 338.8L699.6 335.2L695.7 330.2L690.8 325.4L687.6 321.4L684.8 316.5L684.9 314.9L685.9 313.4L687.1 310L688.1 306.4L687.2 305.7L688.8 300.4L689.5 296.6L687.6 293.5L685.5 292.6L684.5 290.5L683.3 289.8L683.3 288.5L678.4 290.2L676.6 290L674.8 291L670.9 290.9L668.4 288L666.8 284.5L663.5 281.4L659.9 281.4L655.7 281.4L651.7 282L647.9 283L640.4 285.8L637.8 287.4L633.5 288.8L629.3 287.5L627.1 287.5L623.8 286.6L620.7 286.6L615.1 287.5L611.8 288.8L607.1 290.6L606.1 290.5L604.9 290.5L600 288.2L595.7 284.6L591.6 282L588.4 278.9L587.1 278.6L583.7 276.7L581.2 274.1L580.4 272.4L579.8 268.8L577.7 266L575.8 264.2L574.6 263.5L573.4 262.6L572.9 260.5L572.2 259.4L570.8 258.7L568.3 256.7L566.3 256.4L565.2 255L565.2 254.3L563.7 253.3L563.4 252.3L562.7 248.6L563.3 246.5L561.3 242.8L558.9 241.1L561 240.2L563.3 236.8L564.5 234.4L564 231.8L565.4 229.5L566 225L565.4 220.3L564.9 217.9L565.3 215.6L564.1 213.3L561.6 211.2L561.8 209.2L562 207L563.9 205.7L565.4 203.2L565.1 201.6L566.7 198.3L569.4 195.2L571 194.5L572.3 191.7L572.4 189.2L574.1 186.2L577.3 184.5L580.3 179.6L582.8 177.7L587.2 177.2L590.9 173.9L593.3 172.7L597.3 168.7L596.1 162.8L597.9 158.7L598.6 156.2L601.6 153L606.4 150.8L609.9 148.8L613.1 143.9L614.6 141L618.1 141L621 143L625.5 142.7L630.5 143.7L632.5 143.8L637.1 141.2L642.3 140.3L645.3 138.4L649.8 136.9L657.9 136.1L665.8 135.7L668.2 136.4L672.7 134.5L677.8 134.5L679.7 135.6L683 135.3L688.1 133.4L691.5 134L691.3 136.4L695.4 134.6L695.7 135.5L693.3 137.9L693.3 140.1L695 141.2L694.3 145.4L691.2 147.8L692.1 150.4L694.6 150.4L695.8 152.7L697.6 153.4L703.2 155.1L705.2 154.7L709.1 155.5L715.5 157.6L717.7 161.8L722 162.8L728.7 164.7L733.7 167.1L736.1 165.9L738.3 163.7L737.2 160L738.7 157.7L742.2 155.5L745.4 154.8L751.9 155.8L753.5 157.9L755.3 158L756.8 158.8L761.5 159.3L762.7 160.9L769 160.8L773.6 162.1L778.3 163.5L780.5 164.2L784.2 162.7L786.2 161.4L790.4 161L793.8 161.6L795.1 163.9L796.2 162.4L800 163.5L803.7 163.8L806 162.6L807.4 161L807.1 160.7L808.3 158.5L809.3 154.9L810 153.7L810.1 153.7L811.8 149.8L814.2 146.4L814.3 146.3L813.8 142.6L815 140.7L813.2 138.5L815.1 136.7L812.1 137.1L808.2 136L804.9 138.8L797.7 139.3L793.8 136.7L788.7 136.6L787.6 138.6L784.3 139.1L779.7 136.6L774.5 136.7L771.7 131.9L768.2 129.3L770.5 125.6L767.5 123.3L772.8 118.8L780.1 118.6L782.1 115L791.2 115.6L796.9 112.5L802.4 111.1L810.3 111L818.6 114.4L825.5 116.2L831 115.5L835.1 115.9L840.7 113.4L841.4 111.4L840.3 108.2L837.5 106.4L834.9 105.9L833.1 104.4L827 100.4L821.6 98.6L817.5 95.8L821 95L824.9 91L822.3 89.2L829.3 87.2L829.1 86.2L824.9 86.9L821.1 87.3L817.9 88.9L813.4 89.1L809.3 90.9L809.6 93.9L812 95L816.8 94.7L815.9 96.4L810.7 97.2L804.2 100L801.6 99L802.6 96.8L797.4 95.4L798.2 94.5L802.8 92.9L801.4 91.8L794 90.6L793.7 88.8L789.3 89.4L787.5 92L783.8 95.6L783.9 96.8L781.6 97.8L780.2 97.4L778.8 103.1L776.4 105.1L774.6 108.5L776.2 111.2L776.7 113L780.9 114.6L780 115.7L774.4 116L772.3 117.5L768.4 120L766.9 117.8L766.9 116.8L764 116.7L761.6 116.3L755.8 117.5L759.1 120.2L756.7 120.9L754 120.9L751.5 118.5L750.6 119.5L751.7 122.4L754 124.6L752.3 125.7L754.9 127.9L757.3 129.2L757.3 131.9L752.9 130.7L754.3 133.1L751.3 133.6L753.1 137.8L750 137.9L746 135.8L744.3 132L743.4 128.8L741.6 126.6L739.1 123.9L738.8 122.5L738 122.2L737.9 121.2L735.3 119.6L734.9 117.3L735.3 114.1L735.9 112.6L735.1 111.8L734.1 111.5L732.8 109.9L730.7 109L726.2 107.2L723.5 105.5L719.1 104.1L715.1 100.6L716.1 100.2L713.9 98.2L713.8 96.6L710.8 95.8L709.3 97.9L707.9 96.3L708 94.6L708.2 94.6L709.2 94.1L705.4 93.4L701.6 95.1L701.8 97.5L701.2 98.9L702.8 101.3L707.3 103.7L709.7 107.6L715 111.5L718.7 111.4L719.9 112.5L718.5 113.4L722.8 115.1L726.3 116.6L730.4 119.1L730.9 120L730 121.7L727.3 119.4L723.2 118.7L721.2 121.7L724.6 123.5L724.1 126L722.1 126.3L719.5 130.4L717.5 130.7L717.6 129.3L718.5 126.7L719.6 125.7L717.7 122.9L716.3 120.5L714.3 119.9L712.9 117.9L709.8 117L707.8 115.1L704.2 114.8L700.5 112.6L696.2 109.5L692.9 106.8L691.4 102.1L689.1 101.5L685.2 100L683 100.6L680.2 102.8L678.3 103.2L673.9 105.9L664.6 104.6L657.6 106.1L657.1 109L657.3 111.8L652.8 114.9L646.7 115.9L646.3 117.5L643.4 120.2L641.5 124L643.4 126.8L640.6 128.9L639.6 132L636 132.9L632.6 136.6L626.6 136.7L622.1 136.6L619.1 138.3L617.3 140.1L614.9 139.7L613.2 138.1L611.8 135.3L607.4 134.6L605.4 135.8L602.9 135.1L600.5 135.7L601.2 131.9L600.8 129L598.6 128.6L597.5 126.8L597.9 123.7L599.8 121.9L600.1 120L601.1 117.1L601 115.1L600 113.4L599.8 111.8L600.1 108.4L598.1 106.3L604.9 102.9L610.7 103.8L617.1 103.7L622.2 104.6L626.1 104.3L633.8 104.5L636.3 101.6L637.2 92.1L632.3 87.1L628.7 84.7L621.5 82.9L621 79.4L627.2 78.4L635.2 79.6L633.7 74.2L638.1 76.3L649.2 72.5L650.7 68.6L654.8 67.7L658.6 66.7L661.1 65.4L665.3 58.4L671.8 56.4L675.7 56.6L676.7 55.6L680.6 55.3L681.5 56.3L684.8 54L683.7 52.2L683.5 49.5L681.5 46.9L681.4 42L682.2 40.7L683.5 39.3L687.7 39L689.4 37.7L693.2 36.3L693.1 38.8L691.7 40.3L692.2 41.7L694.8 42.4L693.7 44.2L692.2 43.7L688.8 47.1L690.1 49.4L690.2 51.3L695 52.4L695 54.1L699.8 53.2L702.5 51.9L707.8 53.7L710.1 55.3L713.3 53.9L720.8 51.7L726.8 50L731.5 50.8L731.9 52L736.5 52.1L737.6 50L744.1 48.4L743.1 44.4L743.3 40.8L745.6 37.8L750.1 36.2L753.9 39.8L757.7 39.7L758.6 36L759.2 33.2L757.4 33.8L754.4 32.1L754 29.4L760 28.1L766 27.4L771.2 28.2L776.1 28L781.5 25.4L776.5 23.1L767.9 23.5L759.5 25.3L751.8 26.3L749 23.7L744.4 22.1L745.5 17.4L743.1 13.1L745.4 10.3L749.7 7.3L760.6 2.2L763.8 1.2L763.3 -0.8L756.7 -3.1L748.5 -1.7L743.9 1.6L744.6 4.5L737 8.3L727.8 12.4L724.4 19.1L727.8 22.5L732.3 25.1L727.9 30.5L723 31.6L721.2 39.6L718.5 44.1L712.7 43.6L710 47.4L704.5 47.6L703 43.1L699 37.7L695.4 31L692.2 28L682.8 33.6L676.4 34.7L669.8 32.2L668.1 27.1L666.6 16.1L671 13.1L683.6 9.1L693 4.2L701.7 -2.5L713.1 -11.7L721.1 -15.3L734.2 -21.2L744.7 -23.3L752.5 -23.1L759.7 -27L768.4 -26.8L777 -27.7L791.9 -24.3L785.7 -23L791 -20L795.9 -21.6L803.7 -18.8L816.7 -17.6L834.7 -12.2L838.4 -10L838.7 -6.8L833.4 -4.3L825.6 -3L804.4 -6.7L800.9 -6.1L808.6 -2.6L809.3 4.5L815.4 6L819.1 7.2L819.7 4.9L816.8 2.8L819.9 1L831.4 4L835.4 2.8L832.2 -0.7L843.3 -5.3L847.7 -5L852.1 -3.4L854.9 -6.6L850.9 -9.5L853.3 -12.3L849.8 -15.3L863.1 -13.8L865.8 -11.1L859.8 -10.5L859.8 -7.9L863.6 -6.2L870.9 -7.3L872.1 -10.3L882 -12.6L898.7 -16.7L902.2 -16.4L897.6 -13.5L903.5 -13L906.9 -14.7L915.8 -14.8L922.9 -16.8L928.3 -13.9L933.7 -17.1L928.7 -19.8L931.2 -21.4L945.3 -19.9L951.8 -18.5L969.1 -13L972.3 -15.5L967.4 -18L967.3 -19L961.6 -19.5L963.1 -21.8L960.6 -25.5L960.5 -27L969.2 -31.3L972.4 -35.6L975.9 -36.6L988.5 -35.3L989.5 -32.7L985 -28.8L988 -27.3L989.5 -24L988.4 -17.4L993.7 -14.5L991.6 -11.3L982.3 -4.6L987.7 -3.9L989.6 -5.6L994.9 -6.8L996.1 -9.2L1000.2 -11.4L997.5 -14.1L999.7 -17.3L994.5 -17.7L993.3 -20.3L997.1 -25.1L991 -29L999.5 -32.2L998.4 -35.6L1000.8 -35.7L1003.3 -33L1001.4 -28.5L1006.5 -27.6L1004.3 -31L1012.3 -32.9L1022.2 -33.1L1031 -30.4L1026.7 -34.4L1026.2 -39.5L1034.5 -40.4L1046 -40.2L1056.3 -40.8L1052.4 -43.3L1057.9 -46.5L1063.4 -46.6L1072.7 -49L1085.2 -49.6L1086.8 -50.9L1099.3 -51.3L1103.2 -50.3L1113.9 -52.8L1122.7 -52.7L1124 -54.8L1128.5 -56.8L1139.8 -58.8L1147.9 -57.2L1141.5 -56L1152.2 -55.3Z M876.7 114.7L879.1 118L881.4 118.3L882.8 119.5L878.9 119.9L878.1 123.6L877.3 125.3L875.5 126.4L875.6 128.8L877.1 132.3L881.7 133.3L885 135.7L891.7 136.5L899.2 135.2L899.6 134.1L898.7 130.7L899.4 125.8L895.7 124.1L896.9 120.9L893.8 120.6L894.8 116.6L899.3 117.8L903.5 116.2L900 113.4L898.7 110.7L894.8 111.9L894.4 115.4L892.9 112.3L892.6 111.1L893.8 109.1L892.9 107.5L887.3 105.8L885.2 101.6L882.6 100.4L882.4 98.8L887 99.3L887.2 95.8L891.3 95L895.4 95.7L896.3 91.1L895.4 88.1L890.7 88.4L886.6 87.2L881.1 89.3L876.7 90.3L874.5 93.1L869.9 93.9L865.2 98.8L869.5 103.3L869 106.5L874.2 112.1L876.7 114.7Z M513.8 -86.5L543.6 -82.7L534.8 -80.9L516.6 -80.7L491 -80.2L493.4 -79.3L510.2 -79.9L524.6 -78.2L533.8 -79.7L537.8 -78L532.5 -75.2L544.6 -77L567.8 -78.8L582 -77.9L584.7 -75.9L565.3 -72.5L562.6 -71.4L547.4 -70.6L558.4 -70.3L552.9 -66.9L549 -63.8L549.2 -58.5L554.9 -55.4L547.5 -55.2L539.6 -53.7L548.4 -51.1L549.5 -47.1L544.4 -46.6L550.6 -42.6L540 -42.2L545.5 -40.3L544 -38.6L537.3 -37.9L530.6 -37.8L536.6 -34.6L536.7 -32.5L527.2 -34.5L524.8 -33.2L531.2 -32L537.5 -29.1L539.3 -25.3L530.8 -24.3L527.1 -26.2L521.2 -28.9L522.9 -25.7L517.3 -23.2L529.9 -23L536.4 -22.7L523.7 -18.6L510.7 -14.8L496.8 -13.2L491.5 -13.1L486.6 -11.3L480 -6.3L469.7 -2.9L466.5 -2.8L460.1 -1.6L453.3 -0.5L449.2 2.5L449.1 5.8L446.7 8.9L439 12.8L440.9 16.5L438.7 20.4L436.3 25.1L429.6 25.3L422.6 21.5L413 21.4L408.4 18.8L405.2 14.2L397 8.3L394.6 5.2L393.9 0.9L387.3 -3.5L389 -7L385.9 -8.7L390.6 -14.3L397.7 -16L399.6 -18L400.6 -21.8L395.2 -20.1L392.6 -19.4L388.3 -18.7L382.5 -20.2L382.1 -23.5L384 -26L388.4 -26.1L398.1 -24.8L390 -27.8L385.7 -29.5L381 -28.8L377 -30L382.3 -34.4L379.4 -36.2L375.6 -39.5L369.9 -44.5L363.8 -46.4L363.9 -48.4L351.1 -51.2L341 -51.5L328.3 -51.3L316.6 -51L311.1 -52.5L302.8 -55.5L315.3 -57L324.9 -57.2L304.6 -58.5L293.8 -60.4L294.5 -62.3L312.5 -64.5L329.9 -66.8L331.8 -68.6L318.9 -70.3L323.1 -72.2L339.6 -75.5L346.5 -76L344.5 -78.1L355.8 -79.4L370.4 -80.1L385.1 -80.2L390.3 -78.7L402.9 -81.3L414.3 -79.5L421 -79.2L430.8 -77.6L419.5 -80.2L420.2 -82.2L436.2 -85.1L452.9 -84.9L458.9 -86.6L475.8 -87.1L513.8 -86.5Z"/><path class="arc" d="M247.401 109.66 Q427.058 17.3217 606.715 151.366"/><path class="arc" d="M247.401 109.66 Q530.673 -1.32894 813.945 159.077"/><path class="arc" d="M247.401 109.66 Q576.726 -9.61854 906.051 191.215"/><circle class="pin" cx="606.715" cy="151.366" r="4.2"/><circle class="pinring" cx="606.715" cy="151.366" r="8.5"/><text x="619.715" y="155.366">NORTH AFRICA</text><circle class="pin" cx="813.945" cy="159.077" r="4.2"/><circle class="pinring" cx="813.945" cy="159.077" r="8.5"/><text x="826.945" y="163.077">LEVANT</text><circle class="pin" cx="906.051" cy="191.215" r="4.2"/><circle class="pinring" cx="906.051" cy="191.215" r="8.5"/><text x="893.051" y="195.215" text-anchor="end">GULF MARKETS</text><circle class="pin pin--home" cx="247.401" cy="109.66" r="5.5"/><circle class="pinring pinring--home" cx="247.401" cy="109.66" r="11"/><text class="home" x="247.401" y="79.66" text-anchor="middle">DETROIT</text><text x="247.401" y="93.66" text-anchor="middle">UNITED STATES</text></svg>
+      <div class="gmap__legend" aria-hidden="true"><span><i></i>Detroit</span><span><i></i>North Africa</span><span><i></i>Levant</span><span><i></i>Gulf markets</span></div>
+    </div>
+    <div class="global__cols">
+      <div class="gcol"><h3>International delegations</h3><p>Trade agencies, chambers, business organizations, and visiting government delegations engaging U.S. markets.</p></div>
+      <div class="gcol"><h3>Market-entry relationships</h3><p>Pathways for U.S. companies entering MENA markets, and for international companies entering North America.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ATTEND ===================== -->
+<section class="section section--alt anchor" id="attend" aria-label="Registration">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">Registration</span>
+      <h2>Be in the room.</h2>
+      <p class="lede">Registration for the inaugural Arab-X is open to Chamber members, non-members, and guests. Corporate partners receive registrations as part of their package and do not need to purchase separately.</p>
     </div>
     <div class="attend-cols">
       <div class="pass reveal">
@@ -528,17 +567,16 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
         <div class="pass__price">$485</div>
         <div class="pass__per">Per person</div>
         <ul>
-          <li>The full conference day: welcome remarks and all panel sessions</li>
+          <li>The full conference day, from welcome remarks through closing</li>
           <li>The Signature Luncheon, seated</li>
-          <li>A reserved seat at the Arab-X Gala with plated dinner and keynote</li>
-          <li>Concourse access, delegate materials, and the printed program</li>
+          <li>A reserved seat at the evening Arab-X Gala</li>
+          <li>Delegate access to the exhibition concourse</li>
         </ul>
+        <p class="pass__tease">Speakers, panels, and the full lineup of the day are announced in the weeks ahead.</p>
         <a class="btn" href="https://buy.stripe.com/3cIcN40zFcAyaL96Xxds40f" target="_blank" rel="noopener">Register &middot; $485 <span class="arw">&rarr;</span></a>
-        <!-- GALA-ONLY TICKET ($250): live Stripe link below, intentionally not published.
-             The Chamber asked to hold gala-only sales until closer to the date. To enable,
-             uncomment this block and restore the second pass card.
-             <a class="btn btn--ghost-dark" href="https://buy.stripe.com/8x2eVcgyD586dXl2Hhds40e" target="_blank" rel="noopener">Gala Seat Only</a>
-        -->
+        <!-- Gala-only ticket intentionally withheld until the Chamber opens sales.
+             The live Stripe link is deliberately NOT in this file (view-source would
+             expose a working checkout); it is held in the project notes. -->
       </div>
       <div class="venue reveal d1">
         <h3>Venue and accommodations</h3>
@@ -547,20 +585,115 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
         <a class="tlink" style="margin-top:22px;" href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1786741187425&amp;key=GRP&amp;app=resvlink" target="_blank" rel="noopener">Reserve a Room <span class="arw">&rarr;</span></a>
       </div>
     </div>
-    <p class="passes__note reveal">Registration is processed securely through Stripe. Halal and vegetarian service is accommodated; note requirements at registration. Corporate partners receive registrations as part of their package.</p>
+    <p class="passes__note">Registration is processed securely through Stripe. Halal and vegetarian service is accommodated; note requirements at registration.</p>
+  </div>
+</section>
+
+<!-- ===================== CASE FOR PARTNERSHIP ===================== -->
+<section class="section" aria-label="The case for partnership">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">Why Partner</span>
+      <h2>Four structural returns.</h2>
+      <p class="lede">Sponsorship of Arab-X is a market-access decision.</p>
+    </div>
+    <div class="cols2">
+      <div class="tcol tcol--lime reveal"><h3>Market access</h3><p>Arab American consumers and businesses represent a growing, brand-loyal, and under-served commercial market. Arab-X puts your organization in front of its ownership class directly.</p></div>
+      <div class="tcol tcol--lime reveal d1"><h3>Procurement and supplier pipeline</h3><p>If your organization carries diverse-spend or local-sourcing targets, this is a qualified-vendor pipeline in one room, with the Chamber available to support verification, readiness, and follow-through.</p></div>
+      <div class="tcol tcol--lime reveal"><h3>Data and thought leadership</h3><p>The Chamber is building the national economic intelligence layer for Arab American business. Partners are positioned alongside that work: on the panels, in the publications, and in the coverage that follows.</p></div>
+      <div class="tcol tcol--lime reveal d1"><h3>National visibility with substance</h3><p>Founding partners of the inaugural Arab-X are named in the record of the first year of a convening built to run for decades, and are credited across the Chamber's channels well beyond the conference dates.</p></div>
+    </div>
+    <div class="floor reveal">
+      <h3>What every corporate partner receives</h3>
+      <ul>
+        <li>Logo recognition on the Arab-X sponsor page and in the printed program</li>
+        <li>Logo on concourse recognition signage at the conference</li>
+        <li>Verbal recognition from the podium during the program</li>
+        <li>Inclusion in the post-conference report to delegates, partners, and press</li>
+        <li>A written post-conference recap of what your partnership delivered</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PARTNERSHIP ===================== -->
+<section class="section section--alt anchor" id="partnership" aria-label="Partnership">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">Partnership</span>
+      <h2>Partnership opportunities are open.</h2>
+      <p class="lede">A limited number of corporate partnerships are available for the inaugural Arab-X, from founding national positions to panel underwriting and enterprise-level support. Partnership levels, benefits, and investment are set out in the full prospectus, available on request.</p>
+    </div>
+    <div class="cols2">
+      <div class="tcol tcol--lime reveal">
+        <h3>What partnership includes</h3>
+        <p>Recognition across the website, printed program, and concourse signage; delegate registrations and reserved gala seating; program advertisement and social recognition; and a named Chamber staff contact managing your partnership from commitment through delivery.</p>
+      </div>
+      <div class="tcol tcol--lime reveal d1">
+        <h3>Partner-only access</h3>
+        <p><strong>Thursday, October 29:</strong> the Arab-X Welcome Reception, an invitation-only evening of registration, cocktails, and entertainment held ahead of the conference. Corporate partners join an invited room of panelists, visiting delegations, and elected officials, where the relationships that make Friday productive are formed. Access is a partnership benefit rather than a general ticket, and is not sold separately.</p>
+      </div>
+    </div>
+    <p class="combine reveal"><strong>Every partnership can be tailored.</strong> In-kind, nonprofit, multi-year, and fully custom structures are available. If your organization has a marketing objective, a procurement target, or a program idea that does not map to a standard level, the Chamber will build a partnership around it. Submit an inquiry and the full prospectus will follow.</p>
+    <div style="margin-top:34px;" class="reveal"><a class="btn" href="https://airtable.com/appI0H0TUo4rmvqaN/pagDIGgF91BHX9Vkk/form" target="_blank" rel="noopener">Submit a Partnership Inquiry <span class="arw">&rarr;</span></a></div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section anchor" id="faq" aria-label="Frequently asked questions">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">FAQ</span>
+      <h2>Questions, answered.</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>What is Arab-X?</summary>
+        <div class="faq__a"><p>Arab-X is the National Arab American Entrepreneurship Conference: a working convening of founders, investors, corporate leaders, and public officials, held in Detroit and built around entrepreneurship, capital, and global trade. It is presented by the Tejara Innovation Hub in partnership with the American Arab Chamber of Commerce.</p></div>
+      </details>
+      <details>
+        <summary>Is Arab-X open to everyone?</summary>
+        <div class="faq__a"><p>Yes. Registration is open to Chamber members, non-members, and guests. If you build, fund, lead, or support businesses, the room is built for you.</p></div>
+      </details>
+      <details>
+        <summary>When and where is Arab-X?</summary>
+        <div class="faq__a"><p>Friday, October 30, 2026, at The Westin Book Cadillac in downtown Detroit. The conference runs through the day, and the Arab-X Gala follows in the evening. On Thursday, October 29, an invitation-only Welcome Reception is held for corporate partners, panelists, and visiting delegations.</p></div>
+      </details>
+      <details>
+        <summary>What does registration include?</summary>
+        <div class="faq__a"><p>The Full Access Pass covers the full conference day, the Signature Luncheon, a reserved seat at the evening Arab-X Gala, and delegate access to the exhibition concourse. Speakers, panels, and the full lineup of the day are announced in the weeks ahead.</p></div>
+      </details>
+      <details>
+        <summary>Is there a hotel room block?</summary>
+        <div class="faq__a"><p>Yes. A room block is reserved at The Westin Book Cadillac Detroit at a negotiated group rate. Rooms are limited, and the block is released after September 25, 2026.</p><a class="tlink" href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1786741187425&amp;key=GRP&amp;app=resvlink" target="_blank" rel="noopener">Reserve a Room <span class="arw">&rarr;</span></a></div>
+      </details>
+      <details>
+        <summary>I have a question about my registration.</summary>
+        <div class="faq__a"><p>For changes to a completed registration, group registrations, or student and young-professional inquiries, write to <a href="mailto:hello@tejara.org" style="font-weight:700;">hello@tejara.org</a> and the team will follow up directly.</p></div>
+      </details>
+      <details>
+        <summary>How can my company partner with or exhibit at Arab-X?</summary>
+        <div class="faq__a"><p>A limited number of corporate partnerships are open for the inaugural year, from founding national positions to concourse exhibition. Submit a partnership inquiry and the full prospectus will follow.</p><a class="tlink" href="https://airtable.com/appI0H0TUo4rmvqaN/pagDIGgF91BHX9Vkk/form" target="_blank" rel="noopener">Submit a Partnership Inquiry <span class="arw">&rarr;</span></a></div>
+      </details>
+      <details>
+        <summary>How do I propose a speaker, or attend as media?</summary>
+        <div class="faq__a"><p>Speaker proposals and media inquiries go to <a href="mailto:hello@tejara.org" style="font-weight:700;">hello@tejara.org</a>.</p></div>
+      </details>
+    </div>
   </div>
 </section>
 
 <!-- ===================== CLOSE ===================== -->
-<section class="close" aria-label="Become a partner">
+<section class="close" aria-label="Register or partner">
   <div class="close__bg" aria-hidden="true"><img src="assets/img/arabx-audience.jpg" alt="" /></div>
   <div class="close__scrim" aria-hidden="true"></div>
   <div class="wrap">
-    <p class="close__tag reveal">Building Economic Bridges. Advancing Economic Power.</p>
-    <h2 class="reveal">Partner with the inaugural Arab-X.</h2>
-    <p class="reveal d1">Arab-X is built to run annually, and founding partners of the first year are named in its permanent record. The number of founding positions is small, and the Chamber would rather design the right partnership than sell a listed one.</p>
+    <p class="close__tag reveal">Bigger Than Us</p>
+    <h2>Take a seat at the first Arab-X.</h2>
+    <p class="reveal d1">Arab-X is built to run annually, and the founding partners of the first year are named in its permanent record. The room is being composed now. Register to be in it, or partner with the Chamber to help build it.</p>
     <div class="close__cta reveal d2">
-      <a class="btn btn--lime" href="https://airtable.com/appI0H0TUo4rmvqaN/pagDIGgF91BHX9Vkk/form" target="_blank" rel="noopener">Become a Partner <span class="arw">&rarr;</span></a>
+      <a class="btn btn--lime" href="https://buy.stripe.com/3cIcN40zFcAyaL96Xxds40f" target="_blank" rel="noopener">Register &middot; $485 <span class="arw">&rarr;</span></a>
+      <a class="btn btn--ghost" href="https://airtable.com/appI0H0TUo4rmvqaN/pagDIGgF91BHX9Vkk/form" target="_blank" rel="noopener">Become a Partner</a>
     </div>
     <p class="close__contact reveal d3">Partnership inquiries &middot; <a href="mailto:hello@tejara.org">hello@tejara.org</a></p>
   </div>
@@ -585,6 +718,8 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
   </div>
 </footer>
 
+<div class="fab" id="fab"><a class="btn btn--lime" href="#attend">Register Now <span class="arw">&rarr;</span></a></div>
+
 <script>
 (function(){
   "use strict";
@@ -603,34 +738,41 @@ footer{ background:var(--tealblack); color:rgba(255,255,255,.6); padding:40px 0 
   menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ setMenu(false); } });
 
-  var revs = document.querySelectorAll('.reveal');
-  if(reduce || !('IntersectionObserver' in window)){
-    revs.forEach(function(el){ el.classList.add('in'); });
-  } else {
-    var io = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, {threshold:.13});
-    revs.forEach(function(el){ io.observe(el); });
+  // Floating register button: appears once past the hero, hides while the
+  // registration section or the closing band (which carry their own Register
+  // buttons) are on screen.
+  var fab = document.getElementById('fab');
+  var attendSec = document.getElementById('attend');
+  var closeSec = document.querySelector('.close');
+  var visAttend = false, visClose = false;
+  function fabState(){
+    if(!fab){ return; }
+    var y = window.scrollY || window.pageYOffset;
+    fab.classList.toggle('show', y > 640 && !visAttend && !visClose);
   }
+  if(fab && 'IntersectionObserver' in window){
+    var zio = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.target === attendSec){ visAttend = e.isIntersecting; }
+        if(e.target === closeSec){ visClose = e.isIntersecting; }
+      });
+      fabState();
+    }, {threshold:.05});
+    if(attendSec){ zio.observe(attendSec); }
+    if(closeSec){ zio.observe(closeSec); }
+  }
+  window.addEventListener('scroll', fabState, {passive:true});
 
-  var counters = document.querySelectorAll('[data-count]');
-  function animate(el){
-    var to = parseInt(el.getAttribute('data-count'), 10);
-    var t0 = null, dur = 1200;
-    function frame(t){
-      if(!t0){ t0 = t; }
-      var p = Math.min((t - t0) / dur, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(to * eased).toLocaleString('en-US');
-      if(p < 1){ requestAnimationFrame(frame); }
-    }
-    requestAnimationFrame(frame);
-  }
-  if(!reduce && 'IntersectionObserver' in window){
-    var cio = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if(e.isIntersecting){ animate(e.target); cio.unobserve(e.target); } });
-    }, {threshold:.6});
-    counters.forEach(function(el){ cio.observe(el); });
+  // Collapsible speaker slots
+  var spkBtn = document.getElementById('spkBtn');
+  var spkGrid = document.getElementById('spkGrid');
+  if(spkBtn && spkGrid){
+    spkBtn.addEventListener('click', function(){
+      var open = spkGrid.hasAttribute('hidden');
+      if(open){ spkGrid.removeAttribute('hidden'); } else { spkGrid.setAttribute('hidden',''); }
+      spkBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      spkBtn.querySelector('.pm').textContent = open ? '\u2212' : '+';
+    });
   }
 })();
 </script>
