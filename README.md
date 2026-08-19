@@ -9,6 +9,7 @@ with the American Arab Chamber of Commerce.
 | File | What it is |
 |---|---|
 | `index.html` | THE site. Restrained institutional build (WEF/Milken conference grammar): white canvas, hairline rules, text-forward sections, tier rate-card, one dark program band. Arab-X petrol + flat lime accents, Montserrat, real event photography. |
+| `classic.html` | Alternate live version: the pre-rework page (original partner-first copy, logo hero, attendance stats and projections intact) plus the feature batch only (nav + floating Register, per-audience benefit tiles, collapsible speaker slots, global map, FAQ, reveal animation removed). No marketing-doc reframing. |
 | `prospectus-navy.html` | Archived earlier exploration (old prospectus navy/gold/serif theme). |
 | `aacc-blue.html` | Archived earlier exploration (AACC royal-blue theme). |
 
